@@ -1,79 +1,86 @@
-<?
-   require_once('functions.php');
-?>
+<?php
 
-<html>
+session_start();
+require_once('include/config.php');
+require_once('include/functions.php');
+require_once('libs/Smarty/libs/Smarty.class.php');
 
-  <head>
-  <title>Trivial Fleet Manager</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  </head>
+if(isset($_REQUEST['clear']))
+{
+	session_unset();
+	session_destroy();
+	header("Location: index.php");
+	exit;
+}
 
-  <body>
-	<?
-		$ingame = strpos($_SERVER['HTTP_USER_AGENT'], 'EVE-IGB');
-		$trust =	$_SERVER['HTTP_EVE_TRUSTED'];
+$smarty = new Smarty();
 
-		if ($ingame != false || $dev) {
+//Init Smarty
+$smarty->setTemplateDir( dirname(__FILE__) . "/templates" );
+$smarty->setCompileDir(  dirname(__FILE__) . "/smarty/templates_c" );
+$smarty->setConfigDir(   dirname(__FILE__) . "/smarty/configs" );
+$smarty->setCacheDir(    dirname(__FILE__) . "/smarty/cache" );
 
-			if ($_SERVER['HTTP_EVE_TRUSTED']=='No') {
+if(!isTrusted())
+	$smarty->debugging = SMARTY_DEBUG;
 
-			echo "You'll have to trust the website for this to work.<br/><br/><strong>Reload the Window once you Trust the Site</strong><br/>";
-			echo '<script type="text/javascript">CCPEVE.requestTrust("http://' . $addy . '/*");</script>';
+$smarty->assign('igb',isTrusted());
+$smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
-			} else {
-
-				$trusted = true;
-				$pilotname = $_SERVER['HTTP_EVE_CHARNAME'];
-				$pilotcorp = $_SERVER['HTTP_EVE_CORPNAME'];
-				$pilotloc = $_SERVER['HTTP_EVE_SOLARSYSTEMNAME'];
-				if ( $dev == 1 ) {
-					$pilotname = "Veto Garsk";
-					$pilotcorp = "Variable Intentions";
-					$pilotloc = "Osmeden";
-				}
-
-				$query = "SELECT ship_id FROM ships WHERE name='".$pilotname."';";
-				$result = RunQuery($query);
-				$item = sqlite_fetch_array($result, SQLITE_ASSOC);
-				if ( $item[ship_id] ) {
-
-					ShowFleet();
-
-				} else {
-?>
-					<form method="post" action="formproc.php" >
-					<input type='hidden' name='form[action]' value='addship'>
-	
-					Role:<br/>
-					<select name="role">
-					<option>Member</option>
-					<option>Scout</option>
-					<option>FC</option>
-					</select>
-					<br/><br/>
-					Fitting:<br/> 
-					<textarea name='dna' id='dna' rows='4' cols='80'"  maxlength="1024" /></textarea><br/>
-					<br/>
-					<input type='submit' name='Submit' value='Submit' /><br/>
-					</form>
-<?
-				echo "Name: $pilotname<br/>Corp: $pilotcorp<br/>System: $pilotloc<br/><br/>";
-					?><strong>Usage:</strong><br/>Drag the ship name from the fitting window to a chat window and press enter.  Then, right click on the line you pasted in chat, select copy and then paste it into the "Fitting:" box above.  You should see a bunch of numbers and such if you did it right.<?
-				}
+//If not trusted, then exit early to avoid doing work we don't need.
+if (!isTrusted() && REQUIRE_TRUST) 
+{
+    $smarty->display("notrust.tpl");
+    exit;
+}
 
 
+try 
+{
+    //connect to db
+    $dbh = connectToDatabase();
 
-			}
-		} else {
-			// Out of game
-			echo "You are out of the game, nothing to see here dude.";
-		}
+    //if the pilot is in a fleet, redirect to the fleet page
+    if (pilotIsInFleet($dbh))
+    {
+        header("Location: fleet.php");
+        exit;
+    } 
+    else
+    {
+        //if the pilot wants to create a fleet, redirect to the create page
+        if ($_REQUEST["create"])
+        {
+            header("Location: create_fleet.php");
+            exit;
+        }
 
-//		$pilotname = $_SERVER['HTTP_EVE_CHARNAME'];
+        if ($_REQUEST["join"])
+        {
+            if (isset($_REQUEST["fleet"]))
+            {
+                //save the pilots choice to a session variable
+                //that will be cleared by the join fleet script.
+                $_SESSION["join_fleet"] = $_REQUEST["fleet"];
+                header("Location: join_fleet.php");
+                exit;
+            }
+        }
 
-
-	?>
-  </body>
-
-</html>
+	//pass the variables to the template
+	$smarty->assign("charname", $_SERVER['HTTP_EVE_CHARNAME']);
+	$smarty->assign("corpname", $_SERVER['HTTP_EVE_CORPNAME']);
+	$smarty->assign("solarsystem", $_SERVER['HTTP_EVE_SOLARSYSTEMNAME']);
+	$smarty->assign("region", $_SERVER['HTTP_EVE_REGIONNAME']); 
+	$smarty->assign("charid", $_SERVER['HTTP_EVE_CHARID']);
+        
+	$smarty->assign("fleets", getAllValidFleets($dbh));
+	$smarty->display("default.tpl");
+    }
+}
+catch (PDOException $e)
+{
+    $smarty->assign("exception", $e);
+    $smarty->display("whoops.tpl");
+    exit;
+}

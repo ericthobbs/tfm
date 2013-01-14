@@ -1,0 +1,59 @@
+{
+	"webifier": [ 526 ],
+	"disruptor": [ 3242 ],
+	"scrambler": [ 447 ],
+	"disruptfield": [ -1 ],
+	
+	"armor": [ 11355, 11357, 11359, 24569 ],
+	"shield": [ 405, 3586, 3596, 3606, 3616, 352057, 354125 ],
+	"hull": [ 27932, 27930, 27904, 27934 ],
+	"capacitor": [ 529, 12217 ,12102 ,12219 ],
+	"tracking": [ 2103 ],
+	
+	"energyneut": [ 533, 12265, 12269 ],
+	"energyvampire": [ 530, 12257, 12261 ],
+	
+	"trackingdisruptor": [ 2108 ],
+	"sensordampening": [ 1968 ],
+	"targetpainting": [ 12709 ],
+	"spherelauncher": [ 22782 ],
+	
+	"gravimetricecm": [ 1955 ],
+	"magnetometricecm": [ 1948 ],
+	"radarecm": [ 1956 ],
+	"ladarecm": [ 1958 ],
+	"multispececm": [ 1957 ],
+	"burstecm": [ 580 ],
+	"spectrumbreakerecm": [ 4409 ],
+	
+	"gravimetriceccm": [ -1 ],
+	"magnetometriceccm": [ -1 ],
+	"radareccm": [ -1 ],
+	"ladareccm": [ -1 ],
+	"multispececcm": [ -1 ],
+	
+	"shipscanner": [ 443 ],
+	"cargoscanner": [ 442 ],
+	"surveyscanner": [ 444 ],
+	"cynosuralfield": [ 21094 ],
+	"covertcynofield": [ 28646 ],
+	"cloakingdevice": [ 11370 ],
+	"bomblauncher": [ 27914 ],
+	
+	"skirmlinks": [ 11017, 20070, 20408 ],
+	"seigelinks": [ 20124, 20514, 22228 ],
+	"infolinks": [ 11052, 20405, 20406 ],
+	"armorlinks": [ 20069, 20409, 22227 ],
+	"mininglinks": [ -1, -1, -1 ],
+	
+	"salvager": [ 25861 ],
+	"tractorbeam": [ 24348, 24620, 24622, 24644 ],
+	"codebreaker": [ 22175 ],
+	"analyser": [ 22177 ],
+	
+	"afterburner": [ 429, 12056, 12066 ],
+	"microwarpdrive": [ 434, 12052, 12054 ],
+	
+	"damagecontrol": [ 2046 ],
+	"microjumpdrive": [ 4383 ]
+}

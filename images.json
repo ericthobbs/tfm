@@ -1,0 +1,59 @@
+{
+	"webifier": "icon12_06.png",
+	"disruptor": "icon03_07.png",
+	"scrambler": "76_64_1.png",
+	"disruptfield": "icon03_07.png",
+	
+	"armor": "icon01_11.png",
+	"shield": "icon01_16.png",
+	"hull": "",
+	"capacitor": "icon01_02.png",
+	"tracking": "",
+	
+	"energyneut": "icon12_04.png",
+	"energyvampire": "icon01_03.png",
+	
+	"trackingdisruptor": "icon05_07.png",
+	"sensordampening": "icon04_11.png",
+	"targetpainting": "icon56_01.png",
+	"spherelauncher": "icon56_08.png",
+	
+	"gravimetricecm": "",
+	"magnetometricecm": "",
+	"radarecm": "",
+	"ladarecm": "",
+	"multispececm": "",
+	"burstecm": "",
+	"spectrumbreakerecm": "",
+	
+	"gravimetriceccm": "",
+	"magnetometriceccm": "",
+	"radareccm": "",
+	"ladareccm": "",
+	"multispececcm": "",
+	
+	"shipscanner": "icon03_10.png",
+	"cargoscanner": "",
+	"surveyscanner": "",
+	"cynosuralfield": "25_64_4.png",
+	"covertcynofield": "25_64_4.png",
+	"cloakingdevice": "36_64_8.png",
+	"bomblauncher": "",
+	
+	"skirmlinks": "",
+	"seigelinks": "",
+	"infolinks": "",
+	"armorlinks": "",
+	"mininglinks": "",
+	
+	"salvager": "",
+	"tractorbeam": "",
+	"codebreaker": "",
+	"analyser": "",
+	
+	"afterburner": "",
+	"microwarpdrive": "",
+	
+	"damagecontrol": "",
+	"microjumpdrive": ""
+}
