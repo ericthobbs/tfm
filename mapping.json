@@ -1,59 +1,137 @@
 {
-	"webifier": [ 526 ],
-	"disruptor": [ 3242 ],
-	"scrambler": [ 447 ],
-	"disruptfield": [ -1 ],
+	"webifier": {
+		"ids": [ 526 ],
+		"image": "12_64_6.png" },
+	"disruptor": {
+		"ids": [ 3242, 28654 ],
+		"image": "4_64_9.png" },
+	"scrambler": {
+		"ids": [ 447 ],
+		"image": "76_64_1.png" },
+	"disruptfield": {
+		"ids": [ 28654 ],
+		"image": "3_64_7.png" },
 	
-	"armor": [ 11355, 11357, 11359, 24569 ],
-	"shield": [ 405, 3586, 3596, 3606, 3616, 352057, 354125 ],
-	"hull": [ 27932, 27930, 27904, 27934 ],
-	"capacitor": [ 529, 12217 ,12102 ,12219 ],
-	"tracking": [ 2103 ],
+	"armor": {
+		"ids": [ 11355, 11357, 11359, 24569 ],
+		"image": "1_64_11.png" },
+	"shield": {
+		"ids": [ 405, 3586, 3596, 3606, 3616, 352057, 354125 ],
+		"image": "1_64_16.png" },
+	"hull": {
+		"ids": [ 27932, 27930, 27904, 27934 ],
+		"image": "1_64_11.png" },
+	"capacitor": {
+		"ids": [ 529, 12217 ,12102 ,12219 ],
+		"image": "1_64_2.png" },
+	"tracking": { 
+		"ids": [ 2103 ], 
+		"image": "" },
 	
-	"energyneut": [ 533, 12265, 12269 ],
-	"energyvampire": [ 530, 12257, 12261 ],
+	"energyneut": {
+		"ids": [ 533, 12265, 12269 ],
+		"image": "1_64_1.png" },
+	"energyvampire": {
+		"ids": [ 530, 12257, 12261 ],
+		"image": "1_64_3.png" },
 	
-	"trackingdisruptor": [ 2108 ],
-	"sensordampening": [ 1968 ],
-	"targetpainting": [ 12709 ],
-	"spherelauncher": [ 22782 ],
+	"trackingdisruptor": {
+		"ids": [ 2108 ],
+		"image": "5_64_7.png" },
+	"sensordampening": {
+		"ids": [ 1968 ],
+		"image": "4_64_11.png" },
+	"targetpainting": { 
+		"ids": [ 12709 ],
+		"image": "56_64_1.png" },
+	"spherelauncher": {
+		"ids": [ 22782 ],
+		"image": "56_64_8.png" },
 	
-	"gravimetricecm": [ 1955 ],
-	"magnetometricecm": [ 1948 ],
-	"radarecm": [ 1956 ],
-	"ladarecm": [ 1958 ],
-	"multispececm": [ 1957 ],
-	"burstecm": [ 580 ],
-	"spectrumbreakerecm": [ 4409 ],
+	"gravimetricecm": {
+		"ids": [ 1955 ],
+		"image": "63_64_13.png" },
+	"magnetometricecm": {
+		"ids": [ 1948 ],
+		"image": "63_64_14.png" },
+	"radarecm": { 
+		"ids": [ 1956 ], 
+		"image": "63_64_16.png" },
+	"ladarecm": { 
+		"ids": [ 1958 ], 
+		"image": "63_64_15.png" },
+	"multispececm": {
+		"ids": [ 1957 ],
+		"image": "4_64_12.png" },
+	"burstecm": { 
+		"ids": [ 580 ],
+		"image": "4_64_12.png" },
+	"spectrumbreakerecm": { 
+		"ids": [ 4409 ],
+		"image": "105_32_46.png" },
+		
+	"shipscanner": { 
+		"ids": [ 443 ],
+		"image": "3_64_10.png" },
+	"cargoscanner": { 
+		"ids": [ 442 ],
+		"image": "3_64_11.png" },
+	"surveyscanner": { 
+		"ids": [ 444 ],
+		"image": "3_64_12.png" },
+	"cynosuralfield": { 
+		"ids": [ 21094 ],
+		"image": "25_64_4.png" },
+	"covertcynofield": { 
+		"ids": [ 28646 ],
+		"image": "25_64_4.png" },
+	"cloakingdevice": { 
+		"ids": [ 11370 ], 
+		"image":"36_64_8.png" },
+	"bomblauncher": { 
+		"ids": [ 27914 ],
+		"image": "49_64_7.png" },
 	
-	"gravimetriceccm": [ -1 ],
-	"magnetometriceccm": [ -1 ],
-	"radareccm": [ -1 ],
-	"ladareccm": [ -1 ],
-	"multispececcm": [ -1 ],
+	"skirmlinks": { 
+		"ids": [ 11017, 20070, 20408 ],
+		"image": "53_64_16.png" },
+	"seigelinks": { 
+		"ids": [ 20124, 20514, 22228 ],
+		"image": "53_64_16.png" },
+	"infolinks": { 
+		"ids": [ 11052, 20405, 20406 ],
+		"image": "53_64_16.png" },
+	"armorlinks": { 
+		"ids": [ 20069, 20409, 22227 ],
+		"image": "53_64_16.png" },
+	"mininglinks": { 
+		"ids": [ -1, -1, -1 ],
+		"image": "53_64_16.png" },
 	
-	"shipscanner": [ 443 ],
-	"cargoscanner": [ 442 ],
-	"surveyscanner": [ 444 ],
-	"cynosuralfield": [ 21094 ],
-	"covertcynofield": [ 28646 ],
-	"cloakingdevice": [ 11370 ],
-	"bomblauncher": [ 27914 ],
+	"salvager": { 
+		"ids": [ 25861 ],
+		"image": "7_64_15.png" },
+	"tractorbeam": { 
+		"ids": [ 24348, 24620, 24622, 24644 ],
+		"image": "56_64_4.png" },
+	"codebreaker": { 
+		"ids": [ 22175 ], 
+		"image": "53_64_14.png" },
+	"analyser": { 
+		"ids": [ 22177 ], 
+		"image": "53_64_15.png" },
 	
-	"skirmlinks": [ 11017, 20070, 20408 ],
-	"seigelinks": [ 20124, 20514, 22228 ],
-	"infolinks": [ 11052, 20405, 20406 ],
-	"armorlinks": [ 20069, 20409, 22227 ],
-	"mininglinks": [ -1, -1, -1 ],
+	"afterburner": { 
+		"ids": [ 429, 12056, 12066 ],
+		"image": "7_64_15.png" },
+	"microwarpdrive": { 
+		"ids": [ 434, 12052, 12054 ],
+		"image": "7_64_15.png" },
 	
-	"salvager": [ 25861 ],
-	"tractorbeam": [ 24348, 24620, 24622, 24644 ],
-	"codebreaker": [ 22175 ],
-	"analyser": [ 22177 ],
-	
-	"afterburner": [ 429, 12056, 12066 ],
-	"microwarpdrive": [ 434, 12052, 12054 ],
-	
-	"damagecontrol": [ 2046 ],
-	"microjumpdrive": [ 4383 ]
+	"damagecontrol": { 
+		"ids": [ 2046 ],
+		"image": "2_64_11.png" },
+	"microjumpdrive": { 
+		"ids": [ 4383 ],
+		"image": "7_64_15.png" }
 }

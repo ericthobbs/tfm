@@ -1,5 +1,6 @@
+{config_load file='application.conf'}
 <hr/>
-Trivial Fleet Manager by 
+{$smarty.config.GenericPageTitle} by 
 <a href={if $igb}"javascript:CCPEVE.showInfo(1377,91541731);"
    {else}https://gate.eveonline.com/Profile/Deimos%20Ovaert{/if}>Deimos Ovaert</a>,
 <a href={if $igb}"javascript:CCPEVE.showInfo(1377,1290000640);"
@@ -10,4 +11,5 @@ Trivial Fleet Manager by
    {else}https://gate.eveonline.com/Profile/Redhouse{/if}>Redhouse</a>.
 <br/>		   
 For bugs, feature requests or changes, contact Dorian Ramius.
+Source code on <a href="https://github.com/ericthobbs/tfm">github</a>.
 <br/>

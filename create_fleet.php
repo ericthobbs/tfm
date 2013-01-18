@@ -43,6 +43,7 @@ try
 	    $name = $_REQUEST["name"];
 	    $pass = $_REQUEST["password"];
 	    $dna = $_REQUEST["dna"];
+		$motd = $_REQUEST["motd"];
 		$dna_raw = $dna;
 	    $private = $_REQUEST["private"];
 	    
@@ -72,7 +73,7 @@ try
 		
 	    if( (count($errors) < 1))
 	    {
-			$result = createFleet($name,$pass,$fc,$dna_raw,$dbh);
+			$result = createFleet($name,$motd,$pass,$fc,$dna_raw,$dbh);
 		
 			if($result === true)
 			{
@@ -89,6 +90,7 @@ try
 	$smarty->assign("private",$private);
 	$smarty->assign("name",$name);
 	$smarty->assign("dna",$dna_raw);
+	$smarty->assign("motd",$motd);
 	
 	//pass the variables to the template
 	$smarty->assign("charname", $_SERVER['HTTP_EVE_CHARNAME']);
@@ -110,18 +112,26 @@ catch (Exception $e)
 
 //Create the fleet by inserting the information into the database
 // returns true if successful, array of errors on error.
-function createFleet($name,$password,$fc,$dna,PDO $dbh)
+function createFleet($name,$motd,$password,$fc,$dna,PDO $dbh)
 {
     
     $characterId = getCharacterIdFromName($fc,$dbh);
     
 	if($characterId === false)
 		return array("Invalid character name or api error");
-	
+
+	/*
+	$tidy = new Tidy();
+	$tidy->parseString($motd);
+	$tidy->cleanRepair();
+ 
+	$motd_clean = $tidy;	
+	*/
+	$motd_clean = $motd;
     $dbh->beginTransaction();
     
-    $fleets_stmt = $dbh->prepare("INSERT INTO fleets(name,fc,password) VALUES(:name,:fc,:password);");
-    if(!$fleets_stmt->execute( array( ':name' => $name, ':fc' => $characterId, ':password' => $password ) ))
+    $fleets_stmt = $dbh->prepare("INSERT INTO fleets(name,fc,password,motd) VALUES(:name,:fc,:password,:motd);");
+    if(!$fleets_stmt->execute( array( ':name' => $name, ':fc' => $characterId, ':password' => $password, ':motd' => $motd_clean ) ))
     {
 		$error = $fleets_stmt->errorInfo();
 		$dbh->rollback();
@@ -133,8 +143,9 @@ function createFleet($name,$password,$fc,$dna,PDO $dbh)
     $ships_stmt = $dbh->prepare("INSERT INTO ships(fleet,owner,dna) VALUES(:fleet,:owner,:dna);");
     if(!$ships_stmt->execute( array( ':fleet' => $lastInsertId, ':owner' => $characterId, ':dna' => $dna ) ))
     {
-	$dbh->rollBack();
-	return array("ship dna is invalid");
+		$error = $fleets_stmt->errorInfo();
+		$dbh->rollBack();
+		return array("failed to add ship to database:" . $error[2]);
     }
     
     if(!$dbh->commit())

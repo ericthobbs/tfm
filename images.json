@@ -1,59 +1,23 @@
 {
-	"webifier": "icon12_06.png",
-	"disruptor": "icon03_07.png",
-	"scrambler": "76_64_1.png",
-	"disruptfield": "icon03_07.png",
-	
-	"armor": "icon01_11.png",
-	"shield": "icon01_16.png",
-	"hull": "",
-	"capacitor": "icon01_02.png",
-	"tracking": "",
-	
-	"energyneut": "icon12_04.png",
-	"energyvampire": "icon01_03.png",
-	
-	"trackingdisruptor": "icon05_07.png",
-	"sensordampening": "icon04_11.png",
-	"targetpainting": "icon56_01.png",
-	"spherelauncher": "icon56_08.png",
-	
-	"gravimetricecm": "",
-	"magnetometricecm": "",
-	"radarecm": "",
-	"ladarecm": "",
-	"multispececm": "",
-	"burstecm": "",
-	"spectrumbreakerecm": "",
-	
-	"gravimetriceccm": "",
-	"magnetometriceccm": "",
-	"radareccm": "",
-	"ladareccm": "",
-	"multispececcm": "",
-	
-	"shipscanner": "icon03_10.png",
-	"cargoscanner": "",
-	"surveyscanner": "",
-	"cynosuralfield": "25_64_4.png",
-	"covertcynofield": "25_64_4.png",
-	"cloakingdevice": "36_64_8.png",
-	"bomblauncher": "",
-	
-	"skirmlinks": "",
-	"seigelinks": "",
-	"infolinks": "",
-	"armorlinks": "",
-	"mininglinks": "",
-	
-	"salvager": "",
-	"tractorbeam": "",
-	"codebreaker": "",
-	"analyser": "",
-	
-	"afterburner": "",
-	"microwarpdrive": "",
-	
-	"damagecontrol": "",
-	"microjumpdrive": ""
+	"system-icons": 
+	{	
+		"stop": [ "9_32_8.png", "Stop"],
+		"info": [ "9_32_9.png", "Information" ],
+		"help": [ "9_32_10.png", "Help" ],
+		"warning": [ "9_32_11.png", "Warning" ],
+		"danger": [ "9_32_12.png", "Danger" ],
+		"denied": [ "9_32_13.png", "Denied"],
+		"gear": [ "9_32_16.png", "Gear"],
+		"vitruvian": [ "2_64_16.png", "Vitruvian Man"],
+		"ship": [ "36_64_13.png", "Ship"],
+		"checkmark": [ "77_32_7.png", "Green Check"],
+		"redx": [ "77_32_22.png", "Red X"],
+		"fleet": [ "70_64_11.png", "Fleet" ],
+		"settings": [ "22_32_42.png", "settings" ],
+		"foward": [ "23_32_2.png" , "Forwards" ],
+		"backward": [ "23_32_1.png" , "Backwards" ],
+		"reload": [ "23_32_3.png", "Reload" ],
+		"plus": [ "25_32_11.png", "Plus" ],
+		"minus": [ "25_32_12.png", "Minus" ]
+	}
 }

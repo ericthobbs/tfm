@@ -69,9 +69,9 @@ function pilotIsInFleet(PDO $db)
 //get all valid fleets
 function getAllValidFleets($dbh)
 {
-    $query="SELECT fleets.id as fleet_id, fleets.name as fleet_name,fc,creation_time,password,public, pilots.name as fc_name
+    $query="SELECT fleets.id as fleet_id, fleets.name as fleet_name,fc,creation_time,password,public,motd,options,pilots.name as fc_name
 			FROM fleets JOIN pilots ON pilots.id=fleets.fc
-			WHERE creation_time >=date_sub(NOW(), INTERVAL 1 DAY);";
+			WHERE creation_time >=date_sub(NOW(), INTERVAL 1 DAY) ORDER by creation_time DESC;";
     $statement = $dbh->prepare($query);
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -91,7 +91,7 @@ function getShipsInFleet($fleet, PDO $db)
 //returns the selected fleet information
 function getFleetInfo($fleet, PDO $db)
 {
-	$query="SELECT fleets.id as fleet_id, fleets.name as fleet_name,fc,creation_time,password,public, pilots.name as fc_name
+	$query="SELECT fleets.id as fleet_id, fleets.name as fleet_name,fc,creation_time,password,public,motd, pilots.name as fc_name
 			FROM fleets JOIN pilots ON pilots.id=fleets.fc WHERE fleets.id = :id";
 	$stmt = $db->prepare($query);
 	$stmt->execute( array(':id' => $fleet) );

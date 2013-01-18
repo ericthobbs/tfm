@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{config_load file='application.conf'}
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-	<title>Trivial Fleet Manager</title>
+	<title>{$smarty.config.GenericPageTitle}</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body onload="CCPEVE.requestTrust('{$trusturl}');">
@@ -25,38 +26,40 @@
 			</form>
 		</div>
 	{/if}
+	Fleet Message of the Day:<br/>
+	<div class="fleetmessage" style="border: 2px solid lightgray; margin: 5px; padding: 3px;">{$fleet.motd|default:'None Specified'}</div><br/>
 	Direct join Link: <a href="join_fleet.php?join_fleet={$fleet.fleet_id}">in-game link for chat</a>
 	<table class="gridtable" border="0">
 		<tr>
-			<th><img src="img/icon02_16.png" width="32" title="Pilot"/></th>
-			<th><img src="img/icon09_05.png" width="32" title="Ship (Ship name)"/></th>
+			<th><img src="img/Icons/items/{$icons.vitruvian[0]}" width="32" title="Pilot"/></th>
+			<th><img src="img/Icons/items/{$icons.ship[0]}" width="32" title="Ship (Ship name)"/></th>
 			<!-- Remote Assistance Modules -->
-			<th><img src="img/icon01_11.png" width="32" title="Remote Armor"/></th>
-			<th><img src="img/icon01_16.png" width="32" title="Remote Shield"/></th>
-			<th><img src="img/icon01_02.png" width="32" title="Remote Capacitor"/></th>
+			<th><img src="img/Icons/items/{$module_icons.armor}" width="32" title="Remote Armor"/></th>
+			<th><img src="img/Icons/items/{$module_icons.shield}" width="32" title="Remote Shield"/></th>
+			<th><img src="img/Icons/items/{$module_icons.capacitor}" width="32" title="Remote Capacitor"/></th>
 			<!-- Propulsion Modules -->
-			<th><img src="img/76_64_1.png" width="32" title="Warp Scrambler"/></th><!-- wrong icon -->
-			<th><img src="img/icon03_07.png" width="32" title="Warp Disruptor"/></th>
-			<th><img src="img/icon12_06.png" width="32" title="Stasis Webifier"/></th>
+			<th><img src="img/Icons/items/{$module_icons.scrambler}" width="32" title="Warp Scrambler"/></th>
+			<th><img src="img/Icons/items/{$module_icons.disruptor}" width="32" title="Warp Disruptor"/></th>
+			<th><img src="img/Icons/items/{$module_icons.webifier}" width="32" title="Stasis Webifier"/></th>
 			<!-- Cap Warfare -->
-			<th><img src="img/icon12_04.png" width="32" title="Energy Neut"/></th>
-			<th><img src="img/icon01_03.png" width="32" title="Energy Vampire"/></th>
+			<th><img src="img/Icons/items/{$module_icons.energyneut}" width="32" title="Energy Neut"/></th>
+			<th><img src="img/Icons/items/{$module_icons.energyvampire}" width="32" title="Energy Vampire"/></th>
 			<!-- Ewar -->
-			<th><img src="img/icon05_07.png" width="32" title="Tracks"/></th>
-			<th><img src="img/icon04_11.png" width="32" title="Sensor Damps"/></th>
-			<th><img src="img/icon56_01.png" width="32" title="Target Painter"/></th>
-			<th><img src="img/icon56_08.png" width="32" title="Interdiction Probe Launcher"/></th>
+			<th><img src="img/Icons/items/{$module_icons.trackingdisruptor}" width="32" title="Tracks"/></th>
+			<th><img src="img/Icons/items/{$module_icons.sensordampening}" width="32" title="Sensor Damps"/></th>
+			<th><img src="img/Icons/items/{$module_icons.targetpainting}" width="32" title="Target Painter"/></th>
+			<th><img src="img/Icons/items/{$module_icons.spherelauncher}" width="32" title="Interdiction Probe Launcher"/></th>
 			<!-- ECM -->
-			<th><img src="img/icon63_14.png" width="32" title="ECM - Gallente"/></th>
-			<th><img src="img/icon63_13.png" width="32" title="ECM - Caldari"/></th>
-			<th><img src="img/icon63_15.png" width="32" title="ECM - Minmatar"/></th>
-			<th><img src="img/icon63_16.png" width="32" title="ECM - Amarr"/></th>
-			<th><img src="img/icon63_16.png" width="32" title="ECM - Multispec"/></th>
+			<th><img src="img/Icons/items/{$module_icons.magnetometricecm}" width="32" title="ECM - Gallente"/></th>
+			<th><img src="img/Icons/items/{$module_icons.gravimetricecm}" width="32" title="ECM - Caldari"/></th>
+			<th><img src="img/Icons/items/{$module_icons.ladarecm}" width="32" title="ECM - Minmatar"/></th>
+			<th><img src="img/Icons/items/{$module_icons.radarecm}" width="32" title="ECM - Amarr"/></th>
+			<th><img src="img/Icons/items/{$module_icons.multispececm}" width="32" title="ECM - Multispec"/></th>
 			<!-- misc -->
-			<th><img src="img/icon03_10.png" width="32" title="Ship Scanner"/></th>
-			<th><img src="img/25_64_4.png" width="32" title="Cynosural Field Generator"/></th>
-			<th><img src="img/icon09_05.png" width="32" title="Gang Links"/></th>
-			<th>CPNL</th>
+			<th><img src="img/Icons/items/{$module_icons.shipscanner}" width="32" title="Ship Scanner"/></th>
+			<th><img src="img/Icons/items/{$module_icons.cynosuralfield}" width="32" title="Cynosural Field Generator"/></th>
+			<th><img src="img/Icons/items/53_64_16.png" width="32" title="Gang Links"/></th>
+			<th><img src="img/Icons/items/{$icons.settings[0]}" width="32" title="Settings"/></th>
 		</tr>
 		{foreach from=$ships item=i}
 		<tr>
@@ -99,11 +102,11 @@
 			<td>
 				{if $smarty.session.pilot == $i.pilot_id || $fleet.fc == $smarty.session.pilot}
 				<a href="{$smarty.server.PHP_SELF}?remove_pilot={$i.pilot_id}" title="Remove pilot from fleet">
-					<img src="img/Delete-icon.png" width="16" alt="Remove pilot from fleet"/></a>
+					<img src="img/Icons/items/{$icons.redx[0]}" width="16" alt="Remove pilot from fleet"/></a>
 				{/if}
 				{if $fleet.fc == $smarty.session.pilot}
 				<a href="{$smarty.server.PHP_SELF}?make_fc={$i.pilot_id}" title="Promote pilot to FC">
-					<img src="img/Gear-icon.png" width="16" alt="Promote pilot to FC"/></a>
+					<img src="img/Icons/items/{$icons.fleet[0]}" width="16" alt="Promote pilot to FC"/></a>
 				{/if}
 			</td>
 		</tr>
@@ -138,38 +141,38 @@
 			<th>{$totals.shipscanner|default:'0'}</th>
 			<th>{$totals.cynosuralfield|default:'0'}</th>
 			<th>{$totals.ganglinks|default:'N/A'}</th>
-			<th>CPNL</th>
+			<th>&mdash;</th>
 		</tr>
 		<tr>
-			<th><img src="img/icon02_16.png" width="32" title="Pilot"/></th>
-			<th><img src="img/icon09_05.png" width="32" title="Ship (Ship name)"/></th>
+			<th><img src="img/Icons/items/{$icons.vitruvian[0]}" width="32" title="Pilot"/></th>
+			<th><img src="img/Icons/items/{$icons.ship[0]}" width="32" title="Ship Name (Type/Fitting)"/></th>
 			<!-- Remote Assistance Modules -->
-			<th><img src="img/icon01_11.png" width="32" title="Remote Armor"/></th>
-			<th><img src="img/icon01_16.png" width="32" title="Remote Shield"/></th>
-			<th><img src="img/icon01_02.png" width="32" title="Remote Capacitor"/></th>
+			<th><img src="img/Icons/items/{$module_icons.armor}" width="32" title="Remote Armor"/></th>
+			<th><img src="img/Icons/items/{$module_icons.shield}" width="32" title="Remote Shield"/></th>
+			<th><img src="img/Icons/items/{$module_icons.capacitor}" width="32" title="Remote Capacitor"/></th>
 			<!-- Propulsion Modules -->
-			<th><img src="img/icon03_07.png" width="32" title="Warp Scrambler"/></th><!-- wrong icon -->
-			<th><img src="img/icon03_07.png" width="32" title="Warp Disruptor"/></th>
-			<th><img src="img/icon12_06.png" width="32" title="Stasis Webifier"/></th>
+			<th><img src="img/Icons/items/{$module_icons.scrambler}" width="32" title="Warp Scrambler"/></th>
+			<th><img src="img/Icons/items/{$module_icons.disruptor}" width="32" title="Warp Disruptor"/></th>
+			<th><img src="img/Icons/items/{$module_icons.webifier}" width="32" title="Stasis Webifier"/></th>
 			<!-- Cap Warfare -->
-			<th><img src="img/icon12_04.png" width="32" title="Energy Neut"/></th>
-			<th><img src="img/icon01_03.png" width="32" title="Energy Vampire"/></th>
+			<th><img src="img/Icons/items/{$module_icons.energyneut}" width="32" title="Energy Neut"/></th>
+			<th><img src="img/Icons/items/{$module_icons.energyvampire}" width="32" title="Energy Vampire"/></th>
 			<!-- Ewar -->
-			<th><img src="img/icon05_07.png" width="32" title="Tracks"/></th>
-			<th><img src="img/icon04_11.png" width="32" title="Sensor Damps"/></th>
-			<th><img src="img/icon56_01.png" width="32" title="Target Painter"/></th>
-			<th><img src="img/icon56_08.png" width="32" title="Interdiction Probe Launcher"/></th>
+			<th><img src="img/Icons/items/{$module_icons.trackingdisruptor}" width="32" title="Tracks"/></th>
+			<th><img src="img/Icons/items/{$module_icons.sensordampening}" width="32" title="Sensor Damps"/></th>
+			<th><img src="img/Icons/items/{$module_icons.targetpainting}" width="32" title="Target Painter"/></th>
+			<th><img src="img/Icons/items/{$module_icons.spherelauncher}" width="32" title="Interdiction Probe Launcher"/></th>
 			<!-- ECM -->
-			<th><img src="img/icon63_14.png" width="32" title="ECM - Gallente"/></th>
-			<th><img src="img/icon63_13.png" width="32" title="ECM - Caldari"/></th>
-			<th><img src="img/icon63_15.png" width="32" title="ECM - Minmatar"/></th>
-			<th><img src="img/icon63_13.png" width="32" title="ECM - Amarr"/></th>
-			<th><img src="img/icon63_16.png" width="32" title="ECM - Multispec"/></th>
+			<th><img src="img/Icons/items/{$module_icons.magnetometricecm}" width="32" title="ECM - Gallente"/></th>
+			<th><img src="img/Icons/items/{$module_icons.gravimetricecm}" width="32" title="ECM - Caldari"/></th>
+			<th><img src="img/Icons/items/{$module_icons.ladarecm}" width="32" title="ECM - Minmatar"/></th>
+			<th><img src="img/Icons/items/{$module_icons.radarecm}" width="32" title="ECM - Amarr"/></th>
+			<th><img src="img/Icons/items/{$module_icons.multispececm}" width="32" title="ECM - Multispec"/></th>
 			<!-- misc -->
-			<th><img src="img/icon03_10.png" width="32" title="Ship Scanner"/></th>
-			<th><img src="img/icon09_05.png" width="32" title="Cynosural Field Generator"/></th>
-			<th><img src="img/icon09_05.png" width="32" title="Gang Links"/></th>
-			<th>CPNL</th>
+			<th><img src="img/Icons/items/{$module_icons.shipscanner}" width="32" title="Ship Scanner"/></th>
+			<th><img src="img/Icons/items/{$module_icons.cynosuralfield}" width="32" title="Cynosural Field Generator"/></th>
+			<th><img src="img/Icons/items/53_64_16.png" width="32" title="Gang Links"/></th>
+			<th><img src="img/Icons/items/{$icons.settings[0]}" width="32" title="Settings"/></th>
 		</tr>			
 	</table>
 		<!-- <a href="index.php?clear" style="font-size: small;">clear session data</a> -->
@@ -178,10 +181,23 @@
 		{/if}<br/>
 		<div>
 			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-			Update Ship/Fitting: 
-			<input type="text" name="fitting" />
-			<input type="submit" name="update_fitting" value="Update" />
+				<fieldset>
+					<legend>Update Ship/Fitting:</legend>
+					<label for="fitting">New Fitting:</label> <input type="text" name="fitting" />
+					<input type="submit" name="update_fitting" value="Update" />
+				</fieldset>
 			</form>
+			{* not yet implemented... *}
+			{if $fleet.fc == $smarty.session.pilot}
+			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
+				<fieldset style="display: none;">
+					<legend>Update Fleet Information:</legend>
+					<label for="fleet_name">Fleet Name</label> <input type="text" name="fleet_name" value="{$fleet.fleet_name}" /><br/>
+					<label for="fleet_motd">Fleet MOTD</label> <input type="text" name="fleet_motd" value="{$fleet.motd}" /><br/>
+					<input type="submit" name="update_fleet" value="Update" />
+				</fieldset>
+			</form>
+			{/if}
 		</div>
 	{include file='footer.tpl'}
 </body>

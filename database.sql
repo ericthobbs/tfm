@@ -12,10 +12,11 @@ PRIMARY KEY(`id`)
 CREATE TABLE fleets
 (
 `id`				INT NOT NULL AUTO_INCREMENT,
-`name`				VARCHAR(16) NOT NULL,
+`name`				VARCHAR(64) NOT NULL,
 `fc`				INT NOT NULL,
 `creation_time`     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 `motd`				TEXT,
+`options`			TEXT,
 `password`			VARCHAR(16),
 `public`			INT(1) DEFAULT 1 NOT NULL,
 PRIMARY KEY(`id`)
@@ -25,7 +26,7 @@ CREATE TABLE ships
 (
 `fleet`			INT NOT NULL,
 `owner`			INT NOT NULL,
-`dna`			VARCHAR(1024),
+`dna`			VARCHAR(2048),
 `last_ping`		UNSIGNED INT, -- future use as clients will callback to the server every 10-20 seconds
 PRIMARY KEY(`id`),
 UNIQUE KEY(`owner`,`fleet`)

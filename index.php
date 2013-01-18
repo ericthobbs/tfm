@@ -78,7 +78,7 @@ try
 	$smarty->display("default.tpl");
     }
 }
-catch (PDOException $e)
+catch (Exception $e)
 {
     $smarty->assign("exception", $e);
     $smarty->display("whoops.tpl");

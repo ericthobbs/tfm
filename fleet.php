@@ -127,11 +127,12 @@ try
 		
 		$ships = getShipsInFleet($_SESSION["fleet"],$dbh);
 		
+		
 		$pilots = array();
 		$totals = array();
 		
 		$mapping = json_decode(file_get_contents(MAPPINGS_FILE),true);
-		
+		$module_icons = array();
 		foreach($ships as $ship)
 		{
 			$entry = array();
@@ -155,7 +156,8 @@ try
 					continue;
 				
 				foreach($mapping as $key => $types)
-					if(isModuleOfType($types, $module["typeID"], $dbh))
+				{
+					if(isModuleOfType($types["ids"], $module["typeID"], $dbh))
 					{
 						$entry["modules"][$key] += $module["count"];
 						$totals[$key] += $module["count"];
@@ -166,15 +168,23 @@ try
 						{
 							$entry["ganglinks"] += $module["count"];
 							$totals["ganglinks"] += $module["count"];
+							$module_icons["ganglinks"] = $types["image"];
 						}
 					}
+					
+					$module_icons[$key] = $types["image"];
+				}
 			}
 			
 			array_push($pilots,$entry);
 			
 		}
+		$smarty->assign("module_icons",$module_icons);
 		$smarty->assign("fleet",$fleet);
 		$smarty->assign("error_msg",$error_msg);
+		$icons_array = json_decode(file_get_contents(IMAGES_FILE),true);
+		$smarty->assign("icons", $icons_array["system-icons"]);		
+
 		$smarty->assign("ships",$pilots);
 		$smarty->assign("totals",$totals);
 		$smarty->display("fleet.tpl");
@@ -187,15 +197,21 @@ catch (Exception $e)
     exit;
 }
 
+//removes the selected pilot from the selected fleet.
+//returns true on success, false on failure
 function removePilot($pilot_id,$fleet_id, PDO $dbh)
 {
 	$query = "DELETE FROM ships WHERE owner = :pilot and fleet = :fleet";
 	$stmt = $dbh->prepare($query);
-	if($stmt->execute( array( ":pilot" => $pilot_id , ":fleet" => $fleet_id ) ))
-			return true;
+	if(!$stmt->execute( array( ":pilot" => $pilot_id , ":fleet" => $fleet_id ) ))
+			return false;
 	else
-		return false;	
-	return false;
+	{
+		if ($stmt->rowCount() > 0)
+			return true;
+		else
+			return false;
+	}
 }
 
 function promoteToFC($pilot_id,$fleet_id, PDO $dbh)
@@ -204,7 +220,6 @@ function promoteToFC($pilot_id,$fleet_id, PDO $dbh)
 	$stmt = $dbh->prepare($query);
 	if($stmt->execute( array(":fc" => $pilot_id, ":id" => $fleet_id) ) )
 	{
-		$_SESSION["is_fc"] = false; //legacy var
 		return true;
 	}
 	else
