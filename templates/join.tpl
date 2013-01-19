@@ -12,8 +12,7 @@
 	{literal}
 		$(document).ready(function()
 		{
-			$("button").button();
-			$("#options").accordion({collapsible: true, heightStyle: "content"});			
+			$("button").button();		
 		});
 	{/literal}
 	</script>	
@@ -42,7 +41,9 @@
 		{if $igb}readonly="readonly"{/if}/><br/>
 		{* Password (if required): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
 		<label>Ship DNA (Required):</label>
-		<input type="text" name="dna" value="{$dna}" /><br/>
+		<input type="text" name="dna" value="{$dna}" />
+		<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
+			<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help"/></a><br/>
 		
 		<input type="hidden" value="{$fleet_id}" name="fleet" />
 		<button type="submit" name="dojoinfleet">Join!</button>
