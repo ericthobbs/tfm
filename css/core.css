@@ -1,0 +1,40 @@
+
+fieldset
+{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.form label, input {
+    width:200px;
+    display:block;
+    float:left;        
+    margin-bottom:10px;
+}
+.form label {
+    width:125px;
+    text-align:right;
+    padding-right:10px;
+    margin-top:2px;
+}
+.form br {
+    clear:left;
+}
+
+/* Override jQuery-ui defaults */
+
+.ui-button,  .ui-button-text .ui-button
+{  
+	font-size: 12px !important; 
+}
+
+.ui-accordion .ui-accordion-header 
+{
+	font-size: 13px !important;	
+}
+
+.ui-accordion .ui-accordion-content
+{
+	font-size: 11px !important;
+}

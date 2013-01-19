@@ -2,33 +2,57 @@
 {config_load file='application.conf'}
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-	<title>{$smarty.config.GenericPageTitle}</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<title>{$smarty.config.GenericPageTitle} - {$fleet.fleet_name}</title>
+	<link rel="stylesheet" href="css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
+	<link rel="stylesheet" href="{$smarty.const.JQUERYUI_CSS}" type="text/css"/>
+	<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
+	<script type="text/javascript" src="{$smarty.const.JQUERYUI_JS}"></script>
+	<script type="text/javascript">
+	{literal}
+		$(document).ready(function()
+		{
+			$("button").button();
+			$("#options").accordion({collapsible: true, heightStyle: "content"});			
+		});
+		
+	{/literal}
+	</script>
 </head>
-<body onload="CCPEVE.requestTrust('{$trusturl}');">
+<body>
 	{if !empty($error_msg)}
-		Task(s) Failed, Errors:
-		<div style="color: red;">
-			<ul>
-			{foreach from=$error_msg item=error}
-				<li>{$error}</li>
-			{/foreach}
-			</ul>
+		<div class="ui-widget">
+		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+			<p>
+				<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+				<strong>Task(s) Failed, Errors:</strong>
+				<ul>
+					{foreach from=$error_msg item=error}
+						<li>{$error}</li>
+					{/foreach}
+				</ul>
+			</p>
+		</div>
 		</div>
 	{/if}
 	{if $show_confirm}
-		<div>
-			Confirmation required, please enter the verification code of '{$verification}' to proceed with this non-reversable action.<br/>
+		<div class="ui-widget">
+		<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+			<p>
+				<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				Confirmation required, please enter the verification code of '{$verification}' to proceed with this non-reversable action.<br/>
 			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-				<input type="text" name="confirm" /><br/>
+				<input type="text" name="confirm" />
 				<input type="hidden" name="verification" value="{$verification}" />
-				<input type="submit" name="delete_confirmed" value="Delete the fleet"/>
+				<button type="submit" name="delete_confirmed">Delete the fleet</button>
 			</form>
+			</p>
+		</div>
 		</div>
 	{/if}
 	Fleet Message of the Day:<br/>
 	<div class="fleetmessage" style="border: 2px solid lightgray; margin: 5px; padding: 3px;">{$fleet.motd|default:'None Specified'}</div><br/>
-	Direct join Link: <a href="join_fleet.php?join_fleet={$fleet.fleet_id}">in-game link for chat</a>
+	<span style="font-size: small;">Direct link: <a href="join_fleet.php?join_fleet={$fleet.fleet_id}">in-game link for chat</a></span>
 	<table class="gridtable" border="0">
 		<tr>
 			<th><img src="img/Icons/items/{$icons.vitruvian[0]}" width="32" title="Pilot"/></th>
@@ -97,7 +121,7 @@
 			<!-- misc -->
 			<td>{$i.modules.shipscanner|default:'0'}</td>
 			<td>{$i.modules.cynosuralfield|default:'0'}</td>
-			<td>{$i.modules.ganglinks|default:'N/A'}</td>
+			<td>{$i.modules.ganglinks|default:'0'}</td>
 			<!-- pilot/fc options -->
 			<td>
 				{if $smarty.session.pilot == $i.pilot_id || $fleet.fc == $smarty.session.pilot}
@@ -140,7 +164,7 @@
 			<!-- misc -->
 			<th>{$totals.shipscanner|default:'0'}</th>
 			<th>{$totals.cynosuralfield|default:'0'}</th>
-			<th>{$totals.ganglinks|default:'N/A'}</th>
+			<th>{$totals.ganglinks|default:'0'}</th>
 			<th>&mdash;</th>
 		</tr>
 		<tr>
@@ -176,27 +200,35 @@
 		</tr>			
 	</table>
 		<!-- <a href="index.php?clear" style="font-size: small;">clear session data</a> -->
-		{if $fleet.fc == $smarty.session.pilot}
-			<a href="{$smarty.server.PHP_SELF}?delete_fleet={$fleet.fleet_id}">delete fleet</a>
-		{/if}<br/>
-		<div>
-			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-				<fieldset>
-					<legend>Update Ship/Fitting:</legend>
+		<div id="options">
+			<h3>Update Ship</h3>
+			<div>
+				<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
 					<label for="fitting">New Fitting:</label> <input type="text" name="fitting" />
-					<input type="submit" name="update_fitting" value="Update" />
-				</fieldset>
-			</form>
-			{* not yet implemented... *}
+					<button type="submit" name="update_fitting">Update</button>
+				</form>
+			</div>
 			{if $fleet.fc == $smarty.session.pilot}
-			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-				<fieldset style="display: none;">
-					<legend>Update Fleet Information:</legend>
+			<h3>Update Fleet Information</h3>
+			<div>
+				<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
 					<label for="fleet_name">Fleet Name</label> <input type="text" name="fleet_name" value="{$fleet.fleet_name}" /><br/>
-					<label for="fleet_motd">Fleet MOTD</label> <input type="text" name="fleet_motd" value="{$fleet.motd}" /><br/>
-					<input type="submit" name="update_fleet" value="Update" />
-				</fieldset>
-			</form>
+					<label for="fleet_motd" title="Message of the Day">Fleet MOTD</label> <textarea name="fleet_motd">{$fleet.motd|escape}</textarea><br/>
+					<label for="fleet_password" title="Optional Password">Join Password</label> <input type="text" name="fleet_password" value="{$fleet.password}" /><br/>
+					<label for="fleet_public" title="Display Fleet on main page">Display Fleet</label> 
+					<input type="checkbox" name="fleet_public" title="{$smarty.server.fleet_password}" checked="{if $fleet.public == true}checked{/if}" /><br/>
+					<button type="submit" name="update_fleet">Update</button>
+				</form>
+			</div>
+		{if $fleet.fc == $smarty.session.pilot}
+			<h3>Disband Fleet</h3>
+			<div>
+				<form action="{$smarty.server.PHP_SELF}?delete_fleet={$fleet.fleet_id}" method="post">
+					<button type="submit" style="line-height: 16px;"><img src="/img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet</button>
+					<br/>Notice: This action will delete the fleet and any attached ships from it. This action cannot be undone once done.
+				</form>
+			</div>
+		{/if}					
 			{/if}
 		</div>
 	{include file='footer.tpl'}

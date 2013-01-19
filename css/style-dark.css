@@ -1,0 +1,43 @@
+body
+{
+	color: white;
+	background-color: black;
+}
+
+/* Fleet Table */
+
+table.gridtable 
+{
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color: white;
+	border-width: 1px;
+	border-right: 0px;
+	border-left: 0px;
+	border-color: #666666;
+	border-color: #ababab;
+	border-collapse: collapse;
+}
+table.gridtable th 
+{
+	border-width: 1px;
+	border-right: 0px;
+	border-left: 0px;
+	border-top: 4px;
+	padding: 4px;
+	border-style: solid;
+	border-color: black;
+	background-color: #555555;
+}
+table.gridtable td 
+{
+	border-width: 1px;
+	border-right: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	padding: 4px;
+	text-align: center;
+	border-style: solid;
+	background-color: #AAAAAA;
+	color: green;
+}

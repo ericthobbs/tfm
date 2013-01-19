@@ -19,6 +19,7 @@ CREATE TABLE fleets
 `options`			TEXT,
 `password`			VARCHAR(16),
 `public`			INT(1) DEFAULT 1 NOT NULL,
+`enabled`			INT(1) DEFAULT 1 NOT NULL,
 PRIMARY KEY(`id`)
 ) ENGINE=InnoDB;
 

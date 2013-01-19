@@ -1,12 +1,13 @@
-html	{ font-family:tahoma; font-size:8px; }
-body	{ font-family:tahoma; font-size:18px; }
-
-.hide {
-	display:none;
-	visibility:hidden;
+body
+{
+	color: black;
+	background-color: white;
 }
 
-table.gridtable {
+/* Fleet Table */
+
+table.gridtable 
+{
 	font-family: verdana,arial,sans-serif;
 	font-size:11px;
 	color:#333333;
@@ -17,7 +18,9 @@ table.gridtable {
 	border-color: #ababab;
 	border-collapse: collapse;
 }
-table.gridtable th {
+
+table.gridtable th 
+{
 	border-width: 1px;
 	border-right: 0px;
 	border-left: 0px;
@@ -28,7 +31,9 @@ table.gridtable th {
 	border-color: #ababab;
 	background-color: #dedede;
 }
-table.gridtable td {
+
+table.gridtable td 
+{
 	border-width: 1px;
 	border-right: 0px;
 	border-left: 0px;

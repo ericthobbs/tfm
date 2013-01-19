@@ -3,29 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<title>{$smarty.config.GenericPageTitle}</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
+	<link rel="stylesheet" href="{$smarty.const.JQUERYUI_CSS}" type="text/css"/>
+	<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
+	<script type="text/javascript" src="{$smarty.const.JQUERYUI_JS}"></script>
+	<script type="text/javascript">
+	{literal}
+		$(document).ready(function()
+		{
+			$("button").button();		
+		});
+		
+	{/literal}
+	</script>	
 </head>
-<body onload="CCPEVE.requestTrust('{$trusturl}');">
-{if is_array($errors)}
-    The Following errors prevented the fleet from being created. Correct them and try again.
-    <span style="color:red;">
-	<ul>
-	    {foreach from=$errors item=i}
-		<li>{$i}</li>
-	    {/foreach}
-	</ul><hr/></span>
-{/if}
-Fleet Information:<br/>
+<body>
+	{if !empty($errors)}
+		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+			<p>
+				<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+				<strong>Task(s) Failed, Errors:</strong>
+				<ul>
+					{foreach from=$errors item=error}
+						<li>{$error}</li>
+					{/foreach}
+				</ul>
+			</p>
+		</div>			
+	{/if}
+	<div class="ui-widgit">
+		<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+			<p>
+				<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<strong>Notice:</strong>
+				Fleets and their ships automatically expire 24 hours after creation!
+			</p>
+		</div>
+	</div>
+	
+	<div class="form">
 <form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-    Fleet Name (Required): <input type="text" name="name" value="{$charname|default:'Pilot'}'s fleet" /><br/>
-	Fleet MOTD (Optional): <textarea name="motd">{$motd}</textarea> <br/>
-    FC (Required): <input type="text" name="fc" value="{$charname}" /><br/>
+	<fieldset>
+		<legend>Fleet Information</legend>
+		<label>Fleet Name</label>
+		<input type="text" name="name" value="{$charname|default:'Pilot'}'s fleet" /><br/>
+		<label>Fleet MOTD</label>
+		<input type="text" name="motd" value="{$motd}"><br/>
+		<label>Fleet Commander</label>
+		<input type="text" name="fc" value="{$charname}" /><br/>
     {* Password (Optional): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
-    Ship DNA (Required): <input type="text" name="dna" value="{$dna}" /><br/>
+		<label>Ship DNA</label>
+		<input type="text" name="dna" value="{$dna}" />
+		<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
+			<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help"/></a><br/>
     {* Make private: <input type="checkbox" name="private" disabled="disabled" value="{$private}" /><br/> *}
-    <input type="submit" value="Create!" name="docreatefleet" />
-    Fleets and their ships automatically expire after 24 hours after creation!
+    <button type="submit" name="docreatefleet">Create!</button>
+	</fieldset>
 </form>
+</div>
 {include file='footer.tpl'}
 </body>
 </html>

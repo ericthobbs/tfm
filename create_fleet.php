@@ -18,6 +18,9 @@ if(!isTrusted())
 
 $smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
+$icons_array = json_decode(file_get_contents(IMAGES_FILE),true);
+$smarty->assign("icons", $icons_array["system-icons"]);
+
 //If not trusted, then exit early to avoid doing work we don't need.
 if (!isTrusted() && REQUIRE_TRUST) 
 {

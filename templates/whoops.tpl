@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<title>{$smarty.config.GenericPageTitle}</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
 </head>
 <body>
 Whoops, An error as occured. The error is {$exception}

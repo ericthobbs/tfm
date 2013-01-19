@@ -19,6 +19,9 @@ $smarty->debugging = SMARTY_DEBUG;
 $smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 $smarty->assign('igb',isTrusted());
 
+$icons_array = json_decode(file_get_contents(IMAGES_FILE),true);
+$smarty->assign("icons", $icons_array["system-icons"]);
+
 if (!isTrusted() && REQUIRE_TRUST) 
 {
     $smarty->display("notrust.tpl");
@@ -83,6 +86,31 @@ try
 			{
 				array_push($error_msg,"Only the FC may delete a fleet.");
 			}
+		}
+		
+		if(isset($_REQUEST["update_fleet"]))
+		{
+			if($_SESSION["pilot"] != $fleet["fc"])
+				array_push($error_msg,"Only the FC may update a fleet.");
+			
+				$name = $_REQUEST["fleet_name"];
+				$motd = $_REQUEST["fleet_motd"];
+				$password = $_REQUEST["fleet_password"];
+				$public = $_REQUEST["fleet_public"];
+				
+				if(!empty($name))
+				{
+					if(!updateFleetInfo($fleet["fleet_id"],$name,$motd,$public,$dbh))
+						array_push($error_msg,"Failed to update fleet information.");
+					else
+					{
+						header("Location: fleet.php");
+					}
+				}
+				else
+				{
+					array_push($error_msg,"fleet name cannot be blank.");
+				}
 		}
 		
 		if(isset($_REQUEST["delete_confirmed"]))
@@ -182,9 +210,6 @@ try
 		$smarty->assign("module_icons",$module_icons);
 		$smarty->assign("fleet",$fleet);
 		$smarty->assign("error_msg",$error_msg);
-		$icons_array = json_decode(file_get_contents(IMAGES_FILE),true);
-		$smarty->assign("icons", $icons_array["system-icons"]);		
-
 		$smarty->assign("ships",$pilots);
 		$smarty->assign("totals",$totals);
 		$smarty->display("fleet.tpl");
@@ -234,4 +259,17 @@ function deleteFleet($fleet_id, PDO $dbh)
 		ClearSessionAndReturnToIndex();
 	else
 		return false; 
+}
+
+function updateFleetInfo($fleet_id,$name,$motd,$public,PDO $dbh)
+{
+	$query = "UPDATE fleets SET name = :name, motd = :motd, public = :public WHERE id = :id";
+	$stmt = $dbh->prepare($query);
+	if(!$stmt->execute( array( ":name" => $name, ":motd" => $motd, ":public" => $public, ":id" => $fleet_id ) ))
+		return false;
+	
+	if ($stmt->rowCount() > 0)
+		return true;
+	else
+		return false;
 }

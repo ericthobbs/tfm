@@ -74,8 +74,22 @@ try
 	$smarty->assign("region", $_SERVER['HTTP_EVE_REGIONNAME']); 
 	$smarty->assign("charid", $_SERVER['HTTP_EVE_CHARID']);
         
-	$smarty->assign("fleets", getAllValidFleets($dbh));
-	$smarty->display("default.tpl");
+	$fleets = getAllValidFleets($dbh);
+	$has_public = false;
+	
+	foreach($fleets as $f)
+	{
+		if($f["public"] == true)
+		{
+			$has_public = true;
+			break;
+		}
+	}
+	
+	if($has_public)
+		$smarty->assign("fleets",$fleets );
+	
+	$smarty->display("index.tpl");
     }
 }
 catch (Exception $e)

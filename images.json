@@ -1,10 +1,10 @@
 {
 	"system-icons": 
 	{	
-		"stop": [ "9_32_8.png", "Stop"],
-		"info": [ "9_32_9.png", "Information" ],
-		"help": [ "9_32_10.png", "Help" ],
-		"warning": [ "9_32_11.png", "Warning" ],
+		"stop": [ "9_64_8.png", "Stop"],
+		"info": [ "9_64_9.png", "Information" ],
+		"help": [ "9_64_10.png", "Help" ],
+		"warning": [ "9_64_11.png", "Warning" ],
 		"danger": [ "9_32_12.png", "Danger" ],
 		"denied": [ "9_32_13.png", "Denied"],
 		"gear": [ "9_32_16.png", "Gear"],

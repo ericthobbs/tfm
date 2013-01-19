@@ -67,4 +67,21 @@ define('SHIP_CATEGORY', 6);
 //each typeID in this file represents the root of an parent item tree
 define('MAPPINGS_FILE','mapping.json');
 
+define('IMAGES_FILE','images.json');
+
+//
+//Hosted 3rd Party apis
+//
+
+//you may adjust these to whatever cdn you would like to use or to a local path if you so prefer
+define('JQUERY_JS','http://code.jquery.com/jquery-1.9.0.js');
+define('JQUERYUI_JS','http://code.jquery.com/ui/1.10.0/jquery-ui.js');
+define('JQUERYUI_CSS','http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css');
+
+//
+//Site Theme
+//
+//style-light or style-dark currently exist
+define('THEME','style-light.css');
+
 ?>

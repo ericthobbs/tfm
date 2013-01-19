@@ -5,7 +5,7 @@
 2) edit include/config.php to match your settings.
 3) update mapping.json if there have been changes to the modules in the SDE
 4) copy the required eve icons from the eve image export to img/Icons/items/
-5) Populate the database with the following tables from the eve static data dump:
+5) Populate the database with the following tables from the eve static data export:
 	invTypes, invGroups, invCategories, invMetaTypes
 
 ===Change Log===
