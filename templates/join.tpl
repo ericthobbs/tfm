@@ -15,7 +15,6 @@
 			$("button").button();
 			$("#options").accordion({collapsible: true, heightStyle: "content"});			
 		});
-		
 	{/literal}
 	</script>	
 </head>

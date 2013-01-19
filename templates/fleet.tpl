@@ -211,14 +211,16 @@
 			{if $fleet.fc == $smarty.session.pilot}
 			<h3>Update Fleet Information</h3>
 			<div>
-				<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-					<label for="fleet_name">Fleet Name</label> <input type="text" name="fleet_name" value="{$fleet.fleet_name}" /><br/>
-					<label for="fleet_motd" title="Message of the Day">Fleet MOTD</label> <textarea name="fleet_motd">{$fleet.motd|escape}</textarea><br/>
-					<label for="fleet_password" title="Optional Password">Join Password</label> <input type="text" name="fleet_password" value="{$fleet.password}" /><br/>
-					<label for="fleet_public" title="Display Fleet on main page">Display Fleet</label> 
-					<input type="checkbox" name="fleet_public" title="{$smarty.server.fleet_password}" checked="{if $fleet.public == true}checked{/if}" /><br/>
-					<button type="submit" name="update_fleet">Update</button>
-				</form>
+				<div class="form">
+					<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
+						<label for="fleet_name">Fleet Name</label> <input type="text" name="fleet_name" value="{$fleet.fleet_name}" /><br/>
+						<label for="fleet_motd" title="Message of the Day">Fleet MOTD</label> <textarea name="fleet_motd">{$fleet.motd|escape}</textarea><br/>
+						<label for="fleet_password" title="Optional Password">Join Password</label> <input type="text" name="fleet_password" value="{$fleet.password}" /><br/>
+						<label for="fleet_public" title="Display Fleet on main page">Display Fleet</label> 
+						<input type="checkbox" name="fleet_public" title="{$smarty.server.fleet_password}" checked="{if $fleet.public == true}checked{/if}" /><br/>
+						<button type="submit" name="update_fleet">Update</button>
+					</form>
+				</div>
 			</div>
 		{if $fleet.fc == $smarty.session.pilot}
 			<h3>Disband Fleet</h3>
