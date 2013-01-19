@@ -15,7 +15,6 @@
 			$("button").button();
 			$("#options").accordion({collapsible: true, heightStyle: "content"});			
 		});
-		
 	{/literal}
 	</script>
 </head>
@@ -87,15 +86,20 @@
 		</tr>
 		{foreach from=$ships item=i}
 		<tr>
-			<td>{if $igb}<a href="javascript:CCPEVE.showInfo(1377,{$i.pilot_id});">{$i.pilot|default:'Unknown'}</a>
+			<td>
+				{if $igb}<a href="javascript:CCPEVE.showInfo(1377,{$i.pilot_id});">{$i.pilot|default:'Unknown'}</a>
 				{else}
 					{$i.pilot|default:'Unknown'}
-				{/if}</td>
-			<td>{if $igb}<a href="javascript:CCPEVE.showFitting('{$i.ship_dna}');">
+				{/if}
+			</td>
+			<td>
+				{if $igb}<a href="javascript:CCPEVE.showInfo({$i.ship_typeid});">{$i.ship_type}</a>{else}{$i.ship_type|default:'Unknown'}{/if}
+				({if $igb}<a href="javascript:CCPEVE.showFitting('{$i.ship_dna}');">
 					{$i.ship_name|default:'Unknown'}</a>
 				{else}
 					{$i.ship_name|default:'Unknown'}
-				{/if}(&nbsp;{if $igb}<a href="javascript:CCPEVE.showInfo({$i.ship_typeid});">{$i.ship_type}</a>{else}{$i.ship_type|default:'Unknown'}{/if}&nbsp;)</td>
+				{/if})
+			</td>
 			<!-- remote assistance -->
 			<td>{$i.modules.armor|default:'0'}</td>
 			<td>{$i.modules.shield|default:'0'}</td>
@@ -219,7 +223,7 @@
 						<label for="fleet_public" title="Display Fleet on main page">Display Fleet</label> 
 						<input type="checkbox" name="fleet_public" title="{$smarty.server.fleet_password}" checked="{if $fleet.public == true}checked{/if}" /><br/>
 						<button type="submit" name="update_fleet">Update</button>
-					</form>
+				</form>
 				</div>
 			</div>
 		{if $fleet.fc == $smarty.session.pilot}
