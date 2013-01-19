@@ -8,7 +8,16 @@
 	<link rel="stylesheet" href="{$smarty.const.JQUERYUI_CSS}" type="text/css"/>
 	<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
 	<script type="text/javascript" src="{$smarty.const.JQUERYUI_JS}"></script>
-	
+	<script type="text/javascript">
+	{literal}
+		$(document).ready(function()
+		{
+			$("button").button();
+			$("#options").accordion({collapsible: true, heightStyle: "content"});			
+		});
+		
+	{/literal}
+	</script>	
 </head>
 <body>
 	{if !empty($errors)}
@@ -25,14 +34,22 @@
 		</div>			
 	{/if}
 	Joining fleet: {$fleet.fleet_name} commanded by {$fleet.fc_name} created on {$fleet.creation_time|date_format:"%A, %B %e, %Y"}
+	<div class="form">
 	<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-		Pilot Name(Required): <input type="text" value="{$charname}" name="name" value="{$charname}"
+		<fieldset>
+			<legend>Pilot Information</legend>
+		<label>Pilot Name (Required)</label>
+		<input type="text" value="{$charname}" name="name" value="{$charname}"
 		{if $igb}readonly="readonly"{/if}/><br/>
 		{* Password (if required): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
-		Ship DNA (Required): <input type="text" name="dna" value="{$dna}" /><br/>
+		<label>Ship DNA (Required):</label>
+		<input type="text" name="dna" value="{$dna}" /><br/>
+		
 		<input type="hidden" value="{$fleet_id}" name="fleet" />
-		<input type="submit" value="Join!" name="dojoinfleet" />
+		<button type="submit" name="dojoinfleet">Join!</button>
+		</fieldset>
 	</form>
+	</div>
 	{include file='footer.tpl'}
 </body>
 </html>
