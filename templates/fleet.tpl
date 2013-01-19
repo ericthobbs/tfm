@@ -224,7 +224,7 @@
 			<h3>Disband Fleet</h3>
 			<div>
 				<form action="{$smarty.server.PHP_SELF}?delete_fleet={$fleet.fleet_id}" method="post">
-					<button type="submit" style="line-height: 16px;"><img src="/img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet</button>
+					<button type="submit" style="line-height: 16px;"><img src="img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet</button>
 					<br/>Notice: This action will delete the fleet and any attached ships from it. This action cannot be undone once done.
 				</form>
 			</div>
