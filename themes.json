@@ -1,0 +1,13 @@
+{
+	"Light": { 
+		"stylesheet": "light",
+		"theme": "lightness",
+		"desc": "The default theme",
+		"enabled": true },
+
+	"Dark": { 
+		"stylesheet": "dark",
+		"theme": "darkness",
+		"desc": "A dark theme, perfect for the IGB",
+		"enabled": true }
+}

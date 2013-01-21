@@ -6,9 +6,8 @@
 function isTrusted()
 {
     //check if we are the running in the igb
-    $ingame = strpos($_SERVER["HTTP_USER_AGENT"], "EVE-IGB");
-    if(!$ingame)
-        return false;
+	if(!isIGB())
+		return false;
 
     $trust = $_SERVER["HTTP_EVE_TRUSTED"];
 
@@ -16,6 +15,15 @@ function isTrusted()
         return true;
     else
         return false;
+}
+
+//Check if the user is using the In-game browser to view the site
+function isIGB()
+{
+    $ingame = strpos($_SERVER["HTTP_USER_AGENT"], "EVE-IGB");
+    if(!$ingame)
+        return false;
+	return true;
 }
 
 //Connect to the database
@@ -278,6 +286,13 @@ function ClearSessionAndReturnToIndex()
 	session_destroy();
 	header("Location: index.php");
 	exit;	
+}
+
+function getThemeList()
+{
+	$themes = json_decode(file_get_contents(THEMES_MAPPING),true);
+
+	return $themes;
 }
 
 ?>

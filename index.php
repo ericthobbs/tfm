@@ -6,12 +6,7 @@ require_once('include/functions.php');
 require_once('libs/Smarty/libs/Smarty.class.php');
 
 if(isset($_REQUEST['clear']))
-{
-	session_unset();
-	session_destroy();
-	header("Location: index.php");
-	exit;
-}
+	ClearSessionAndReturnToIndex();
 
 $smarty = new Smarty();
 
@@ -27,6 +22,8 @@ if(!isTrusted())
 $smarty->assign('igb',isTrusted());
 $smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
+$smarty->assign("themes", getThemeList());
+
 //If not trusted, then exit early to avoid doing work we don't need.
 if (!isTrusted() && REQUIRE_TRUST) 
 {
@@ -34,6 +31,11 @@ if (!isTrusted() && REQUIRE_TRUST)
     exit;
 }
 
+if(isIGB())
+{
+	$smarty->assign("USERTHEME","dark");
+	$smarty->assign("JQUERYTHEME","ui-darkness");
+}
 
 try 
 {

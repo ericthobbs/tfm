@@ -4,7 +4,9 @@
 <head>
 	<title>{$smarty.config.GenericPageTitle}</title>
 	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
+	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	{include file='jquery.tpl'}
+	{include file='bootstrap.tpl'}
 </head>
 <body>
 Whoops, An error as occured. The error is {$exception}

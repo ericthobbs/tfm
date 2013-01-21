@@ -4,21 +4,21 @@
 <head>
 	<title>{$smarty.config.GenericPageTitle} - {$fleet.fleet_name}</title>
 	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
-	<link rel="stylesheet" href="{$smarty.const.JQUERYUI_CSS}" type="text/css"/>
-	<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
-	<script type="text/javascript" src="{$smarty.const.JQUERYUI_JS}"></script>
+	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	{include file='jquery.tpl'}
+	{include file='bootstrap.tpl'}
 	<script type="text/javascript">
 	{literal}
 		$(document).ready(function()
 		{
-			$("button").button();
 			$("#options").accordion({collapsible: true, heightStyle: "content"});			
 		});
 	{/literal}
 	</script>
 </head>
 <body>
+	{include file='navbar.tpl'}
+	<div class="container">
 	{if !empty($error_msg)}
 		<div class="ui-widget">
 		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
@@ -207,9 +207,9 @@
 		<div id="options">
 			<h3>Update Ship</h3>
 			<div>
-				<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-					<label for="fitting">New Fitting:</label> <input type="text" name="fitting" />
-					<button type="submit" name="update_fitting">Update</button>
+				<form class="form" name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
+					<label for="fitting">New Fitting</label> <input type="text" name="fitting" />&nbsp;
+					<button class="btn btn-info" type="submit" name="update_fitting">Update</button>
 				</form>
 			</div>
 			{if $fleet.fc == $smarty.session.pilot}
@@ -222,7 +222,7 @@
 						<label for="fleet_password" title="Optional Password">Join Password</label> <input type="text" name="fleet_password" value="{$fleet.password}" /><br/>
 						<label for="fleet_public" title="Display Fleet on main page">Display Fleet</label> 
 						<input type="checkbox" name="fleet_public" title="{$smarty.server.fleet_password}" checked="{if $fleet.public == true}checked{/if}" /><br/>
-						<button type="submit" name="update_fleet">Update</button>
+						<button class="btn btn-success" type="submit" name="update_fleet">Update</button>
 				</form>
 				</div>
 			</div>
@@ -230,7 +230,7 @@
 			<h3>Disband Fleet</h3>
 			<div>
 				<form action="{$smarty.server.PHP_SELF}?delete_fleet={$fleet.fleet_id}" method="post">
-					<button type="submit" style="line-height: 16px;"><img src="img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet</button>
+					<button class="btn btn-danger" type="submit"><img src="img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet &raquo;</button>
 					<br/>Notice: This action will delete the fleet and any attached ships from it. This action cannot be undone once done.
 				</form>
 			</div>
@@ -238,5 +238,7 @@
 			{/if}
 		</div>
 	{include file='footer.tpl'}
+	</div> <!-- container -->
+	
 </body>
 </html>

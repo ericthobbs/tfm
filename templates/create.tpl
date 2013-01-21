@@ -4,21 +4,14 @@
 <head>
 	<title>{$smarty.config.GenericPageTitle}</title>
 	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
-	<link rel="stylesheet" href="{$smarty.const.JQUERYUI_CSS}" type="text/css"/>
-	<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
-	<script type="text/javascript" src="{$smarty.const.JQUERYUI_JS}"></script>
-	<script type="text/javascript">
-	{literal}
-		$(document).ready(function()
-		{
-			$("button").button();		
-		});
-		
-	{/literal}
-	</script>	
+	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	{include file='jquery.tpl'}
+	{include file='bootstrap.tpl'}
 </head>
 <body>
+	{include file='navbar.tpl'}
+	
+    <div class="container">
 	{if !empty($errors)}
 		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
 			<p>
@@ -58,10 +51,11 @@
 		<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
 			<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help"/></a><br/>
     {* Make private: <input type="checkbox" name="private" disabled="disabled" value="{$private}" /><br/> *}
-    <button type="submit" name="docreatefleet">Create!</button>
+    <button class="btn btn-primary" type="submit" name="docreatefleet">Create!</button>
 	</fieldset>
 </form>
 </div>
 {include file='footer.tpl'}
+    </div> <!-- /container -->
 </body>
 </html>

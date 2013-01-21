@@ -76,12 +76,8 @@ define('IMAGES_FILE','images.json');
 //you may adjust these to whatever cdn you would like to use or to a local path if you so prefer
 define('JQUERY_JS','http://code.jquery.com/jquery-1.9.0.js');
 define('JQUERYUI_JS','http://code.jquery.com/ui/1.10.0/jquery-ui.js');
-define('JQUERYUI_CSS','http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css');
+define('JQUERYCSS_THEMEDIR','http://code.jquery.com/ui/1.10.0/themes');
 
-//
-//Site Theme
-//
-//style-light or style-dark currently exist
-define('THEME','style-light.css');
+define('THEMES_MAPPING','themes.json');
 
 ?>

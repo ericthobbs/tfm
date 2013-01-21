@@ -4,10 +4,9 @@
 <head>
 	<title>{$smarty.config.GenericPageTitle} - {$fleet.fleet_name}</title>
 	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/{$smarty.const.THEME}" type="text/css"/>
-	<link rel="stylesheet" href="{$smarty.const.JQUERYUI_CSS}" type="text/css"/>
-	<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
-	<script type="text/javascript" src="{$smarty.const.JQUERYUI_JS}"></script>
+	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	{include file='jquery.tpl'}
+	{include file='bootstrap.tpl'}
 	<script type="text/javascript">
 	{literal}
 		$(document).ready(function()
