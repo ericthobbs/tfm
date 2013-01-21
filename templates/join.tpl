@@ -17,6 +17,8 @@
 	</script>	
 </head>
 <body>
+	{include file='navbar.tpl'}
+	<div class="container">
 	{if !empty($errors)}
 		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
 			<p>
@@ -45,9 +47,10 @@
 			<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help"/></a><br/>
 		
 		<input type="hidden" value="{$fleet_id}" name="fleet" />
-		<button type="submit" name="dojoinfleet">Join!</button>
+		<button class="btn btn-primary" type="submit" name="dojoinfleet">Join!</button>
 		</fieldset>
 	</form>
+	</div>
 	</div>
 	{include file='footer.tpl'}
 </body>

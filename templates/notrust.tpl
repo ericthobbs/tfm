@@ -9,10 +9,12 @@
 	{include file='bootstrap.tpl'}
 </head>
 <body onload="javascript:CCPEVE.requestTrust('{$trusturl}');">
+	<div class="container">
 Trivial Fleet Manager requires that the IGB trust this page. 
 Click <a href="javascript:CCPEVE.requestTrust('{$trusturl}');">here</a> to trust. 
 After seting the site to trusted, you must refresh the page. 
 Click <a href="javascript:window.location.reload(true);">here</a> to refresh.
 {include file='footer.tpl'}
+	</div>
 </body>
 </html>

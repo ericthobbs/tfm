@@ -55,7 +55,7 @@
 	</fieldset>
 </form>
 </div>
+</div> <!-- /container -->
 {include file='footer.tpl'}
-    </div> <!-- /container -->
 </body>
 </html>

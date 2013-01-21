@@ -41,16 +41,18 @@
 				<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
 				Confirmation required, please enter the verification code of '{$verification}' to proceed with this non-reversable action.<br/>
 			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-				<input type="text" name="confirm" />
-				<input type="hidden" name="verification" value="{$verification}" />
-				<button type="submit" name="delete_confirmed">Delete the fleet</button>
+				<input class="input-small" type="text" name="confirm" size="4" />
+				<input type="hidden" name="verification" value="{$verification}" />&nbsp;
+				<button class="btn btn-danger" type="submit" name="delete_confirmed">Confirm</button>
 			</form>
 			</p>
 		</div>
 		</div>
 	{/if}
-	Fleet Message of the Day:<br/>
-	<div class="fleetmessage" style="border: 2px solid lightgray; margin: 5px; padding: 3px;">{$fleet.motd|default:'None Specified'}</div><br/>
+	<strong>Fleet Message of the Day:</strong>
+	<div class="well well-small">
+		<p>{$fleet.motd|default:'None Specified'}</p>
+	</div>
 	<span style="font-size: small;">Direct link: <a href="join_fleet.php?join_fleet={$fleet.fleet_id}">in-game link for chat</a></span>
 	<table class="gridtable" border="0">
 		<tr>
@@ -230,15 +232,14 @@
 			<h3>Disband Fleet</h3>
 			<div>
 				<form action="{$smarty.server.PHP_SELF}?delete_fleet={$fleet.fleet_id}" method="post">
-					<button class="btn btn-danger" type="submit"><img src="img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet &raquo;</button>
+					<button class="btn btn-warning" type="submit"><img src="img/Icons/items/{$icons.warning[0]}" width="16" alt="Warning"/> Delete fleet &raquo;</button>
 					<br/>Notice: This action will delete the fleet and any attached ships from it. This action cannot be undone once done.
 				</form>
 			</div>
 		{/if}					
 			{/if}
 		</div>
-	{include file='footer.tpl'}
 	</div> <!-- container -->
-	
+	{include file='footer.tpl'}	
 </body>
 </html>

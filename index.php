@@ -22,19 +22,11 @@ if(!isTrusted())
 $smarty->assign('igb',isTrusted());
 $smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
-$smarty->assign("themes", getThemeList());
-
 //If not trusted, then exit early to avoid doing work we don't need.
 if (!isTrusted() && REQUIRE_TRUST) 
 {
     $smarty->display("notrust.tpl");
     exit;
-}
-
-if(isIGB())
-{
-	$smarty->assign("USERTHEME","dark");
-	$smarty->assign("JQUERYTHEME","ui-darkness");
 }
 
 try 

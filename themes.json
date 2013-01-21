@@ -1,13 +1,19 @@
 {
 	"Light": { 
 		"stylesheet": "light",
-		"theme": "lightness",
+		"theme": "ui-lightness",
 		"desc": "The default theme",
 		"enabled": true },
 
 	"Dark": { 
 		"stylesheet": "dark",
-		"theme": "darkness",
+		"theme": "ui-darkness",
 		"desc": "A dark theme, perfect for the IGB",
-		"enabled": true }
+		"enabled": true },
+	
+	"Smooth": { 
+		"stylesheet": "light",
+		"theme": "smoothness",
+		"desc": "An alternate light theme",
+		"enabled": true }	
 }

@@ -9,7 +9,7 @@
           <a class="brand" href="index.php">{#GenericPageTitle#}</a>
 		  <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="login.php">Login</a>
+              <a href="#">Login</a>
             </p>
             <ul class="nav">
               <li {* class="active" *}><a href="index.php?clear">Home</a></li>
