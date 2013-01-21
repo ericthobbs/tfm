@@ -265,7 +265,7 @@ function getTypeAndQuantity($mixedtypeandquantity)
 function isModuleOfType(array $parentTypeID,$moduleID,PDO $dbh)
 {
 	foreach($parentTypeID as $ptype)
-	{
+	{		
 		if($ptype == $moduleID)
 			return true;
 		
@@ -273,8 +273,10 @@ function isModuleOfType(array $parentTypeID,$moduleID,PDO $dbh)
 		$stmt = $dbh->prepare($query);
 		if(!$stmt->execute( array( ":ptype" => $ptype, ":module" => $moduleID ) ))
 			return false;
-		
-		return ($stmt->fetchColumn() > 0 ? true : false );
+				
+		$rval = ($stmt->fetchColumn() > 0 ? true : false );
+		if($rval)
+			return true;
 	}
 	return false;
 }
