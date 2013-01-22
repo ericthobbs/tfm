@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: application/xhtml+xml");
 session_start();
 require_once('include/config.php');
 require_once('include/functions.php');
@@ -52,20 +52,35 @@ try
 	    
 	    $errors = array();
 	    
-	    if($private == true)
+	    if($private == true) 
+		{
 			array_push($errors, "Fleets cannot be private in this version");
+			$smarty->assign("error_private",true);
+		}
 	    
 	    if(!empty($pass))
+		{
 			array_push($errors, "Fleets cannot be password protected yet");
+			$smarty->assign("error_password",true);
+		}
 	    
 	    if(empty($fc))
+		{
 			array_push($errors, "FC cannot be empty");
+			$smarty->assign("error_fc",true);
+		}
 	    
 	    if(empty($name))
+		{
 			array_push($errors, "Fleet name cannot be blank");
+			$smarty->assign("error_name",true);
+		}
 	    
 	    if(empty($dna))
+		{
 			array_push($errors, "FC must have a ship");
+			$smarty->assign("error_dna",true);
+		}
 	    
 	    if( ($shipId = isShipDNA($dna,$dbh) ) === false && isTypeAShip($shipId,$dbh))
 			array_push($errors,"FC did not pass a valid ship dna string");

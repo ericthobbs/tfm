@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: application/xhtml+xml");
 session_start();
 require_once('include/config.php');
 require_once('include/functions.php');
@@ -50,12 +50,10 @@ try
     } 
     else
     {
-		
 		//pilot submitted the form
 		if(isset($_REQUEST["dojoinfleet"]))
 		{
 			$smarty->assign("fleet_id",$_REQUEST["fleet"]);
-			
 			$smarty->assign("password",$_REQUEST["password"]);
 			
 			$fleet = getFleetInfo($_REQUEST["fleet"],$dbh);
@@ -63,16 +61,19 @@ try
 			if($fleet["password"] !== null && $_REQUEST["password"] != $fleet["password"])
 			{
 				array_push($errors, "Invalid password");
+				$smarty->assign("password_error",true);
 			}
 			
 			if(($pilot_id = getCharacterIdFromName($_REQUEST["name"], $dbh)) == false)
 			{
 				array_push($errors, "Invalid pilot name.");
+				$smarty->assign("pilot_error",true);
 			}
 			
 			if(!isShipDNA($_REQUEST["dna"], $dbh))
 			{
 				array_push($errors, "Invalid Ship DNA string.");
+				$smarty->assign("dna_error",true);
 			}
 			
 			if(empty($errors))

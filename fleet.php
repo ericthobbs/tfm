@@ -1,7 +1,6 @@
 <?php
-
+header("Content-Type: application/xhtml+xml");
 session_start();
-
 require_once('include/config.php');
 require_once('include/functions.php');
 require_once('libs/Smarty/libs/Smarty.class.php');
@@ -186,7 +185,7 @@ try
 				foreach($mapping as $key => $types)
 				{
 					if(isModuleOfType($types["ids"], $module["typeID"], $dbh))
-					{
+					{			
 						$entry["modules"][$key] += $module["count"];
 						$totals[$key] += $module["count"];
 						
@@ -202,6 +201,13 @@ try
 					
 					$module_icons[$key] = $types["image"];
 				}
+			}
+			
+			if($_REQUEST["debug"])
+			{
+				print("<pre><code>");
+				print_r($entry);
+				print("</code></pre>");			
 			}
 			
 			array_push($pilots,$entry);

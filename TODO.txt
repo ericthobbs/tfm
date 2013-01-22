@@ -1,3 +1,5 @@
 1) add ship type summary
 3) add groupings (wings/etc)
 4) add ship validation (eccm on correct racial ship, etc)
+5) add installer script
+6) reduce the usage of config.php

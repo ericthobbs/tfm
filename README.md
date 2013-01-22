@@ -13,10 +13,19 @@
 1/13/2013: Version 1
 	- Initial release
 1/17/2013: Version 1.01
-	- tweakes and fixes
+	- minor fixes and changes
 	- removed the images from the repo
 	- Added the ability to set a message of the day for the fleet.
 	- Increased the length of the fleet name to 64
+1/21/2012: Version 1.02
+	- Changed layout to use bootstrap
+	- minor bugfixes
+
+===Requirements===
+
+*) PHP 5.3+
+*) MySQL
+*) PHP PDO Extension
 
 ===License===
 Code is licensed under the GPL v2
