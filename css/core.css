@@ -1,3 +1,12 @@
+body 
+{
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+.sidebar-nav 
+{
+	padding: 9px 0;
+}
 
 fieldset
 {
@@ -24,7 +33,7 @@ fieldset
 
 /* Override jQuery-ui defaults */
 
-.ui-button,  .ui-button-text .ui-button
+.ui-button, .ui-button-text .ui-button
 {  
 	font-size: 12px !important; 
 }
@@ -37,4 +46,76 @@ fieldset
 .ui-accordion .ui-accordion-content
 {
 	font-size: 11px !important;
+}
+
+/* Fleet Table */
+body
+{
+	color: black;
+	background-color: white;
+}
+
+/* Fleet Table */
+
+table.gridtable 
+{
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	border-width: 1px;
+	border-right: 0px;
+	border-left: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.gridtable th 
+{
+	border-width: 1px;
+	border-right: 0px;
+	border-left: 0px;
+	border-top: 4px;
+	padding: 4px;
+	border-style: solid;
+}
+
+table.gridtable th img
+{
+	width: 32px;
+}
+
+table.gridtable td img
+{
+	width: 16px;
+}
+
+table.gridtable td 
+{
+	border-width: 1px;
+	border-right: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	padding: 4px;
+	text-align: center;
+	border-style: solid;
+}
+
+table.gridtable .active
+{
+	color: green;
+}
+
+table.gridtable .fc
+{
+	color: blue;
+}
+
+table.gridtable tr.border-off > th
+{
+	border-top: dashed 1px;
+	border-bottom: none;
+}
+
+table.gridtable tr:last-child > th
+{
+	border-top: none;
 }
