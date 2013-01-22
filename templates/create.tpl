@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 {config_load file='application.conf'}
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+	<meta charset="UTF-8" />
 	<title>{$smarty.config.GenericPageTitle}</title>
 	<link rel="stylesheet" href="css/core.css" type="text/css"/>
 	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
@@ -11,7 +12,7 @@
 <body>
 	{include file='navbar.tpl'}
 	
-    <div class="container">
+    <div class="container-fluid">
 	{if !empty($errors)}
 		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
 			<p>
@@ -39,17 +40,27 @@
 <form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
 	<fieldset>
 		<legend>Fleet Information</legend>
-		<label>Fleet Name</label>
-		<input type="text" name="name" value="{$charname|default:'Pilot'}'s fleet" /><br/>
-		<label>Fleet MOTD</label>
-		<input type="text" name="motd" value="{$motd}"><br/>
-		<label>Fleet Commander</label>
-		<input type="text" name="fc" value="{$charname}" /><br/>
-    {* Password (Optional): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
-		<label>Ship DNA</label>
-		<input type="text" name="dna" value="{$dna}" />
-		<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
-			<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help"/></a><br/>
+		<div class="{if $error_name}control-group error{/if}">
+			<label class="control-label" for="name">Fleet Name</label>
+			<input id="name" type="text" name="name" value="{$charname|default:'Pilot'}'s fleet" /><br/>
+		</div>
+		<div class="{if $error_motd}control-group error{/if}">
+			<label class="control-label" for="motd">Fleet MOTD</label>
+			<input id="motd" type="text" name="motd" value="{$motd}" /><br/>
+		</div>
+		<div class="{if $error_fc}control-group error{/if}">
+			<label class="control-label" for="fc">Fleet Commander</label>
+			<input id="fc" type="text" name="fc" value="{$charname}" /><br/>
+		</div>
+		<div class="{if $error_password}control-group error{/if}">
+		{* Password (Optional): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
+		</div>
+		<div class="{if $error_dna}control-group error{/if}">
+			<label class="control-label" for="dna">Ship DNA</label>
+			<input id="dna" type="text" name="dna" value="{$dna}" />
+				<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
+					<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help" alt="question mark"/></a><br/>
+		</div>
     {* Make private: <input type="checkbox" name="private" disabled="disabled" value="{$private}" /><br/> *}
     <button class="btn btn-primary" type="submit" name="docreatefleet">Create!</button>
 	</fieldset>
