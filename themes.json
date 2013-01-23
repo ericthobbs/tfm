@@ -1,19 +1,22 @@
 {
+	"Smooth": { 
+		"stylesheet": "light",
+		"theme": "smoothness",
+		"bootstrap": "css",
+		"desc": "An alternate light theme",
+		"enabled": true },
+	
 	"Light": { 
 		"stylesheet": "light",
 		"theme": "ui-lightness",
+		"bootstrap": "css",
 		"desc": "The default theme",
 		"enabled": true },
 
 	"Dark": { 
 		"stylesheet": "dark",
 		"theme": "ui-darkness",
+		"bootstrap": "css",
 		"desc": "A dark theme, perfect for the IGB",
-		"enabled": true },
-	
-	"Smooth": { 
-		"stylesheet": "light",
-		"theme": "smoothness",
-		"desc": "An alternate light theme",
-		"enabled": true }	
+		"enabled": true }
 }

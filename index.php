@@ -31,7 +31,6 @@ if (!isTrusted() && REQUIRE_TRUST)
 
 try 
 {
-    //connect to db
     $dbh = connectToDatabase();
 
     //if the pilot is in a fleet, redirect to the fleet page

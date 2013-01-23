@@ -42,22 +42,22 @@
 		<legend>Fleet Information</legend>
 		<div class="{if $error_name}control-group error{/if}">
 			<label class="control-label" for="name">Fleet Name</label>
-			<input id="name" type="text" name="name" value="{$charname|default:'Pilot'}'s fleet" /><br/>
+			<input id="name" type="text" name="name" value="{$charname|default:'Pilot'}'s fleet" required="required" aria-required="true"/><br/>
 		</div>
 		<div class="{if $error_motd}control-group error{/if}">
 			<label class="control-label" for="motd">Fleet MOTD</label>
-			<input id="motd" type="text" name="motd" value="{$motd}" /><br/>
+			<input id="motd" type="text" name="motd" value="{$motd}" placeholder="Message of the day" /><br/>
 		</div>
 		<div class="{if $error_fc}control-group error{/if}">
 			<label class="control-label" for="fc">Fleet Commander</label>
-			<input id="fc" type="text" name="fc" value="{$charname}" /><br/>
+			<input id="fc" type="text" name="fc" value="{$charname}" required="required" aria-required="true" /><br/>
 		</div>
 		<div class="{if $error_password}control-group error{/if}">
 		{* Password (Optional): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
 		</div>
 		<div class="{if $error_dna}control-group error{/if}">
 			<label class="control-label" for="dna">Ship DNA</label>
-			<input id="dna" type="text" name="dna" value="{$dna}" />
+			<input id="dna" type="text" name="dna" value="{$dna}" required="required" aria-required="true" />
 				<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
 					<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help" alt="question mark"/></a><br/>
 		</div>

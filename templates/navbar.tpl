@@ -9,7 +9,11 @@
           <a class="brand" href="index.php">{#GenericPageTitle#}</a>
 		  <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="#">Login Disabled</a>
+				{if !isset($smarty.session.authenticated)}
+					<a href="login.php">Login</a>
+				{else}
+					<a href="login.php?logout">Logout</a>
+				{/if}
             </p>
             <ul class="nav">
 				{if isset($smarty.session.pilot)}

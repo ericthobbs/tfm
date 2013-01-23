@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
 	{include file='jquery.tpl'}
 	{include file='bootstrap.tpl'}
+	<script type="text/javascript" src="js/util.js"></script>
 </head>
 <body>
 	{include file='navbar.tpl'}

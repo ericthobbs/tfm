@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>{$smarty.config.GenericPageTitle} - {$fleet.fleet_name}</title>
+	<script type="text/javascript" src="js/util.js"></script>
 	<link rel="stylesheet" href="css/core.css" type="text/css"/>
 	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
 	{include file='jquery.tpl'}
@@ -19,10 +20,9 @@
 </head>
 <body>
 	{include file='navbar.tpl'}
-	<div class="container-fluid">
+	<div class="container-fluid mainbg">
 	{if !empty($error_msg)}
-		<div class="ui-widget">
-		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+		<div class="alert alert-error" style="padding: 0 .7em;">
 			<p>
 				<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
 				<strong>Task(s) Failed, Errors:</strong>
@@ -33,21 +33,17 @@
 				</ul>
 			</p>
 		</div>
-		</div>
 	{/if}
 	{if $show_confirm}
-		<div class="ui-widget">
-		<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
-			<p>
-				<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
-				Confirmation required, please enter the verification code of '{$verification}' to proceed with this non-reversable action.<br/>
+		<div class="alert alert-block">
+			<button type="button" class="close" data-dismiss="alert">&#215;</button>
+			<h4>Confirmation Required!</h4>
+			Please enter the verification code of '{$verification}' to proceed with this non-reversable action.<br/>
 			<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
-				<input class="input-small" type="text" name="confirm" size="4" />
+				<input class="input-mini" type="text" name="confirm" size="4" />
 				<input type="hidden" name="verification" value="{$verification}" />&#160;
-				<button class="btn btn-danger" type="submit" name="delete_confirmed">Confirm</button>
+				<button class="btn btn-danger btn-small" type="submit" name="delete_confirmed">Confirm</button>
 			</form>
-			</p>
-		</div>
 		</div>
 	{/if}
 	<strong>Fleet Message of the Day:</strong>
@@ -90,13 +86,14 @@
 		{foreach from=$ships item=i name=row}
 		<tr class="{if $smarty.foreach.row.index is odd}odd{/if} {if $smarty.session.pilot == $i.pilot_id}active{/if} {if $i.pilot_id == $fleet.fc}fc{/if}">
 			<td>
-				{if $igb}<a href="javascript:CCPEVE.showInfo(1377,{$i.pilot_id});">{$i.pilot|default:'Unknown'}</a>
+				{if $igb}<a href="javascript:CCPEVE.showInfo(1377,{$i.pilot_id});">{$i.pilot|default}</a>
 				{else}
-					{$i.pilot|default:'Unknown'}
+					<a href="https://gate.eveonline.com/Profile/{$i.pilot|escape}" target="_blank">{$i.pilot}</a>
 				{/if}
 			</td>
 			<td>
-				{if $igb}<a href="javascript:CCPEVE.showInfo({$i.ship_typeid});">{$i.ship_type}</a>{else}{$i.ship_type|default:'Unknown'}{/if}
+				{if $igb}<a href="javascript:CCPEVE.showInfo({$i.ship_typeid});">{$i.ship_type}</a>
+				{else}<a href="#" onclick="CreateShipPopup({$i.ship_typeid}); return false;">{$i.ship_type}</a>{/if}
 				({if $igb}<a href="javascript:CCPEVE.showFitting('{$i.ship_dna}');">
 					{$i.ship_name|default:'Unknown'}</a>
 				{else}

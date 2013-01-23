@@ -1,0 +1,3 @@
+RewriteEngine Off
+
+RewriteRule ^Join/([^/\.]+)/?$ join_fleet.php?join_fleet=$1 [L]

@@ -13,8 +13,7 @@
 	{include file='navbar.tpl'}
 	<div class="container-fluid">
 	{if !empty($errors)}
-		<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
-			<p>
+		<div class="alert alert-error" style="padding: 0 .7em;">
 				<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
 				<strong>Task(s) Failed, Errors:</strong>
 				<ul>
@@ -22,20 +21,23 @@
 						<li>{$error}</li>
 					{/foreach}
 				</ul>
-			</p>
 		</div>			
 	{/if}
+	{if isset($fleet)}
 	Joining fleet: {$fleet.fleet_name} commanded by {$fleet.fc_name} created on {$fleet.creation_time|date_format:"%A, %B %e, %Y"}
+	{else}
+	Select another fleet to continue!
+	{/if}
 	<div class="form">
 	<form name="option" action="{$smarty.server.PHP_SELF|escape}" method="post">
 		<fieldset>
 			<legend>Pilot Information</legend>
-		<label class="control-label" for="name" >Pilot Name (Required)</label>
-		<input id="name" type="text" value="{$charname}" name="name"
+		<label class="control-label" for="name">Pilot Name (Required)</label>
+		<input id="name" type="text" value="{$charname}" name="name" required="required" aria-required="true"
 		{if $igb}readonly="readonly"{/if}/><br/>
 		{* Password (if required): <input type="text" name="password" disabled="disabled" value="{$pass}" /><br/> *}
 		<label>Ship DNA (Required):</label>
-		<input type="text" name="dna" value="{$dna}" />
+		<input type="text" name="dna" value="{$dna}" required="required" aria-required="true"/>
 		<a href="doc/shipdna.html" target="_blank" title="how do I find my ship dna?">
 			<img src="img/Icons/items/{$icons.help[0]}" width="24" title="Help" alt="question mark" /></a><br/>
 		

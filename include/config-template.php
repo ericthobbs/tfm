@@ -2,7 +2,7 @@
 //Configuration file for Trivial Fleet Manager
 
 //
-// Database
+// Database and Admin
 //
 
 //Database host name
@@ -26,6 +26,14 @@ define('DB_MYSQL',FALSE);
 //support for additional drivers can be implemented by tweaking the connectToDatabase function in include\functions.php
 //the database should already exist and point to an existing file!
 define('DB_SQLITE',FALSE);
+
+//admin username password -- change this!
+//any user with this name and password will get full admin rights
+define('ADMIN_USERNAME','admin');
+define('ADMIN_PASSWORD',"%$^^@#%^FDFDGGJKLDSGHJGHsdfhsas95620dskl.,.@$^&*$256i359592d");
+
+//availible themes
+define('THEMES_MAPPING','themes.json');
 
 //
 // Smarty
@@ -78,6 +86,7 @@ define('JQUERY_JS','http://code.jquery.com/jquery-1.9.0.js');
 define('JQUERYUI_JS','http://code.jquery.com/ui/1.10.0/jquery-ui.js');
 define('JQUERYCSS_THEMEDIR','http://code.jquery.com/ui/1.10.0/themes');
 
-define('THEMES_MAPPING','themes.json');
+define('CCPSHIPVIEWER_URL','http://web.ccpgamescdn.com/shipviewer/ccp.shipviewer-0.989.min.js');
+define('CCPMAPVIEWER_URL','http://web.ccpgamescdn.com/starmap/ccp.starmap-0.9843.min.js');
 
 ?>

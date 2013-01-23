@@ -2,7 +2,7 @@
 <hr/>
 {$smarty.config.GenericPageTitle} by 
 <a href={if $igb}"javascript:CCPEVE.showInfo(1377,1290000640);"
-   {else}"https://gate.eveonline.com/Profile/Dorian%20Ramius"{/if}>Dorian Ramius</a>,
+   {else}"https://gate.eveonline.com/Profile/Dorian%20Ramius"{/if}>Dorian Ramius</a> and
 <a href={if $igb}"javascript:CCPEVE.showInfo(1377,91541731);"
    {else}"https://gate.eveonline.com/Profile/Deimos%20Ovaert"{/if}>Deimos Ovaert</a>.
 Contributions by
