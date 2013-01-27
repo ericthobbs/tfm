@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_CacheResource_KeyValueStore | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li class="active"><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smarty_CacheResource.html">Smarty_CacheResource</a></li>
+				<li><a href="class-Smarty_CacheResource_Custom.html">Smarty_CacheResource_Custom</a></li>
+				<li class="active"><a href="class-Smarty_CacheResource_KeyValueStore.html">Smarty_CacheResource_KeyValueStore</a></li>
+				<li><a href="class-Smarty_Internal_CacheResource_File.html">Smarty_Internal_CacheResource_File</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Cacher.html" title="Summary of Smarty\Cacher"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_CacheResource_KeyValueStore</h1>
+
+
+	<div class="description">
+	
+<p>Smarty Cache Handler Base for Key/Value Storage Implementations</p>
+
+<p>This class implements the functionality required to use simple key/value
+stores for hierarchical cache groups. key/value stores like memcache or APC do
+not support wildcards in keys, therefore a cache group cannot be cleared like
+"a|*" - which is no problem to filesystem and RDBMS implementations.</p>
+
+<p>This implementation is based on the concept of invalidation. While one
+specific cache can be identified and cleared, any range of caches cannot be
+identified. For this reason each level of the cache group hierarchy can have its
+own value in the store. These values are nothing but microtimes, telling us when
+a particular cache group was cleared for the last time. These keys are evaluated
+for every cache read to determine if the cache has been invalidated since it was
+created and should hence be treated as inexistent.</p>
+
+<p>Although deep hierarchies are possible, they are not recommended. Try to keep
+your cache groups as shallow as possible. Anything up 3-5 parents should be ok.
+So »a|b|c« is a good depth where »a|b|c|d|e|f|g|h|i|j|k« isn't. Try to join
+correlating cache groups: if your cache groups look somewhat like
+»a|b|$page|$items|$whatever« consider using »a|b|c|$page-$items-$whatever«
+instead.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Smarty_CacheResource.html"><span>Smarty_CacheResource</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Smarty_CacheResource_KeyValueStore</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Cacher.html">Cacher</a><br />
+
+				<b>Author:</b>
+				Rodney Rehm<br />
+		<b>Located at</b> <a href="source-class-Smarty_CacheResource_KeyValueStore.html#9-461" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_cacheresource_keyvaluestore.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="populate" id="_populate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populate">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#47-62" title="Go to source code">populate</a>( <span><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code> <var>$cached</var></span>, <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code> <var>$_template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>populate Cached Object with meta data from Resource</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>populate Cached Object with meta data from Resource</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cached</var></dt>
+					<dd><code><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code></code><br>$cached cached object</dd>
+					<dt><var>$_template</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code></code><br>$_template template object</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="populateTimestamp" id="_populateTimestamp">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populateTimestamp">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#64-78" title="Go to source code">populateTimestamp</a>( <span><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code> <var>$cached</var></span> )</code>
+
+		<div class="description short">
+			
+<p>populate Cached Object with timestamp and exists from Resource</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>populate Cached Object with timestamp and exists from Resource</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cached</var></dt>
+					<dd><code><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code></code><br>$cached cached object</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="process" id="_process">
+
+		<td class="attributes"><code>
+			 public 
+			booelan
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_process">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#80-105" title="Go to source code">process</a>( <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code> <var>$_template</var></span>, <span><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code> <var>$cached</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Read the cached template and process the header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read the cached template and process the header</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$_template</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code></code><br>$_template template object</dd>
+					<dt><var>$cached</var></dt>
+					<dd><code><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code></code><br>$cached cached object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>booelan</code><br>true or false if the cached content does not exist<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeCachedContent" id="_writeCachedContent">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeCachedContent">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#107-118" title="Go to source code">writeCachedContent</a>( <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code> <var>$_template</var></span>, <span>string <var>$content</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Write the rendered template output to cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Write the rendered template output to cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$_template</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code></code><br>$_template template object</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>$content content to cache</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>success<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearAll" id="_clearAll">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearAll">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#120-137" title="Go to source code">clearAll</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span>integer <var>$exp_time</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Empty cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Empty cache</p>
+
+<p>}</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty object</dd>
+					<dt><var>$exp_time</var></dt>
+					<dd><code>integer</code><br>$exp_time expiration time [being ignored]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of cache files deleted [always -1]<br />
+				</div>
+
+
+				<h4>Uses</h4>
+				<div class="list">
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_purge">Smarty_CacheResource_KeyValueStore::purge()</a></code></code><br>to clear the whole store<br />
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_invalidate">Smarty_CacheResource_KeyValueStore::invalidate()</a></code></code><br>to mark everything outdated if purge() is inapplicable<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#139-161" title="Go to source code">clear</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span>string <var>$resource_name</var></span>, <span>string <var>$cache_id</var></span>, <span>string <var>$compile_id</var></span>, <span>integer <var>$exp_time</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Empty cache for a specific template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Empty cache for a specific template</p>
+
+<p>}</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty object</dd>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>string</code><br>$cache_id cache id</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+					<dt><var>$exp_time</var></dt>
+					<dd><code>integer</code><br>$exp_time expiration time [being ignored]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of cache files deleted [always -1]<br />
+				</div>
+
+
+				<h4>Uses</h4>
+				<div class="list">
+						buildCachedFilepath() to generate the CacheID<br />
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_invalidate">Smarty_CacheResource_KeyValueStore::invalidate()</a></code></code><br>to mark CacheIDs parent chain as outdated<br />
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_delete">Smarty_CacheResource_KeyValueStore::delete()</a></code></code><br>to remove CacheID from cache<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTemplateUid" id="_getTemplateUid">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTemplateUid">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#162-192" title="Go to source code">getTemplateUid</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span>string <var>$resource_name</var></span>, <span>string <var>$cache_id</var></span>, <span>string <var>$compile_id</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get template's unique ID</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get template's unique ID</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty object</dd>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>string</code><br>$cache_id cache id</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>filepath of cache file<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sanitize" id="_sanitize">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sanitize">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#194-208" title="Go to source code">sanitize</a>( <span>string <var>$string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sanitize CacheID components</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sanitize CacheID components</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$string</var></dt>
+					<dd><code>string</code><br>$string CacheID component to sanitize</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>sanitized CacheID component<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetch" id="_fetch">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetch">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#210-237" title="Go to source code">fetch</a>( <span>string <var>$cid</var></span>, <span>string <var>$resource_name</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>&amp; $content</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>&amp; $timestamp</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$resource_uid</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetch and prepare a cache object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetch and prepare a cache object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>string</code><br>$cid CacheID to fetch</dd>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>string</code><br>$cache_id cache id</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>$content cached content</dd>
+					<dt><var>$timestamp</var></dt>
+					<dd><code>integer</code><br>&amp;$timestamp cached timestamp (epoch)</dd>
+					<dt><var>$resource_uid</var></dt>
+					<dd><code>string</code><br>$resource_uid resource's uid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>success<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMetaTimestamp" id="_addMetaTimestamp">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMetaTimestamp">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#239-251" title="Go to source code">addMetaTimestamp</a>( <span>string <var>&amp; $content</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add current microtime to the beginning of $cache_content</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add current microtime to the beginning of $cache_content</p>
+
+<p>}</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>&amp;$content the content to be cached</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMetaTimestamp" id="_getMetaTimestamp">
+
+		<td class="attributes"><code>
+			 protected 
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMetaTimestamp">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#253-265" title="Go to source code">getMetaTimestamp</a>( <span>string <var>&amp; $content</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Extract the timestamp the $content was cached</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Extract the timestamp the $content was cached</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>&amp;$content the cached content</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>the microtime the content was cached<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="invalidate" id="_invalidate">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_invalidate">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#267-302" title="Go to source code">invalidate</a>( <span>string <var>$cid</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$resource_name</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$resource_uid</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Invalidate CacheID</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Invalidate CacheID</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>string</code><br>$cid CacheID</dd>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>string</code><br>$cache_id cache id</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+					<dt><var>$resource_uid</var></dt>
+					<dd><code>string</code><br>$resource_uid source's uid</dd>
+				</dl></div>
+
+
+
+				<h4>Used by</h4>
+				<div class="list">
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_clearAll">Smarty_CacheResource_KeyValueStore::clearAll()</a></code></code><br>to mark everything outdated if purge() is inapplicable<br />
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_clear">Smarty_CacheResource_KeyValueStore::clear()</a></code></code><br>to mark CacheIDs parent chain as outdated<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLatestInvalidationTimestamp" id="_getLatestInvalidationTimestamp">
+
+		<td class="attributes"><code>
+			 protected 
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLatestInvalidationTimestamp">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#304-332" title="Go to source code">getLatestInvalidationTimestamp</a>( <span>string <var>$cid</var></span>, <span>string <var>$resource_name</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$resource_uid</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Determine the latest timestamp known to the invalidation chain</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determine the latest timestamp known to the invalidation chain</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>string</code><br>$cid CacheID to determine latest invalidation timestamp of</dd>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>string</code><br>$cache_id cache id</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+					<dt><var>$resource_uid</var></dt>
+					<dd><code>string</code><br>$resource_uid source's filepath</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>the microtime the CacheID was invalidated<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listInvalidationKeys" id="_listInvalidationKeys">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_listInvalidationKeys">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#334-384" title="Go to source code">listInvalidationKeys</a>( <span>string <var>$cid</var></span>, <span>string <var>$resource_name</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$resource_uid</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Translate a CacheID into the list of applicable InvalidationKeys.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Translate a CacheID into the list of applicable InvalidationKeys.</p>
+
+<p>Splits "some|chain|into|an|array" into array( '#clearAll#', 'some',
+'some|chain', 'some|chain|into', ... )</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>string</code><br>$cid CacheID to translate</dd>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>string</code><br>$cache_id cache id</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+					<dt><var>$resource_uid</var></dt>
+					<dd><code>string</code><br>$resource_uid source's filepath</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>list of InvalidationKeys<br />
+				</div>
+
+
+				<h4>Uses</h4>
+				<div class="list">
+						$invalidationKeyPrefix to prepend to each InvalidationKey<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasLock" id="_hasLock">
+
+		<td class="attributes"><code>
+			 public 
+			booelan
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasLock">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#386-398" title="Go to source code">hasLock</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code> <var>$cached</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check is cache is locked for this template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check is cache is locked for this template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty object</dd>
+					<dt><var>$cached</var></dt>
+					<dd><code><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code></code><br>$cached cached object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>booelan</code><br>true or false if cache is locked<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Smarty_CacheResource.html#_hasLock">Smarty_CacheResource::hasLock()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="acquireLock" id="_acquireLock">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_acquireLock">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#400-411" title="Go to source code">acquireLock</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code> <var>$cached</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Lock cache for this template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Lock cache for this template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty object</dd>
+					<dt><var>$cached</var></dt>
+					<dd><code><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code></code><br>$cached cached object</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Smarty_CacheResource.html#_acquireLock">Smarty_CacheResource::acquireLock()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="releaseLock" id="_releaseLock">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_releaseLock">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#413-424" title="Go to source code">releaseLock</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code> <var>$cached</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unlock cache for this template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unlock cache for this template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty object</dd>
+					<dt><var>$cached</var></dt>
+					<dd><code><code><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></code></code><br>$cached cached object</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Smarty_CacheResource.html#_releaseLock">Smarty_CacheResource::releaseLock()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			abstract protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#426-432" title="Go to source code">read</a>( <span>array <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Read values for a set of keys from cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Read values for a set of keys from cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>$keys list of keys to fetch</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>list of values with the given keys used as indexes<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			abstract protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#434-441" title="Go to source code">write</a>( <span>array <var>$keys</var></span>, <span>integer <var>$expire</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Save values for a set of keys to cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Save values for a set of keys to cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>$keys list of values to save</dd>
+					<dt><var>$expire</var></dt>
+					<dd><code>integer</code><br>$expire expiration time</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true on success, false on failure<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			abstract protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#443-449" title="Go to source code">delete</a>( <span>array <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove values from cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove values from cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>$keys list of keys to delete</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true on success, false on failure<br />
+				</div>
+
+
+				<h4>Used by</h4>
+				<div class="list">
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_clear">Smarty_CacheResource_KeyValueStore::clear()</a></code></code><br>to remove CacheID from cache<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="purge" id="_purge">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_purge">#</a>
+		<code><a href="source-class-Smarty_CacheResource_KeyValueStore.html#451-459" title="Go to source code">purge</a>( )</code>
+
+		<div class="description short">
+			
+<p>Remove <em>all</em> values from cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove <em>all</em> values from cache</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true on success, false on failure<br />
+				</div>
+
+
+				<h4>Used by</h4>
+				<div class="list">
+						<code><code><a href="class-Smarty_CacheResource_KeyValueStore.html#_clearAll">Smarty_CacheResource_KeyValueStore::clearAll()</a></code></code><br>to clear the whole store<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Smarty_CacheResource.html#methods">Smarty_CacheResource</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_CacheResource.html#_getCachedContent">getCachedContent()</a>, 
+			<a href="class-Smarty_CacheResource.html#_invalidLoadedCache">invalidLoadedCache()</a>, 
+			<a href="class-Smarty_CacheResource.html#_load">load()</a>, 
+			<a href="class-Smarty_CacheResource.html#_locked">locked()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="contents" id="$contents">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_CacheResource_KeyValueStore.html#36-40" title="Go to source code"><var>$contents</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$contents" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>cache for contents</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>cache for contents</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="timestamps" id="$timestamps">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_CacheResource_KeyValueStore.html#41-45" title="Go to source code"><var>$timestamps</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$timestamps" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>cache for timestamps</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>cache for timestamps</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Smarty_CacheResource.html#properties">Smarty_CacheResource</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_CacheResource.html#$resources"><var>$resources</var></a>, 
+			<a href="class-Smarty_CacheResource.html#$sysplugins"><var>$sysplugins</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

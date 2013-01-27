@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class PhealRowSet | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Pheal.html">Pheal</a></li>
+				<li><a href="class-PhealCheckAccess.html">PhealCheckAccess</a></li>
+				<li><a href="class-PhealConfig.html">PhealConfig</a></li>
+				<li><a href="class-PhealContainer.html">PhealContainer</a></li>
+				<li><a href="class-PhealElement.html">PhealElement</a></li>
+				<li><a href="class-PhealFileArchive.html">PhealFileArchive</a></li>
+				<li><a href="class-PhealFileCache.html">PhealFileCache</a></li>
+				<li><a href="class-PhealFileCacheForced.html">PhealFileCacheForced</a></li>
+				<li><a href="class-PhealFileCacheHashedNames.html">PhealFileCacheHashedNames</a></li>
+				<li><a href="class-PhealFileLog.html">PhealFileLog</a></li>
+				<li><a href="class-PhealMemcache.html">PhealMemcache</a></li>
+				<li><a href="class-PhealNullAccess.html">PhealNullAccess</a></li>
+				<li><a href="class-PhealNullArchive.html">PhealNullArchive</a></li>
+				<li><a href="class-PhealNullCache.html">PhealNullCache</a></li>
+				<li><a href="class-PhealNullLog.html">PhealNullLog</a></li>
+				<li><a href="class-PhealResult.html">PhealResult</a></li>
+				<li class="active"><a href="class-PhealRowSet.html">PhealRowSet</a></li>
+				<li><a href="class-PhealRowSetRow.html">PhealRowSetRow</a></li>
+				<li><a href="class-Smarty_Internal_Configfileparser.html">Smarty_Internal_Configfileparser</a></li>
+				<li><a href="class-Smarty_Internal_Templateparser.html">Smarty_Internal_Templateparser</a></li>
+				<li><a href="class-TP_yyStackEntry.html">TP_yyStackEntry</a></li>
+				<li><a href="class-TPC_yyStackEntry.html">TPC_yyStackEntry</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PhealAccessInterface.html">PhealAccessInterface</a></li>
+				<li><a href="class-PhealArchiveInterface.html">PhealArchiveInterface</a></li>
+				<li><a href="class-PhealArrayInterface.html">PhealArrayInterface</a></li>
+				<li><a href="class-PhealCacheInterface.html">PhealCacheInterface</a></li>
+				<li><a href="class-PhealLogInterface.html">PhealLogInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-PhealAccessException.html">PhealAccessException</a></li>
+				<li><a href="class-PhealAPIException.html">PhealAPIException</a></li>
+				<li><a href="class-PhealConnectionException.html">PhealConnectionException</a></li>
+				<li><a href="class-PhealException.html">PhealException</a></li>
+				<li><a href="class-PhealHTTPException.html">PhealHTTPException</a></li>
+			</ul>
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-ClearSessionAndReturnToIndex.html">ClearSessionAndReturnToIndex</a></li>
+				<li><a href="function-connectToDatabase.html">connectToDatabase</a></li>
+				<li><a href="function-createFleet.html">createFleet</a></li>
+				<li><a href="function-deleteFleet.html">deleteFleet</a></li>
+				<li><a href="function-getAllValidFleets.html">getAllValidFleets</a></li>
+				<li><a href="function-getCharacterIdFromName.html">getCharacterIdFromName</a></li>
+				<li><a href="function-getFleetInfo.html">getFleetInfo</a></li>
+				<li><a href="function-getItemTypeName.html">getItemTypeName</a></li>
+				<li><a href="function-getShipsInFleet.html">getShipsInFleet</a></li>
+				<li><a href="function-getThemeList.html">getThemeList</a></li>
+				<li><a href="function-getTypeAndQuantity.html">getTypeAndQuantity</a></li>
+				<li><a href="function-isIGB.html">isIGB</a></li>
+				<li><a href="function-isModuleOfType.html">isModuleOfType</a></li>
+				<li><a href="function-isPlayerInFleet.html">isPlayerInFleet</a></li>
+				<li><a href="function-isShipDNA.html">isShipDNA</a></li>
+				<li><a href="function-isTrusted.html">isTrusted</a></li>
+				<li><a href="function-isTypeAShip.html">isTypeAShip</a></li>
+				<li><a href="function-isValidSystemName.html">isValidSystemName</a></li>
+				<li><a href="function-joinFleet.html">joinFleet</a></li>
+				<li><a href="function-parseShipDNA.html">parseShipDNA</a></li>
+				<li><a href="function-pilotIsInFleet.html">pilotIsInFleet</a></li>
+				<li><a href="function-promoteToFC.html">promoteToFC</a></li>
+				<li><a href="function-removePilot.html">removePilot</a></li>
+				<li><a href="function-smarty_function_escape_special_chars.html" class="invalid">smarty_function_escape_special_chars</a></li>
+				<li><a href="function-updateFleetInfo.html">updateFleetInfo</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-None.html" title="Summary of None"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class PhealRowSet</h1>
+
+
+	<div class="description">
+	
+<p>class to implement EVE API RowSets</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-ArrayObject.html"><span>ArrayObject</span></a>
+			
+			 implements 
+				<a href="class-IteratorAggregate.html"><span>IteratorAggregate</span></a>, 
+			
+				<a href="class-Traversable.html"><span>Traversable</span></a>, 
+			
+				<a href="class-ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="class-Serializable.html"><span>Serializable</span></a>, 
+			
+				<a href="class-Countable.html"><span>Countable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>PhealRowSet</span></b>			
+			 implements 
+				<a href="class-PhealArrayInterface.html"><span>PhealArrayInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-PhealRowSet.html#28-80" title="Go to source code">libs/pheal/PhealRowSet.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PhealRowSet.html#39-65" title="Go to source code">__construct</a>( <span><code><a href="class-SimpleXMLElement.html">SimpleXMLElement</a></code> <var>$xml</var></span>, <span>mixed <var>$name</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$rowname</var> = <span class="php-quote">'row'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>initialize the rowset</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>initialize the rowset</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$xml</var></dt>
+					<dd><code><code><a href="class-SimpleXMLElement.html">SimpleXMLElement</a></code></code><br>$xml</dd>
+					<dt><var>$name</var></dt>
+					<dd></dd>
+					<dt><var>$rowname</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>Optional</h4>
+				<div class="list">
+						String $name<br />
+						String $rowname<br />
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-ArrayObject.html#___construct">ArrayObject::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code><a href="source-class-PhealRowSet.html#67-79" title="Go to source code">toArray</a>( )</code>
+
+		<div class="description short">
+			
+<p>returns the Object as associated array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>returns the Object as associated array</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PhealArrayInterface.html#_toArray">PhealArrayInterface::toArray()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ArrayObject.html#methods">ArrayObject</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ArrayObject.html#_append">append()</a>, 
+			<a href="class-ArrayObject.html#_asort">asort()</a>, 
+			<a href="class-ArrayObject.html#_count">count()</a>, 
+			<a href="class-ArrayObject.html#_exchangeArray">exchangeArray()</a>, 
+			<a href="class-ArrayObject.html#_getArrayCopy">getArrayCopy()</a>, 
+			<a href="class-ArrayObject.html#_getFlags">getFlags()</a>, 
+			<a href="class-ArrayObject.html#_getIterator">getIterator()</a>, 
+			<a href="class-ArrayObject.html#_getIteratorClass">getIteratorClass()</a>, 
+			<a href="class-ArrayObject.html#_ksort">ksort()</a>, 
+			<a href="class-ArrayObject.html#_natcasesort">natcasesort()</a>, 
+			<a href="class-ArrayObject.html#_natsort">natsort()</a>, 
+			<a href="class-ArrayObject.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-ArrayObject.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-ArrayObject.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-ArrayObject.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-ArrayObject.html#_serialize">serialize()</a>, 
+			<a href="class-ArrayObject.html#_setFlags">setFlags()</a>, 
+			<a href="class-ArrayObject.html#_setIteratorClass">setIteratorClass()</a>, 
+			<a href="class-ArrayObject.html#_uasort">uasort()</a>, 
+			<a href="class-ArrayObject.html#_uksort">uksort()</a>, 
+			<a href="class-ArrayObject.html#_unserialize">unserialize()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-ArrayObject.html#constants">ArrayObject</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ArrayObject.html#ARRAY_AS_PROPS"><b>ARRAY_AS_PROPS</b></a>, 
+			<a href="class-ArrayObject.html#STD_PROP_LIST"><b>STD_PROP_LIST</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_name" id="$_name">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PhealRowSet.html#33-37" title="Go to source code"><var>$_name</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_name" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>name of the rowset</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>name of the rowset</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

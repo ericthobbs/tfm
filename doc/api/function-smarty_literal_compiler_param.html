@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Function smarty_literal_compiler_param | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li class="active"><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li class="active"><a href="function-smarty_literal_compiler_param.html">smarty_literal_compiler_param</a></li>
+				<li><a href="function-smarty_make_timestamp.html">smarty_make_timestamp</a></li>
+				<li><a href="function-smarty_mb_from_unicode.html">smarty_mb_from_unicode</a></li>
+				<li><a href="function-smarty_mb_str_replace.html">smarty_mb_str_replace</a></li>
+				<li><a href="function-smarty_mb_to_unicode.html">smarty_mb_to_unicode</a></li>
+				<li><a href="function-smarty_mb_wordwrap.html">smarty_mb_wordwrap</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.PluginsShared.html" title="Summary of Smarty\PluginsShared"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Function</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="function">
+	<h1>Function smarty_literal_compiler_param</h1>
+
+
+	<div class="description">
+	
+<p>evaluate compiler parameter</p>
+
+	</div>
+
+	<div class="info">
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.PluginsShared.html">PluginsShared</a><br />
+				<b>Author:</b>
+				Rodney Rehm<br />
+		<b>Located at</b> <a href="source-function-smarty_literal_compiler_param.html#9-33" title="Go to source code">libs/Smarty/libs/plugins/shared.literal_compiler_param.php</a><br />
+	</div>
+
+
+	<table class="summary" id="parameters">
+	<caption>Parameters summary</caption>
+	<tr id="$params">
+		<td class="name"><code>array</code></td>
+		<td class="value"><code><var>$params</var></code></td>
+		<td>
+			 parameter array as given to the compiler function
+		</td>
+	</tr>
+	<tr id="$index">
+		<td class="name"><code>integer</code></td>
+		<td class="value"><code><var>$index</var></code></td>
+		<td>
+			 array index of the parameter to convert
+		</td>
+	</tr>
+	<tr id="$default">
+		<td class="name"><code>mixed</code></td>
+		<td class="value"><code><var>$default</var> = <span class="php-keyword1">null</span></code></td>
+		<td>
+			 value to be returned if the parameter is not present
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary" id="returns">
+	<caption>Return value summary</caption>
+	<tr>
+		<td class="name"><code>
+			mixed
+		</code></td>
+		<td>
+			evaluated value of parameter or $default
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary" id="throws">
+	<caption>Thrown exceptions summary</caption>
+	<tr>
+		<td class="name"><code>
+			<code><a href="class-SmartyException.html">SmartyException</a></code>
+		</code></td>
+		<td>
+			if parameter is not a literal (but an expression, variable, …)
+		</td>
+	</tr>
+	</table>
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_Internal_Utility | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li class="active"><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Smarty_Internal_Utility.html">Smarty_Internal_Utility</a></li>
+				<li><a href="class-Smarty_Security.html">Smarty_Security</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Security.html" title="Summary of Smarty\Security"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_Internal_Utility</h1>
+
+
+	<div class="description">
+	
+<p>Utility class</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Security.html">Security</a><br />
+
+				<b>Copyright:</b>
+				2008 New Digital Group, Inc.<br />
+				<b>Author:</b>
+				Monte Ohrt &lt;monte at ohrt dot com&gt;<br />
+				<b>Author:</b>
+				Uwe Tews<br />
+		<b>Located at</b> <a href="source-class-Smarty_Internal_Utility.html#35-828" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_internal_utility.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="compileAllTemplates" id="_compileAllTemplates">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compileAllTemplates">#</a>
+		<code><a href="source-class-Smarty_Internal_Utility.html#51-113" title="Go to source code">compileAllTemplates</a>( <span>string <var>$extention</var></span>, <span>boolean <var>$force_compile</var></span>, <span>integer <var>$time_limit</var></span>, <span>integer <var>$max_errors</var></span>, <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compile all template files</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compile all template files</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$extention</var></dt>
+					<dd><code>string</code><br>$extension template file name extension</dd>
+					<dt><var>$force_compile</var></dt>
+					<dd><code>boolean</code><br>$force_compile force all to recompile</dd>
+					<dt><var>$time_limit</var></dt>
+					<dd><code>integer</code><br>$time_limit set maximum execution time</dd>
+					<dt><var>$max_errors</var></dt>
+					<dd><code>integer</code><br>$max_errors set maximum allowed errors</dd>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of template files compiled<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compileAllConfig" id="_compileAllConfig">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compileAllConfig">#</a>
+		<code><a href="source-class-Smarty_Internal_Utility.html#115-173" title="Go to source code">compileAllConfig</a>( <span>string <var>$extention</var></span>, <span>boolean <var>$force_compile</var></span>, <span>integer <var>$time_limit</var></span>, <span>integer <var>$max_errors</var></span>, <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compile all config files</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compile all config files</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$extention</var></dt>
+					<dd><code>string</code><br>$extension config file name extension</dd>
+					<dt><var>$force_compile</var></dt>
+					<dd><code>boolean</code><br>$force_compile force all to recompile</dd>
+					<dt><var>$time_limit</var></dt>
+					<dd><code>integer</code><br>$time_limit set maximum execution time</dd>
+					<dt><var>$max_errors</var></dt>
+					<dd><code>integer</code><br>$max_errors set maximum allowed errors</dd>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of config files compiled<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearCompiledTemplate" id="_clearCompiledTemplate">
+
+		<td class="attributes"><code>
+			 public static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearCompiledTemplate">#</a>
+		<code><a href="source-class-Smarty_Internal_Utility.html#175-270" title="Go to source code">clearCompiledTemplate</a>( <span>string <var>$resource_name</var></span>, <span>string <var>$compile_id</var></span>, <span>integer <var>$exp_time</var></span>, <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete compiled template file</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete compiled template file</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource_name</var></dt>
+					<dd><code>string</code><br>$resource_name template name</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>string</code><br>$compile_id compile id</dd>
+					<dt><var>$exp_time</var></dt>
+					<dd><code>integer</code><br>$exp_time expiration time</dd>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty instance</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of template files deleted<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTags" id="_getTags">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTags">#</a>
+		<code><a href="source-class-Smarty_Internal_Utility.html#272-283" title="Go to source code">getTags</a>( <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code> <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return array of tag/attributes of all tags used by an template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return array of tag/attributes of all tags used by an template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code></code><br>$templae template object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of tag/attributes<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="testInstall" id="_testInstall">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_testInstall">#</a>
+		<code><a href="source-class-Smarty_Internal_Utility.html#286-826" title="Go to source code">testInstall</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span>, <span>array <var>&amp; $errors</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>diagnose Smarty setup</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>diagnose Smarty setup</p>
+
+<p>If $errors is secified, the diagnostic report will be appended to the array,
+rather than being output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty Smarty instance to test</dd>
+					<dt><var>$errors</var></dt>
+					<dd><code>array</code><br>$errors array to push results into rather than outputting them</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>status, true if everything is fine, false else<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

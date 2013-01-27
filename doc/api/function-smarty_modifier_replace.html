@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Function smarty_modifier_replace | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li class="active"><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-smarty_modifier_capitalize.html">smarty_modifier_capitalize</a></li>
+				<li><a href="function-smarty_modifier_date_format.html">smarty_modifier_date_format</a></li>
+				<li><a href="function-smarty_modifier_escape.html">smarty_modifier_escape</a></li>
+				<li><a href="function-smarty_modifier_regex_replace.html">smarty_modifier_regex_replace</a></li>
+				<li class="active"><a href="function-smarty_modifier_replace.html">smarty_modifier_replace</a></li>
+				<li><a href="function-smarty_modifier_spacify.html">smarty_modifier_spacify</a></li>
+				<li><a href="function-smarty_modifier_truncate.html">smarty_modifier_truncate</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.PluginsModifier.html" title="Summary of Smarty\PluginsModifier"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Function</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="function">
+	<h1>Function smarty_modifier_replace</h1>
+
+
+	<div class="description">
+	
+<p>Smarty replace modifier plugin</p>
+
+<p>Type: modifier<br />
+Name: replace<br />
+Purpose: simple search/replace</p>
+
+	</div>
+
+	<div class="info">
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.PluginsModifier.html">PluginsModifier</a><br />
+				<b>Author:</b>
+				Monte Ohrt &lt;monte at ohrt dot com&gt;<br />
+				<b>Author:</b>
+				Uwe Tews<br />
+				<b>Link:</b>
+				<a href="http://smarty.php.net/manual/en/language.modifier.replace.php">replace (Smarty online manual)</a><br />
+		<b>Located at</b> <a href="source-function-smarty_modifier_replace.html#8-31" title="Go to source code">libs/Smarty/libs/plugins/modifier.replace.php</a><br />
+	</div>
+
+
+	<table class="summary" id="parameters">
+	<caption>Parameters summary</caption>
+	<tr id="$string">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$string</var></code></td>
+		<td>
+			 input string
+		</td>
+	</tr>
+	<tr id="$search">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$search</var></code></td>
+		<td>
+			 text to search for
+		</td>
+	</tr>
+	<tr id="$replace">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$replace</var></code></td>
+		<td>
+			 replacement text
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary" id="returns">
+	<caption>Return value summary</caption>
+	<tr>
+		<td class="name"><code>
+			string
+		</code></td>
+		<td>
+			
+		</td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

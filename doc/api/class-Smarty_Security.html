@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_Security | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li class="active"><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smarty_Internal_Utility.html">Smarty_Internal_Utility</a></li>
+				<li class="active"><a href="class-Smarty_Security.html">Smarty_Security</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Security.html" title="Summary of Smarty\Security"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_Security</h1>
+
+
+	<div class="description">
+	
+<p>This class does contain the security settings</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Security.html">Security</a><br />
+
+				<b>Author:</b>
+				Uwe Tews<br />
+		<b>Located at</b> <a href="source-class-Smarty_Security.html#19-457" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_security.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Smarty_Security.html#169-175" title="Go to source code">__construct</a>( <span><code><a href="class-Smarty.html">Smarty</a></code> <var>$smarty</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$smarty</var></dt>
+					<dd><code><code><a href="class-Smarty.html">Smarty</a></code></code><br>$smarty</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedPhpFunction" id="_isTrustedPhpFunction">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedPhpFunction">#</a>
+		<code><a href="source-class-Smarty_Security.html#177-193" title="Go to source code">isTrustedPhpFunction</a>( <span>string <var>$function_name</var></span>, <span>object <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if PHP function is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if PHP function is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function_name</var></dt>
+					<dd><code>string</code><br>$function_name</dd>
+					<dt><var>$compiler</var></dt>
+					<dd><code>object</code><br>$compiler compiler object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if function is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyCompilerException.html">SmartyCompilerException</a></code></code><br>if php function is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedStaticClass" id="_isTrustedStaticClass">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedStaticClass">#</a>
+		<code><a href="source-class-Smarty_Security.html#195-211" title="Go to source code">isTrustedStaticClass</a>( <span>string <var>$class_name</var></span>, <span>object <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if static class is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if static class is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class_name</var></dt>
+					<dd><code>string</code><br>$class_name</dd>
+					<dt><var>$compiler</var></dt>
+					<dd><code>object</code><br>$compiler compiler object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if class is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyCompilerException.html">SmartyCompilerException</a></code></code><br>if static class is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedPhpModifier" id="_isTrustedPhpModifier">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedPhpModifier">#</a>
+		<code><a href="source-class-Smarty_Security.html#213-229" title="Go to source code">isTrustedPhpModifier</a>( <span>string <var>$modifier_name</var></span>, <span>object <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if PHP modifier is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if PHP modifier is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$modifier_name</var></dt>
+					<dd><code>string</code><br>$modifier_name</dd>
+					<dt><var>$compiler</var></dt>
+					<dd><code>object</code><br>$compiler compiler object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if modifier is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyCompilerException.html">SmartyCompilerException</a></code></code><br>if modifier is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedTag" id="_isTrustedTag">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedTag">#</a>
+		<code><a href="source-class-Smarty_Security.html#231-259" title="Go to source code">isTrustedTag</a>( <span>string <var>$tag_name</var></span>, <span>object <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if tag is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if tag is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tag_name</var></dt>
+					<dd><code>string</code><br>$tag_name</dd>
+					<dt><var>$compiler</var></dt>
+					<dd><code>object</code><br>$compiler compiler object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if tag is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyCompilerException.html">SmartyCompilerException</a></code></code><br>if modifier is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedModifier" id="_isTrustedModifier">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedModifier">#</a>
+		<code><a href="source-class-Smarty_Security.html#261-288" title="Go to source code">isTrustedModifier</a>( <span>string <var>$modifier_name</var></span>, <span>object <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if modifier plugin is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if modifier plugin is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$modifier_name</var></dt>
+					<dd><code>string</code><br>$modifier_name</dd>
+					<dt><var>$compiler</var></dt>
+					<dd><code>object</code><br>$compiler compiler object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if tag is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyCompilerException.html">SmartyCompilerException</a></code></code><br>if modifier is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedStream" id="_isTrustedStream">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedStream">#</a>
+		<code><a href="source-class-Smarty_Security.html#290-304" title="Go to source code">isTrustedStream</a>( <span>string <var>$stream_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if stream is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if stream is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$stream_name</var></dt>
+					<dd><code>string</code><br>$stream_name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if stream is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if stream is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedResourceDir" id="_isTrustedResourceDir">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedResourceDir">#</a>
+		<code><a href="source-class-Smarty_Security.html#306-382" title="Go to source code">isTrustedResourceDir</a>( <span>string <var>$filepath</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if directory of file resource is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if directory of file resource is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filepath</var></dt>
+					<dd><code>string</code><br>$filepath</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if directory is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if directory is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedUri" id="_isTrustedUri">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedUri">#</a>
+		<code><a href="source-class-Smarty_Security.html#384-408" title="Go to source code">isTrustedUri</a>( <span>string <var>$uri</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if URI (e.g. {fetch} or {html_image}) is trusted</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if URI (e.g. {fetch} or {html_image}) is trusted</p>
+
+<p>To simplify things, isTrustedUri() resolves all input to
+"{$PROTOCOL}://{$HOSTNAME}". So "http://username:<a
+href="mailto:password&#64;hello.world.example.org">password&#64;<!---->hello.world.example.org</a>:8080/some-path?some=query-string"
+is reduced to "http://hello.world.example.org" prior to applying the patters
+from <code><a href="class-Smarty_Security.html#$trusted_uri">Smarty_Security::<var>$trusted_uri</var></a></code>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uri</var></dt>
+					<dd><code>string</code><br>$uri</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if URI is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if URI is not trusted<br />
+				</div>
+
+				<h4>Uses</h4>
+				<div class="list">
+						<code>mixed</code><br>for list of patterns to match against $uri<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isTrustedPHPDir" id="_isTrustedPHPDir">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isTrustedPHPDir">#</a>
+		<code><a href="source-class-Smarty_Security.html#410-455" title="Go to source code">isTrustedPHPDir</a>( <span>string <var>$filepath</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if directory of file resource is trusted.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if directory of file resource is trusted.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filepath</var></dt>
+					<dd><code>string</code><br>$filepath</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if directory is trusted<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if PHP directory is not trusted<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="php_handling" id="$php_handling">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#24-36" title="Go to source code"><var>$php_handling</var></a>
+		</td>
+		<td class="value"><code><code><a href="class-Smarty.html#PHP_PASSTHRU">Smarty::<b>PHP_PASSTHRU</b></a></code></code></td>
+		<td class="description"><div>
+			<a href="#$php_handling" class="anchor">#</a>
+
+			<div class="description short">
+				This determines how Smarty handles "&lt;?php ... ?&gt;" tags in templates.
+possible values:
+<ul>
+	<li>Smarty::PHP_PASSTHRU -&gt; echo PHP tags as they are</li>
+
+	<li>Smarty::PHP_QUOTE -&gt; escape tags as entities</li>
+
+	<li>Smarty::PHP_REMOVE -&gt; remove php tags</li>
+
+	<li>Smarty::PHP_ALLOW -&gt; execute php tags</li>
+</ul>
+
+			</div>
+
+			<div class="description detailed hidden">
+				This determines how Smarty handles "&lt;?php ... ?&gt;" tags in templates.
+possible values:
+<ul>
+	<li>Smarty::PHP_PASSTHRU -&gt; echo PHP tags as they are</li>
+
+	<li>Smarty::PHP_QUOTE -&gt; escape tags as entities</li>
+
+	<li>Smarty::PHP_REMOVE -&gt; remove php tags</li>
+
+	<li>Smarty::PHP_ALLOW -&gt; execute php tags</li>
+</ul>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="secure_dir" id="$secure_dir">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#37-43" title="Go to source code"><var>$secure_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$secure_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is the list of template directories that are considered secure.
+$template_dir is in this list implicitly.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is the list of template directories that are considered secure.
+$template_dir is in this list implicitly.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="trusted_dir" id="$trusted_dir">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#44-50" title="Go to source code"><var>$trusted_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$trusted_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of directories where trusted php scripts reside. $security is disabled during their inclusion/execution.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of directories where trusted php scripts reside. $security is disabled during their inclusion/execution.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="trusted_uri" id="$trusted_uri">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#51-56" title="Go to source code"><var>$trusted_uri</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$trusted_uri" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>List of regular expressions (PCRE) that include trusted URIs</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>List of regular expressions (PCRE) that include trusted URIs</p>
+
+
+					<h4>Used by</h4>
+					<div class="list">
+							<code><code><a href="class-Smarty_Security.html#_isTrustedUri">Smarty_Security::isTrustedUri()</a></code></code><br>for list of patterns to match against $uri<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="static_classes" id="$static_classes">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#57-64" title="Go to source code"><var>$static_classes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$static_classes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of trusted static classes.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of trusted static classes.</p>
+
+<p>If empty access to all static classes is allowed. If set to 'none' none is
+allowed.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="php_functions" id="$php_functions">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#65-78" title="Go to source code"><var>$php_functions</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'isset'</span>, <span class="php-quote">'empty'</span>,
+    <span class="php-quote">'count'</span>, <span class="php-quote">'sizeof'</span>,
+    <span class="php-quote">'in_array'</span>, <span class="php-quote">'is_array'</span>,
+    <span class="php-quote">'time'</span>,
+    <span class="php-quote">'nl2br'</span>,
+)</code></td>
+		<td class="description"><div>
+			<a href="#$php_functions" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of trusted PHP functions.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of trusted PHP functions.</p>
+
+<p>If empty all functions are allowed. To disable all PHP functions set
+$php_functions = null.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="php_modifiers" id="$php_modifiers">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#79-89" title="Go to source code"><var>$php_modifiers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'escape'</span>,
+    <span class="php-quote">'count'</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$php_modifiers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of trusted PHP modifers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of trusted PHP modifers.</p>
+
+<p>If empty all modifiers are allowed. To disable all modifier set $modifiers =
+null.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="allowed_tags" id="$allowed_tags">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#90-96" title="Go to source code"><var>$allowed_tags</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$allowed_tags" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of allowed tags.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of allowed tags.</p>
+
+<p>If empty no restriction by allowed_tags.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="disabled_tags" id="$disabled_tags">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#97-103" title="Go to source code"><var>$disabled_tags</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$disabled_tags" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of disabled tags.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of disabled tags.</p>
+
+<p>If empty no restriction by disabled_tags.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="allowed_modifiers" id="$allowed_modifiers">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#104-110" title="Go to source code"><var>$allowed_modifiers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$allowed_modifiers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of allowed modifier plugins.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of allowed modifier plugins.</p>
+
+<p>If empty no restriction by allowed_modifiers.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="disabled_modifiers" id="$disabled_modifiers">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#111-117" title="Go to source code"><var>$disabled_modifiers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$disabled_modifiers" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of disabled modifier plugins.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of disabled modifier plugins.</p>
+
+<p>If empty no restriction by disabled_modifiers.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="streams" id="$streams">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#118-125" title="Go to source code"><var>$streams</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'file'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$streams" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This is an array of trusted streams.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This is an array of trusted streams.</p>
+
+<p>If empty all streams are allowed. To disable all streams set $streams =
+null.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="allow_constants" id="$allow_constants">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#126-130" title="Go to source code"><var>$allow_constants</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$allow_constants" class="anchor">#</a>
+
+			<div class="description short">
+				
+<ul>
+	<li>flag if constants can be accessed from template</li>
+</ul>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<ul>
+	<li>flag if constants can be accessed from template</li>
+</ul>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="allow_super_globals" id="$allow_super_globals">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#131-135" title="Go to source code"><var>$allow_super_globals</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$allow_super_globals" class="anchor">#</a>
+
+			<div class="description short">
+				
+<ul>
+	<li>flag if super globals can be accessed from template</li>
+</ul>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<ul>
+	<li>flag if super globals can be accessed from template</li>
+</ul>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_resource_dir" id="$_resource_dir">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#137-141" title="Go to source code"><var>$_resource_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_resource_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache for $resource_dir lookups</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache for $resource_dir lookups</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_template_dir" id="$_template_dir">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#142-146" title="Go to source code"><var>$_template_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_template_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache for $template_dir lookups</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache for $template_dir lookups</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_config_dir" id="$_config_dir">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#147-151" title="Go to source code"><var>$_config_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_config_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache for $config_dir lookups</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache for $config_dir lookups</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_secure_dir" id="$_secure_dir">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#152-156" title="Go to source code"><var>$_secure_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_secure_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache for $secure_dir lookups</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache for $secure_dir lookups</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_php_resource_dir" id="$_php_resource_dir">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#157-161" title="Go to source code"><var>$_php_resource_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_php_resource_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache for $php_resource_dir lookups</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache for $php_resource_dir lookups</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_trusted_dir" id="$_trusted_dir">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Security.html#162-166" title="Go to source code"><var>$_trusted_dir</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_trusted_dir" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cache for $trusted_dir lookups</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cache for $trusted_dir lookups</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

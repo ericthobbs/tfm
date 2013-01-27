@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_Internal_TemplateCompilerBase | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li class="active"><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smarty_Internal_Compile_Append.html">Smarty_Internal_Compile_Append</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Assign.html">Smarty_Internal_Compile_Assign</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Block.html">Smarty_Internal_Compile_Block</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Blockclose.html">Smarty_Internal_Compile_Blockclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Break.html">Smarty_Internal_Compile_Break</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Call.html">Smarty_Internal_Compile_Call</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Capture.html">Smarty_Internal_Compile_Capture</a></li>
+				<li><a href="class-Smarty_Internal_Compile_CaptureClose.html">Smarty_Internal_Compile_CaptureClose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Config_Load.html">Smarty_Internal_Compile_Config_Load</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Continue.html">Smarty_Internal_Compile_Continue</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Debug.html">Smarty_Internal_Compile_Debug</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Else.html">Smarty_Internal_Compile_Else</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Elseif.html">Smarty_Internal_Compile_Elseif</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Eval.html">Smarty_Internal_Compile_Eval</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Extends.html">Smarty_Internal_Compile_Extends</a></li>
+				<li><a href="class-Smarty_Internal_Compile_For.html">Smarty_Internal_Compile_For</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Forclose.html">Smarty_Internal_Compile_Forclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Foreach.html">Smarty_Internal_Compile_Foreach</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Foreachclose.html">Smarty_Internal_Compile_Foreachclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Foreachelse.html">Smarty_Internal_Compile_Foreachelse</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Forelse.html">Smarty_Internal_Compile_Forelse</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Function.html">Smarty_Internal_Compile_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Functionclose.html">Smarty_Internal_Compile_Functionclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_If.html">Smarty_Internal_Compile_If</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Ifclose.html">Smarty_Internal_Compile_Ifclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Include.html">Smarty_Internal_Compile_Include</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Include_Php.html">Smarty_Internal_Compile_Include_Php</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Insert.html">Smarty_Internal_Compile_Insert</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Ldelim.html">Smarty_Internal_Compile_Ldelim</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Nocache.html">Smarty_Internal_Compile_Nocache</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Nocacheclose.html">Smarty_Internal_Compile_Nocacheclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Block_Plugin.html">Smarty_Internal_Compile_Private_Block_Plugin</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Function_Plugin.html">Smarty_Internal_Compile_Private_Function_Plugin</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Modifier.html">Smarty_Internal_Compile_Private_Modifier</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Object_Block_Function.html">Smarty_Internal_Compile_Private_Object_Block_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Object_Function.html">Smarty_Internal_Compile_Private_Object_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Print_Expression.html">Smarty_Internal_Compile_Private_Print_Expression</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Registered_Block.html">Smarty_Internal_Compile_Private_Registered_Block</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Registered_Function.html">Smarty_Internal_Compile_Private_Registered_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Special_Variable.html">Smarty_Internal_Compile_Private_Special_Variable</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Rdelim.html">Smarty_Internal_Compile_Rdelim</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Section.html">Smarty_Internal_Compile_Section</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Sectionclose.html">Smarty_Internal_Compile_Sectionclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Sectionelse.html">Smarty_Internal_Compile_Sectionelse</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Setfilter.html">Smarty_Internal_Compile_Setfilter</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Setfilterclose.html">Smarty_Internal_Compile_Setfilterclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_While.html">Smarty_Internal_Compile_While</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Whileclose.html">Smarty_Internal_Compile_Whileclose</a></li>
+				<li><a href="class-Smarty_Internal_CompileBase.html">Smarty_Internal_CompileBase</a></li>
+				<li><a href="class-Smarty_Internal_Nocache_Insert.html">Smarty_Internal_Nocache_Insert</a></li>
+				<li><a href="class-Smarty_Internal_SmartyTemplateCompiler.html">Smarty_Internal_SmartyTemplateCompiler</a></li>
+				<li class="active"><a href="class-Smarty_Internal_TemplateCompilerBase.html">Smarty_Internal_TemplateCompilerBase</a></li>
+				<li><a href="class-Smarty_Internal_Templatelexer.html">Smarty_Internal_Templatelexer</a></li>
+				<li><a href="class-TP_yyToken.html">TP_yyToken</a></li>
+				<li><a href="class-TPC_yyToken.html">TPC_yyToken</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Compiler.html" title="Summary of Smarty\Compiler"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_Internal_TemplateCompilerBase</h1>
+
+
+	<div class="description">
+	
+<p>Main abstract compiler class</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Smarty_Internal_SmartyTemplateCompiler.html">Smarty_Internal_SmartyTemplateCompiler</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Compiler.html">Compiler</a><br />
+
+				<b>Author:</b>
+				Uwe Tews<br />
+		<b>Located at</b> <a href="source-class-Smarty_Internal_TemplateCompilerBase.html#13-660" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_internal_templatecompilerbase.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#139-144" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Initialize compiler</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize compiler</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compileTemplate" id="_compileTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compileTemplate">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#146-221" title="Go to source code">compileTemplate</a>( <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code> <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method to compile a Smarty template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method to compile a Smarty template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code></code><br>$template template object to compile</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if compiling succeeded, false if it failed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="compileTag" id="_compileTag">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compileTag">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#223-445" title="Go to source code">compileTag</a>( <span>string <var>$tag</var></span>, <span>array <var>$args</var></span>, <span>array <var>$parameter</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Compile Tag</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compile Tag</p>
+
+<p>This is a call back from the lexer/parser It executes the required compile
+plugin for the Smarty tag</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tag</var></dt>
+					<dd><code>string</code><br>$tag tag name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>$args array with tag attributes</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>array</code><br>$parameter array with compilation parameter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>compiled code<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callTagCompiler" id="_callTagCompiler">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callTagCompiler">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#447-480" title="Go to source code">callTagCompiler</a>( <span>string <var>$tag</var></span>, <span>array <var>$args</var></span>, <span>mixed <var>$param1</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$param2</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$param3</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>lazy loads internal compile plugin for tag and calls the compile methode</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>lazy loads internal compile plugin for tag and calls the compile methode</p>
+
+<p>compile objects cached for reuse. class name format:
+Smarty_Internal_Compile_TagName plugin filename format:
+Smarty_Internal_Tagname.php</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tag</var></dt>
+					<dd><code>string</code><br>$tag tag name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>$args list of tag attributes</dd>
+					<dt><var>$param1</var></dt>
+					<dd><code>mixed</code><br>$param1 optional parameter</dd>
+					<dt><var>$param2</var></dt>
+					<dd><code>mixed</code><br>$param2 optional parameter</dd>
+					<dt><var>$param3</var></dt>
+					<dd><code>mixed</code><br>$param3 optional parameter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>compiled code<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlugin" id="_getPlugin">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlugin">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#482-534" title="Go to source code">getPlugin</a>( <span>string <var>$plugin_name</var></span>, <span>string <var>$plugin_type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check for plugins and return function name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check for plugins and return function name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$plugin_name</var></dt>
+					<dd><code>string</code><br>$pugin_name name of plugin or function</dd>
+					<dt><var>$plugin_type</var></dt>
+					<dd><code>string</code><br>$plugin_type type of plugin</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>call name of function<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPluginFromDefaultHandler" id="_getPluginFromDefaultHandler">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPluginFromDefaultHandler">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#536-577" title="Go to source code">getPluginFromDefaultHandler</a>( <span>string <var>$tag</var></span>, <span>string <var>$plugin_type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check for plugins by default plugin handler</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check for plugins by default plugin handler</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tag</var></dt>
+					<dd><code>string</code><br>$tag name of tag</dd>
+					<dt><var>$plugin_type</var></dt>
+					<dd><code>string</code><br>$plugin_type type of plugin</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if found<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processNocacheCode" id="_processNocacheCode">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processNocacheCode">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#579-616" title="Go to source code">processNocacheCode</a>( <span>string <var>$content</var></span>, <span>boolean <var>$is_code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Inject inline code for nocache template sections</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Inject inline code for nocache template sections</p>
+
+<p>This method gets the content of each template element from the parser. If the
+content is compiled code and it should be not cached the code is injected into
+the rendered output.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>$content content of template element</dd>
+					<dt><var>$is_code</var></dt>
+					<dd><code>boolean</code><br>$is_code true if content is compiled code</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>content<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trigger_template_error" id="_trigger_template_error">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trigger_template_error">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateCompilerBase.html#618-658" title="Go to source code">trigger_template_error</a>( <span>string <var>$args</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$line</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>display compiler error messages without dying</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>display compiler error messages without dying</p>
+
+<p>If parameter $args is empty it is a parser detected syntax error. In this
+case the parser is called to obtain information about expected tokens.</p>
+
+<p>If parameter $args contains a string this is used as error message</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$args</var></dt>
+					<dd><code>string</code><br>$args individual error message or null</dd>
+					<dt><var>$line</var></dt>
+					<dd><code>string</code><br>$line line-number</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyCompilerException.html">SmartyCompilerException</a></code></code><br>when an unexpected token is found<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="suppressNocacheProcessing" id="$suppressNocacheProcessing">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#28-33" title="Go to source code"><var>$suppressNocacheProcessing</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$suppressNocacheProcessing" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>suppress generation of nocache code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>suppress generation of nocache code</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="suppressMergedTemplates" id="$suppressMergedTemplates">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#35-40" title="Go to source code"><var>$suppressMergedTemplates</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$suppressMergedTemplates" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>suppress generation of merged template code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>suppress generation of merged template code</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_tag_objects" id="$_tag_objects">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#42-47" title="Go to source code"><var>$_tag_objects</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_tag_objects" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>compile tag objects</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>compile tag objects</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_tag_stack" id="$_tag_stack">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#49-54" title="Go to source code"><var>$_tag_stack</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_tag_stack" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>tag stack</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>tag stack</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="template" id="$template">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#56-61" title="Go to source code"><var>$template</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$template" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>current template</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>current template</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="merged_templates" id="$merged_templates">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#63-68" title="Go to source code"><var>$merged_templates</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$merged_templates" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>merged templates</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>merged templates</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="inheritance" id="$inheritance">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#70-75" title="Go to source code"><var>$inheritance</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$inheritance" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>flag when compiling {block}</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>flag when compiling {block}</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_handler_plugins" id="$default_handler_plugins">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#77-82" title="Go to source code"><var>$default_handler_plugins</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$default_handler_plugins" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>plugins loaded by default plugin handler</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>plugins loaded by default plugin handler</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_modifier_list" id="$default_modifier_list">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#84-89" title="Go to source code"><var>$default_modifier_list</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_modifier_list" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>saved preprocessed modifier list</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>saved preprocessed modifier list</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="forceNocache" id="$forceNocache">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#91-95" title="Go to source code"><var>$forceNocache</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$forceNocache" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>force compilation of complete template as nocache</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>force compilation of complete template as nocache</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="suppressHeader" id="$suppressHeader">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#97-101" title="Go to source code"><var>$suppressHeader</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$suppressHeader" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>suppress Smarty header code in compiled template</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>suppress Smarty header code in compiled template</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="suppressTemplatePropertyHeader" id="$suppressTemplatePropertyHeader">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#103-107" title="Go to source code"><var>$suppressTemplatePropertyHeader</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$suppressTemplatePropertyHeader" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>suppress template property header code in compiled template</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>suppress template property header code in compiled template</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="write_compiled_code" id="$write_compiled_code">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#109-113" title="Go to source code"><var>$write_compiled_code</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$write_compiled_code" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>flag if compiled template file shall we written</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>flag if compiled template file shall we written</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="compiles_template_function" id="$compiles_template_function">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#115-119" title="Go to source code"><var>$compiles_template_function</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$compiles_template_function" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>flag if currently a template function is compiled</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>flag if currently a template function is compiled</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="called_functions" id="$called_functions">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#121-125" title="Go to source code"><var>$called_functions</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$called_functions" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>called subfuntions from template function</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>called subfuntions from template function</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="modifier_plugins" id="$modifier_plugins">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#127-131" title="Go to source code"><var>$modifier_plugins</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$modifier_plugins" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>flags for used modifier plugins</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>flags for used modifier plugins</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="known_modifier_type" id="$known_modifier_type">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_TemplateCompilerBase.html#133-137" title="Go to source code"><var>$known_modifier_type</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$known_modifier_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>type of already compiled modifier</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>type of already compiled modifier</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

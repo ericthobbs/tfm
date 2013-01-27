@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_Internal_Debug | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li class="active"><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Smarty_Internal_Debug.html">Smarty_Internal_Debug</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-smarty_modifier_debug_print_var.html">smarty_modifier_debug_print_var</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Debug.html" title="Summary of Smarty\Debug"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_Internal_Debug</h1>
+
+
+	<div class="description">
+	
+<p>Smarty Internal Plugin Debug Class</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Smarty_Internal_Data.html"><span>Smarty_Internal_Data</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Smarty_Internal_Debug</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Debug.html">Debug</a><br />
+
+				<b>Author:</b>
+				Uwe Tews<br />
+		<b>Located at</b> <a href="source-class-Smarty_Internal_Debug.html#12-204" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_internal_debug.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="start_compile" id="_start_compile">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start_compile">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#27-36" title="Go to source code">start_compile</a>( <span>object <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Start logging of compile time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Start logging of compile time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>object</code><br>$template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="end_compile" id="_end_compile">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_end_compile">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#38-47" title="Go to source code">end_compile</a>( <span>object <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>End logging of compile time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>End logging of compile time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>object</code><br>$template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start_render" id="_start_render">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start_render">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#49-58" title="Go to source code">start_render</a>( <span>object <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Start logging of render time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Start logging of render time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>object</code><br>$template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="end_render" id="_end_render">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_end_render">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#60-69" title="Go to source code">end_render</a>( <span>object <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>End logging of compile time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>End logging of compile time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>object</code><br>$template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start_cache" id="_start_cache">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start_cache">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#71-80" title="Go to source code">start_cache</a>( <span>object <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Start logging of cache time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Start logging of cache time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>object</code><br>$template cached template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="end_cache" id="_end_cache">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_end_cache">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#82-91" title="Go to source code">end_cache</a>( <span>object <var>$template</var></span> )</code>
+
+		<div class="description short">
+			
+<p>End logging of cache time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>End logging of cache time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>object</code><br>$template cached template</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_debug" id="_display_debug">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_display_debug">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#93-136" title="Go to source code">display_debug</a>( <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code>|<code><a href="class-Smarty.html">Smarty</a></code> <var>$obj</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Opens a window for the Smarty Debugging Consol and display the data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Opens a window for the Smarty Debugging Consol and display the data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obj</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code>|<code><a href="class-Smarty.html">Smarty</a></code></code><br>$obj object to debug</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_debug_vars" id="_get_debug_vars">
+
+		<td class="attributes"><code>
+			 public static
+			StdClass
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_debug_vars">#</a>
+		<code><a href="source-class-Smarty_Internal_Debug.html#138-173" title="Go to source code">get_debug_vars</a>( <span><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code>|<code><a href="class-Smarty_Data.html">Smarty_Data</a></code> <var>$obj</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Recursively gets variables from all template/data scopes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Recursively gets variables from all template/data scopes</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obj</var></dt>
+					<dd><code><code><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></code>|<code><a href="class-Smarty_Data.html">Smarty_Data</a></code></code><br>$obj object to debug</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>StdClass</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Smarty_Internal_Data.html#methods">Smarty_Internal_Data</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_Internal_Data.html#_append">append()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_appendByRef">appendByRef()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_assign">assign()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_assignByRef">assignByRef()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_assignGlobal">assignGlobal()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_clearAllAssign">clearAllAssign()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_clearAssign">clearAssign()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_clearConfig">clearConfig()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_configLoad">configLoad()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getConfigVariable">getConfigVariable()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getConfigVars">getConfigVars()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getStreamVariable">getStreamVariable()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getTemplateVars">getTemplateVars()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getVariable">getVariable()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="template_data" id="$template_data">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_Debug.html#20-25" title="Go to source code"><var>$template_data</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$template_data" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>template data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>template data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Smarty_Internal_Data.html#properties">Smarty_Internal_Data</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_Internal_Data.html#$config_vars"><var>$config_vars</var></a>, 
+			<a href="class-Smarty_Internal_Data.html#$parent"><var>$parent</var></a>, 
+			<a href="class-Smarty_Internal_Data.html#$template_class"><var>$template_class</var></a>, 
+			<a href="class-Smarty_Internal_Data.html#$tpl_vars"><var>$tpl_vars</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

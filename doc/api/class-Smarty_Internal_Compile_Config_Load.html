@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_Internal_Compile_Config_Load | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li class="active"><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smarty_Internal_Compile_Append.html">Smarty_Internal_Compile_Append</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Assign.html">Smarty_Internal_Compile_Assign</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Block.html">Smarty_Internal_Compile_Block</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Blockclose.html">Smarty_Internal_Compile_Blockclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Break.html">Smarty_Internal_Compile_Break</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Call.html">Smarty_Internal_Compile_Call</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Capture.html">Smarty_Internal_Compile_Capture</a></li>
+				<li><a href="class-Smarty_Internal_Compile_CaptureClose.html">Smarty_Internal_Compile_CaptureClose</a></li>
+				<li class="active"><a href="class-Smarty_Internal_Compile_Config_Load.html">Smarty_Internal_Compile_Config_Load</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Continue.html">Smarty_Internal_Compile_Continue</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Debug.html">Smarty_Internal_Compile_Debug</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Else.html">Smarty_Internal_Compile_Else</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Elseif.html">Smarty_Internal_Compile_Elseif</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Eval.html">Smarty_Internal_Compile_Eval</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Extends.html">Smarty_Internal_Compile_Extends</a></li>
+				<li><a href="class-Smarty_Internal_Compile_For.html">Smarty_Internal_Compile_For</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Forclose.html">Smarty_Internal_Compile_Forclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Foreach.html">Smarty_Internal_Compile_Foreach</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Foreachclose.html">Smarty_Internal_Compile_Foreachclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Foreachelse.html">Smarty_Internal_Compile_Foreachelse</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Forelse.html">Smarty_Internal_Compile_Forelse</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Function.html">Smarty_Internal_Compile_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Functionclose.html">Smarty_Internal_Compile_Functionclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_If.html">Smarty_Internal_Compile_If</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Ifclose.html">Smarty_Internal_Compile_Ifclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Include.html">Smarty_Internal_Compile_Include</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Include_Php.html">Smarty_Internal_Compile_Include_Php</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Insert.html">Smarty_Internal_Compile_Insert</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Ldelim.html">Smarty_Internal_Compile_Ldelim</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Nocache.html">Smarty_Internal_Compile_Nocache</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Nocacheclose.html">Smarty_Internal_Compile_Nocacheclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Block_Plugin.html">Smarty_Internal_Compile_Private_Block_Plugin</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Function_Plugin.html">Smarty_Internal_Compile_Private_Function_Plugin</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Modifier.html">Smarty_Internal_Compile_Private_Modifier</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Object_Block_Function.html">Smarty_Internal_Compile_Private_Object_Block_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Object_Function.html">Smarty_Internal_Compile_Private_Object_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Print_Expression.html">Smarty_Internal_Compile_Private_Print_Expression</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Registered_Block.html">Smarty_Internal_Compile_Private_Registered_Block</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Registered_Function.html">Smarty_Internal_Compile_Private_Registered_Function</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Private_Special_Variable.html">Smarty_Internal_Compile_Private_Special_Variable</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Rdelim.html">Smarty_Internal_Compile_Rdelim</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Section.html">Smarty_Internal_Compile_Section</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Sectionclose.html">Smarty_Internal_Compile_Sectionclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Sectionelse.html">Smarty_Internal_Compile_Sectionelse</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Setfilter.html">Smarty_Internal_Compile_Setfilter</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Setfilterclose.html">Smarty_Internal_Compile_Setfilterclose</a></li>
+				<li><a href="class-Smarty_Internal_Compile_While.html">Smarty_Internal_Compile_While</a></li>
+				<li><a href="class-Smarty_Internal_Compile_Whileclose.html">Smarty_Internal_Compile_Whileclose</a></li>
+				<li><a href="class-Smarty_Internal_CompileBase.html">Smarty_Internal_CompileBase</a></li>
+				<li><a href="class-Smarty_Internal_Nocache_Insert.html">Smarty_Internal_Nocache_Insert</a></li>
+				<li><a href="class-Smarty_Internal_SmartyTemplateCompiler.html">Smarty_Internal_SmartyTemplateCompiler</a></li>
+				<li><a href="class-Smarty_Internal_TemplateCompilerBase.html">Smarty_Internal_TemplateCompilerBase</a></li>
+				<li><a href="class-Smarty_Internal_Templatelexer.html">Smarty_Internal_Templatelexer</a></li>
+				<li><a href="class-TP_yyToken.html">TP_yyToken</a></li>
+				<li><a href="class-TPC_yyToken.html">TPC_yyToken</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Compiler.html" title="Summary of Smarty\Compiler"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_Internal_Compile_Config_Load</h1>
+
+
+	<div class="description">
+	
+<p>Smarty Internal Plugin Compile Config Load Class</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Smarty_Internal_CompileBase.html"><span>Smarty_Internal_CompileBase</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Smarty_Internal_Compile_Config_Load</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Compiler.html">Compiler</a><br />
+
+				<b>Author:</b>
+				Uwe Tews<br />
+		<b>Located at</b> <a href="source-class-Smarty_Internal_Compile_Config_Load.html#12-83" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_internal_compile_config_load.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="compile" id="_compile">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_compile">#</a>
+		<code><a href="source-class-Smarty_Internal_Compile_Config_Load.html#42-81" title="Go to source code">compile</a>( <span>array <var>$args</var></span>, <span>object <var>$compiler</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compiles code for the {config_load} tag</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compiles code for the {config_load} tag</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>$args array with attributes from parser</dd>
+					<dt><var>$compiler</var></dt>
+					<dd><code>object</code><br>$compiler compiler object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>compiled code<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Smarty_Internal_CompileBase.html#methods">Smarty_Internal_CompileBase</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_Internal_CompileBase.html#_closeTag">closeTag()</a>, 
+			<a href="class-Smarty_Internal_CompileBase.html#_getAttributes">getAttributes()</a>, 
+			<a href="class-Smarty_Internal_CompileBase.html#_openTag">openTag()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="required_attributes" id="$required_attributes">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_Compile_Config_Load.html#20-26" title="Go to source code"><var>$required_attributes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'file'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$required_attributes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Attribute definition: Overwrites base class.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attribute definition: Overwrites base class.</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-Smarty_Internal_CompileBase.html">Smarty_Internal_CompileBase</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="shorttag_order" id="$shorttag_order">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_Compile_Config_Load.html#27-33" title="Go to source code"><var>$shorttag_order</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'file'</span>,<span class="php-quote">'section'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$shorttag_order" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Attribute definition: Overwrites base class.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attribute definition: Overwrites base class.</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-Smarty_Internal_CompileBase.html">Smarty_Internal_CompileBase</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="optional_attributes" id="$optional_attributes">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Smarty_Internal_Compile_Config_Load.html#34-40" title="Go to source code"><var>$optional_attributes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'section'</span>, <span class="php-quote">'scope'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$optional_attributes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Attribute definition: Overwrites base class.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Attribute definition: Overwrites base class.</p>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-Smarty_Internal_CompileBase.html">Smarty_Internal_CompileBase</a></code></code><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Smarty_Internal_CompileBase.html#properties">Smarty_Internal_CompileBase</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_Internal_CompileBase.html#$option_flags"><var>$option_flags</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

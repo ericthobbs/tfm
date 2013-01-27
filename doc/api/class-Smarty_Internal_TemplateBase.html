@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Smarty_Internal_TemplateBase | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li class="active"><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smarty_Data.html">Smarty_Data</a></li>
+				<li><a href="class-Smarty_Internal_Data.html">Smarty_Internal_Data</a></li>
+				<li><a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a></li>
+				<li class="active"><a href="class-Smarty_Internal_TemplateBase.html">Smarty_Internal_TemplateBase</a></li>
+				<li><a href="class-Smarty_Variable.html">Smarty_Variable</a></li>
+				<li><a href="class-Undefined_Smarty_Variable.html">Undefined_Smarty_Variable</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.Template.html" title="Summary of Smarty\Template"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Smarty_Internal_TemplateBase</h1>
+
+
+	<div class="description">
+	
+<p>Class with shared template methodes</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Smarty_Internal_Data.html"><span>Smarty_Internal_Data</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Smarty_Internal_TemplateBase</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Smarty.html">Smarty</a>, 
+			<a href="class-Smarty_Internal_Template.html">Smarty_Internal_Template</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-SmartyBC.html">SmartyBC</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-Smarty.html">Smarty</a>\<a href="package-Smarty.Template.html">Template</a><br />
+
+				<b>Author:</b>
+				Uwe Tews<br />
+		<b>Located at</b> <a href="source-class-Smarty_Internal_TemplateBase.html#12-809" title="Go to source code">libs/Smarty/libs/sysplugins/smarty_internal_templatebase.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="fetch" id="_fetch">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetch">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#20-361" title="Go to source code">fetch</a>( <span>string <var>$template</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>object <var>$parent</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$merge_tpl_vars</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$no_output_filter</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>fetches a rendered Smarty template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>fetches a rendered Smarty template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>string</code><br>$template the resource handle of the template file or template object</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>mixed</code><br>$cache_id cache id to be used with this template</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>mixed</code><br>$compile_id compile id to be used with this template</dd>
+					<dt><var>$parent</var></dt>
+					<dd><code>object</code><br>$parent next higher level of Smarty variables</dd>
+					<dt><var>$display</var></dt>
+					<dd><code>boolean</code><br>$display true: display, false: fetch</dd>
+					<dt><var>$merge_tpl_vars</var></dt>
+					<dd><code>boolean</code><br>$merge_tpl_vars if true parent template variables merged in to local scope</dd>
+					<dt><var>$no_output_filter</var></dt>
+					<dd><code>boolean</code><br>$no_output_filter if true do not run output filter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>rendered template output<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="display" id="_display">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_display">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#363-375" title="Go to source code">display</a>( <span>string <var>$template</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>object <var>$parent</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>displays a Smarty template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>displays a Smarty template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>string</code><br>$template the resource handle of the template file or template object</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>mixed</code><br>$cache_id cache id to be used with this template</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>mixed</code><br>$compile_id compile id to be used with this template</dd>
+					<dt><var>$parent</var></dt>
+					<dd><code>object</code><br>$parent next higher level of Smarty variables</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isCached" id="_isCached">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isCached">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#377-399" title="Go to source code">isCached</a>( <span>string|object <var>$template</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$cache_id</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$compile_id</var> = <span class="php-keyword1">null</span></span>, <span>object <var>$parent</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>test if cache is valid</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>test if cache is valid</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd><code>string|object</code><br>$template the resource handle of the template file or template object</dd>
+					<dt><var>$cache_id</var></dt>
+					<dd><code>mixed</code><br>$cache_id cache id to be used with this template</dd>
+					<dt><var>$compile_id</var></dt>
+					<dd><code>mixed</code><br>$compile_id compile id to be used with this template</dd>
+					<dt><var>$parent</var></dt>
+					<dd><code>object</code><br>$parent next higher level of Smarty variables</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>cache status<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createData" id="_createData">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createData">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#401-410" title="Go to source code">createData</a>( <span>object <var>$parent</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>creates a data object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>creates a data object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$parent</var></dt>
+					<dd><code>object</code><br>$parent next higher level of Smarty variables</dd>
+				</dl></div>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+						Smarty_Data data object<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerPlugin" id="_registerPlugin">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerPlugin">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#412-434" title="Go to source code">registerPlugin</a>( <span>string <var>$type</var></span>, <span>string <var>$tag</var></span>, <span>callable <var>$callback</var></span>, <span>boolean <var>$cacheable</var> = <span class="php-keyword1">true</span></span>, <span>array <var>$cache_attr</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers plugin to be used in templates</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers plugin to be used in templates</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type plugin type</dd>
+					<dt><var>$tag</var></dt>
+					<dd><code>string</code><br>$tag name of template tag</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback PHP callback to register</dd>
+					<dt><var>$cacheable</var></dt>
+					<dd><code>boolean</code><br>$cacheable if true (default) this fuction is cachable</dd>
+					<dt><var>$cache_attr</var></dt>
+					<dd><code>array</code><br>$cache_attr caching attributes if any</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>when the plugin tag is invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unregisterPlugin" id="_unregisterPlugin">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unregisterPlugin">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#436-450" title="Go to source code">unregisterPlugin</a>( <span>string <var>$type</var></span>, <span>string <var>$tag</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unregister Plugin</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unregister Plugin</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type of plugin</dd>
+					<dt><var>$tag</var></dt>
+					<dd><code>string</code><br>$tag name of plugin</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerResource" id="_registerResource">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerResource">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#452-463" title="Go to source code">registerResource</a>( <span>string <var>$type</var></span>, <span><code><a href="class-Smarty_Resource.html">Smarty_Resource</a></code>|array <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a resource to fetch a template</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a resource to fetch a template</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type name of resource type</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code><code><a href="class-Smarty_Resource.html">Smarty_Resource</a></code>|array</code><br>$callback or instance of Smarty_Resource, or array of callbacks to handle
+resource (deprecated)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unregisterResource" id="_unregisterResource">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unregisterResource">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#465-478" title="Go to source code">unregisterResource</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unregisters a resource</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unregisters a resource</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type name of resource type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerCacheResource" id="_registerCacheResource">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerCacheResource">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#480-491" title="Go to source code">registerCacheResource</a>( <span>string <var>$type</var></span>, <span><code><a href="class-Smarty_CacheResource.html">Smarty_CacheResource</a></code> <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a cache resource to cache a template's output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a cache resource to cache a template's output</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type name of cache resource type</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code><code><a href="class-Smarty_CacheResource.html">Smarty_CacheResource</a></code></code><br>$callback instance of Smarty_CacheResource to handle output caching</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unregisterCacheResource" id="_unregisterCacheResource">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unregisterCacheResource">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#493-506" title="Go to source code">unregisterCacheResource</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unregisters a cache resource</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unregisters a cache resource</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type name of cache resource type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerObject" id="_registerObject">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerObject">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#508-542" title="Go to source code">registerObject</a>( <span>string <var>$object_name</var></span>, <span>object <var>$object_impl</var></span>, <span>array <var>$allowed</var> = <span class="php-keyword1">array</span>()</span>, <span>boolean <var>$smarty_args</var> = <span class="php-keyword1">true</span></span>, <span>array <var>$block_methods</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Registers object to be used in templates</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers object to be used in templates</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object_name</var></dt>
+					<dd><code>string</code><br>$object name of template object</dd>
+					<dt><var>$object_impl</var></dt>
+					<dd><code>object</code><br>$object_impl the referenced PHP object to register</dd>
+					<dt><var>$allowed</var></dt>
+					<dd><code>array</code><br>$allowed list of allowed methods (empty = all)</dd>
+					<dt><var>$smarty_args</var></dt>
+					<dd><code>boolean</code><br>$smarty_args smarty argument format, else traditional</dd>
+					<dt><var>$block_methods</var></dt>
+					<dd><code>array</code><br>$block_methods list of block-methods</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if any of the methods in $allowed or $block_methods are invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRegisteredObject" id="_getRegisteredObject">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRegisteredObject">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#544-560" title="Go to source code">getRegisteredObject</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>return a reference to a registered object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>return a reference to a registered object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name object name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if no such object is found<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unregisterObject" id="_unregisterObject">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unregisterObject">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#562-575" title="Go to source code">unregisterObject</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>unregister an object</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>unregister an object</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name object name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerClass" id="_registerClass">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerClass">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#577-594" title="Go to source code">registerClass</a>( <span>string <var>$class_name</var></span>, <span>string <var>$class_impl</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers static classes to be used in templates</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers static classes to be used in templates</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class_name</var></dt>
+					<dd><code>string</code><br>$class name of template class</dd>
+					<dt><var>$class_impl</var></dt>
+					<dd><code>string</code><br>$class_impl the referenced PHP class to register</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if $class_impl does not refer to an existing class<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerDefaultPluginHandler" id="_registerDefaultPluginHandler">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerDefaultPluginHandler">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#596-612" title="Go to source code">registerDefaultPluginHandler</a>( <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a default plugin handler</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a default plugin handler</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback class/method name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if $callback is not callable<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerDefaultTemplateHandler" id="_registerDefaultTemplateHandler">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerDefaultTemplateHandler">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#614-630" title="Go to source code">registerDefaultTemplateHandler</a>( <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a default template handler</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a default template handler</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback class/method name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if $callback is not callable<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerDefaultConfigHandler" id="_registerDefaultConfigHandler">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerDefaultConfigHandler">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#632-648" title="Go to source code">registerDefaultConfigHandler</a>( <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a default template handler</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a default template handler</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback class/method name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if $callback is not callable<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerFilter" id="_registerFilter">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerFilter">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#650-661" title="Go to source code">registerFilter</a>( <span>string <var>$type</var></span>, <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a filter function</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a filter function</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type filter type</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unregisterFilter" id="_unregisterFilter">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unregisterFilter">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#663-678" title="Go to source code">unregisterFilter</a>( <span>string <var>$type</var></span>, <span>callable <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unregisters a filter function</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unregisters a filter function</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type filter type</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>callable</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_get_filter_name" id="__get_filter_name">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__get_filter_name">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#680-695" title="Go to source code">_get_filter_name</a>( <span>callable <var>$function_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return internal filter name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return internal filter name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function_name</var></dt>
+					<dd><code>callable</code><br>$function_name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>internal filter name<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadFilter" id="_loadFilter">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadFilter">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#697-718" title="Go to source code">loadFilter</a>( <span>string <var>$type</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>load a filter of specified type and name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>load a filter of specified type and name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type filter type</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name filter name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-SmartyException.html">SmartyException</a></code></code><br>if filter could not be loaded<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unloadFilter" id="_unloadFilter">
+
+		<td class="attributes"><code>
+			 public 
+			Smarty_Internal_Templatebase
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unloadFilter">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#720-735" title="Go to source code">unloadFilter</a>( <span>string <var>$type</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>unload a filter of specified type and name</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>unload a filter of specified type and name</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type filter type</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name filter name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Smarty_Internal_Templatebase</code><br>current Smarty_Internal_Templatebase (or Smarty or Smarty_Internal_Template)
+instance for chaining<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Smarty_Internal_TemplateBase.html#747-807" title="Go to source code">__call</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Handle unknown class methods</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handle unknown class methods</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name unknown method-name</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>$args argument array</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Smarty_Internal_Data.html#methods">Smarty_Internal_Data</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_Internal_Data.html#_append">append()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_appendByRef">appendByRef()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_assign">assign()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_assignByRef">assignByRef()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_assignGlobal">assignGlobal()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_clearAllAssign">clearAllAssign()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_clearAssign">clearAssign()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_clearConfig">clearConfig()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_configLoad">configLoad()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getConfigVariable">getConfigVariable()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getConfigVars">getConfigVars()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getStreamVariable">getStreamVariable()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getTemplateVars">getTemplateVars()</a>, 
+			<a href="class-Smarty_Internal_Data.html#_getVariable">getVariable()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Smarty_Internal_Data.html#properties">Smarty_Internal_Data</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Smarty_Internal_Data.html#$config_vars"><var>$config_vars</var></a>, 
+			<a href="class-Smarty_Internal_Data.html#$parent"><var>$parent</var></a>, 
+			<a href="class-Smarty_Internal_Data.html#$template_class"><var>$template_class</var></a>, 
+			<a href="class-Smarty_Internal_Data.html#$tpl_vars"><var>$tpl_vars</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File libs/Smarty/libs/sysplugins/smarty_resource_uncompiled.php | Trivial Fleet Manager</title>
+
+	<script type="text/javascript" src="resources/combined.js?3287214295"></script>
+	<script type="text/javascript" src="elementlist.js?696465405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="package-Smarty.html">Smarty<span></span></a>
+						<ul>
+				<li><a href="package-Smarty.Cacher.html">Cacher</a>
+						</li>
+				<li><a href="package-Smarty.Compiler.html">Compiler</a>
+						</li>
+				<li><a href="package-Smarty.Config.html">Config</a>
+						</li>
+				<li><a href="package-Smarty.Debug.html">Debug</a>
+						</li>
+				<li><a href="package-Smarty.PluginsBlock.html">PluginsBlock</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFilter.html">PluginsFilter</a>
+						</li>
+				<li><a href="package-Smarty.PluginsFunction.html">PluginsFunction</a>
+						</li>
+				<li><a href="package-Smarty.PluginsInternal.html">PluginsInternal</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifier.html">PluginsModifier</a>
+						</li>
+				<li><a href="package-Smarty.PluginsModifierCompiler.html">PluginsModifierCompiler</a>
+						</li>
+				<li><a href="package-Smarty.PluginsShared.html">PluginsShared</a>
+						</li>
+				<li><a href="package-Smarty.Security.html">Security</a>
+						</li>
+				<li><a href="package-Smarty.Template.html">Template</a>
+						</li>
+				<li class="active"><a href="package-Smarty.TemplateResources.html">TemplateResources</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smarty_Config_Source.html">Smarty_Config_Source</a></li>
+				<li><a href="class-Smarty_Internal_Resource_Eval.html">Smarty_Internal_Resource_Eval</a></li>
+				<li><a href="class-Smarty_Internal_Resource_Extends.html">Smarty_Internal_Resource_Extends</a></li>
+				<li><a href="class-Smarty_Internal_Resource_File.html">Smarty_Internal_Resource_File</a></li>
+				<li><a href="class-Smarty_Internal_Resource_PHP.html">Smarty_Internal_Resource_PHP</a></li>
+				<li><a href="class-Smarty_Internal_Resource_Stream.html">Smarty_Internal_Resource_Stream</a></li>
+				<li><a href="class-Smarty_Internal_Resource_String.html">Smarty_Internal_Resource_String</a></li>
+				<li><a href="class-Smarty_Resource.html">Smarty_Resource</a></li>
+				<li><a href="class-Smarty_Resource_Custom.html">Smarty_Resource_Custom</a></li>
+				<li><a href="class-Smarty_Resource_Recompiled.html">Smarty_Resource_Recompiled</a></li>
+				<li class="active"><a href="class-Smarty_Resource_Uncompiled.html">Smarty_Resource_Uncompiled</a></li>
+				<li><a href="class-Smarty_Template_Cached.html">Smarty_Template_Cached</a></li>
+				<li><a href="class-Smarty_Template_Compiled.html">Smarty_Template_Compiled</a></li>
+				<li><a href="class-Smarty_Template_Source.html">Smarty_Template_Source</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Smarty.TemplateResources.html" title="Summary of Smarty\TemplateResources"><span>Package</span></a>
+			</li>
+			<li>
+				<a href="class-Smarty_Resource_Uncompiled.html" title="Summary of Smarty_Resource_Uncompiled"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment"> * Smarty Resource Plugin
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> *
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * @package Smarty
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> * @subpackage TemplateResources
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-comment"> * @author Rodney Rehm
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-comment"> */</span>
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a>
+</span><span id="10" class="l"><a class="l" href="#10">10: </a><span class="php-comment">/**
+</span></span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment"> * Smarty Resource Plugin
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> *
+</span></span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment"> * Base implementation for resource plugins that don't use the compiler
+</span></span><span id="14" class="l"><a class="l" href="#14">14: </a><span class="php-comment"> *
+</span></span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-comment"> * @package Smarty
+</span></span><span id="16" class="l"><a class="l" href="#16">16: </a><span class="php-comment"> * @subpackage TemplateResources
+</span></span><span id="17" class="l"><a class="l" href="#17">17: </a><span class="php-comment"> */</span>
+</span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-keyword1">abstract</span> <span class="php-keyword1">class</span> <a id="Smarty_Resource_Uncompiled" href="#Smarty_Resource_Uncompiled">Smarty_Resource_Uncompiled</a> <span class="php-keyword1">extends</span> Smarty_Resource {
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>    <span class="php-comment">/**
+</span></span><span id="21" class="l"><a class="l" href="#21">21: </a><span class="php-comment">     * Render and output the template (without using the compiler)
+</span></span><span id="22" class="l"><a class="l" href="#22">22: </a><span class="php-comment">     *
+</span></span><span id="23" class="l"><a class="l" href="#23">23: </a><span class="php-comment">     * @param Smarty_Template_Source   $source    source object
+</span></span><span id="24" class="l"><a class="l" href="#24">24: </a><span class="php-comment">     * @param Smarty_Internal_Template $_template template object
+</span></span><span id="25" class="l"><a class="l" href="#25">25: </a><span class="php-comment">     * @throws SmartyException on failure
+</span></span><span id="26" class="l"><a class="l" href="#26">26: </a><span class="php-comment">     */</span>
+</span><span id="27" class="l"><a class="l" href="#27">27: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">abstract</span> <span class="php-keyword1">function</span> <a id="_renderUncompiled" href="#_renderUncompiled">renderUncompiled</a>(Smarty_Template_Source <span class="php-var">$source</span>, Smarty_Internal_Template <span class="php-var">$_template</span>);
+</span><span id="28" class="l"><a class="l" href="#28">28: </a>
+</span><span id="29" class="l"><a class="l" href="#29">29: </a>    <span class="php-comment">/**
+</span></span><span id="30" class="l"><a class="l" href="#30">30: </a><span class="php-comment">     * populate compiled object with compiled filepath
+</span></span><span id="31" class="l"><a class="l" href="#31">31: </a><span class="php-comment">     *
+</span></span><span id="32" class="l"><a class="l" href="#32">32: </a><span class="php-comment">     * @param Smarty_Template_Compiled $compiled  compiled object
+</span></span><span id="33" class="l"><a class="l" href="#33">33: </a><span class="php-comment">     * @param Smarty_Internal_Template $_template template object (is ignored)
+</span></span><span id="34" class="l"><a class="l" href="#34">34: </a><span class="php-comment">     */</span>
+</span><span id="35" class="l"><a class="l" href="#35">35: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_populateCompiledFilepath" href="#_populateCompiledFilepath">populateCompiledFilepath</a>(Smarty_Template_Compiled <span class="php-var">$compiled</span>, Smarty_Internal_Template <span class="php-var">$_template</span>)
+</span><span id="36" class="l"><a class="l" href="#36">36: </a>    {
+</span><span id="37" class="l"><a class="l" href="#37">37: </a>        <span class="php-var">$compiled</span>-&gt;filepath = <span class="php-keyword1">false</span>;
+</span><span id="38" class="l"><a class="l" href="#38">38: </a>        <span class="php-var">$compiled</span>-&gt;timestamp = <span class="php-keyword1">false</span>;
+</span><span id="39" class="l"><a class="l" href="#39">39: </a>        <span class="php-var">$compiled</span>-&gt;exists = <span class="php-keyword1">false</span>;
+</span><span id="40" class="l"><a class="l" href="#40">40: </a>    }
+</span><span id="41" class="l"><a class="l" href="#41">41: </a>
+</span><span id="42" class="l"><a class="l" href="#42">42: </a>}
+</span><span id="43" class="l"><a class="l" href="#43">43: </a>
+</span><span id="44" class="l"><a class="l" href="#44">44: </a></span><span class="xlang">?&gt;</span></code></pre>
+
+	<div id="footer">
+		Trivial Fleet Manager API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
