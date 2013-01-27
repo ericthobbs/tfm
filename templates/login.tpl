@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>{$smarty.config.GenericPageTitle}</title>
-	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	<link rel="stylesheet" href="{$baseurl}/css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="{$baseurl}/css/style-light.css" type="text/css"/>
 	{include file='jquery.tpl'}
 	{include file='bootstrap.tpl'}
 </head>

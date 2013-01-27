@@ -1,3 +1,10 @@
-RewriteEngine Off
+RewriteEngine On
 
 RewriteRule ^Join/([^/\.]+)/?$ join_fleet.php?join_fleet=$1 [L]
+RewriteRule ^Create$ create_fleet.php [L]
+
+RewriteRule ^ViewShip/Id/([^/\.]+)/?$ popup.php?shipid=$1 [L]
+RewriteRule ^ViewShip/Name/([^/\.]+)/?$ popup.php?shipname=$1 [L]
+
+RewriteRule ^ViewMap/Name/([^/\.]+)/?$ popup.php?starmap&system=$1 [L]
+RewriteRule ^ViewMap/Id/([^/\.]+)/?$ popup.php?starmap&systemid=$1 [L]

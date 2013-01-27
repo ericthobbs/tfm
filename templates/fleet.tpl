@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<title>{$smarty.config.GenericPageTitle} - {$fleet.fleet_name}</title>
 	<script type="text/javascript" src="js/util.js"></script>
-	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	<link rel="stylesheet" href="{$baseurl}/css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="{$baseurl}/css/style-light.css" type="text/css"/>
 	{include file='jquery.tpl'}
 	{include file='bootstrap.tpl'}
 	<script type="text/javascript">
@@ -46,9 +46,9 @@
 			</form>
 		</div>
 	{/if}
-	<strong>Fleet Message of the Day:</strong>
 	<div class="well well-small">
-		<p>{$fleet.motd|default:'None Specified'}</p>
+		<strong>Fleet Message of the Day:</strong>
+		<p style="padding-left: 4px;">{$fleet.motd|default:'None Specified'}</p>
 	</div>
 	<span style="font-size: small;">Direct link: <a href="join_fleet.php?join_fleet={$fleet.fleet_id}">in-game link for chat</a></span>
 	<table class="gridtable" border="0">
@@ -135,6 +135,7 @@
 				{if $fleet.fc == $smarty.session.pilot}
 				<a href="{$smarty.server.PHP_SELF}?make_fc={$i.pilot_id}" title="Promote pilot to FC">
 					<img src="img/Icons/items/{$icons.fleet[0]}" width="16" alt="Promote pilot to FC"/></a>
+				<a href="#" onclick="{if $igb}javascript:CCPEVE.showMap(5,{$smarty.server.HTTP_EVE_SOLARSYSTEMID});{else}CreateMapPopup('{$i.position|default:'New Eden'}');{/if} return false;" title="Map Position">M</a>
 				{/if}
 			</td>
 		</tr>
@@ -203,6 +204,24 @@
 			<th><img src="img/Icons/items/{$icons.settings[0]}" title="Settings"/></th>
 		</tr>			
 	</table>
+	<br/>
+	<table class="fleetcomp">
+		<caption>Fleet Composition</caption>
+	{foreach $shiptypes as $i}
+		{if $i@first}
+			<tr>
+		{/if}
+		{* Break the table every 4 group types *}
+		{if $i@iteration is div by 4}
+			</tr><tr>
+		{/if}
+			<th>{$i.groupName}</th>
+			<td>{$i.count}</td>	
+		{if $i@last}
+			</tr>
+		{/if}
+	{/foreach}
+	</table>
 		<!-- <a href="index.php?clear" style="font-size: small;">clear session data</a> -->
 		<div id="options">
 			<h3>Update Ship</h3>
@@ -211,6 +230,11 @@
 					<label for="fitting">New Fitting</label> <input type="text" name="fitting" />&#160;
 					<button class="btn btn-info" type="submit" name="update_fitting">Update</button>
 				</form>
+				{if $igb}
+				<form class="form" name="option1" action="{$smarty.server.PHP_SELF|escape}" method="post">
+					<button class="btn btn-info" type="submit" name="update_position">Update Position</button>
+				</form>
+				{/if}
 			</div>
 			{if $fleet.fc == $smarty.session.pilot}
 			<h3>Update Fleet Information</h3>

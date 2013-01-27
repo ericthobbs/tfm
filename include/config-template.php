@@ -88,5 +88,6 @@ define('JQUERYCSS_THEMEDIR','http://code.jquery.com/ui/1.10.0/themes');
 
 define('CCPSHIPVIEWER_URL','http://web.ccpgamescdn.com/shipviewer/ccp.shipviewer-0.989.min.js');
 define('CCPMAPVIEWER_URL','http://web.ccpgamescdn.com/starmap/ccp.starmap-0.9843.min.js');
+define('CCPMAPTHREEJS_URL','http://web.ccpgamescdn.com/common/three.r44.js');
 
 ?>

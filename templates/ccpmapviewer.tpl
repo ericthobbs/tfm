@@ -1,6 +1,6 @@
 <script type="text/javascript" src="{$smarty.const.CCPMAPVIEWER_URL}"></script>
-<script type="text/javascript" src="http://web.ccpgamescdn.com/common/three.r44.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="{$smarty.const.CCPMAPTHREEJS_URL}"></script>
+<script type="text/javascript" src="{$smarty.const.JQUERY_JS}"></script>
 <div id="starmap"></div>
 <script>
  {
@@ -8,18 +8,26 @@
             var sm = new CCPStarmap({
                 views: [
 {
- adapterFunc: ["adapterSecurity"]
+			adapterFunc: ["adapterSecurity"]
+			//dataSource: [webAPI+"/jsonp/jumps/last30days"],
+            //adapterFunc: ["adapterJumpsMonth"] 
 }
 ],
                 defaultView: 0,
                 parentElementId: 'starmap',
-                height: 618,
+                height: 640,
                 displayMenu: false,
                 displayPopup: false,
-                /* onSystemSelected: universe.starmapOnSystemSelected,
-                onSystemDeselected: universe.starmapOnSystemDeselected, */
-                onLoaded: function() {
-                    //universe.starmapSelectPrespecifiedSystem(sm)
+                onSystemSelected: function(obj) { 
+					console.dir(obj); 
+				},
+                onSystemDeselected: function(obj)
+				{
+					console.dir(obj);
+				},
+                onLoaded: function() 
+				{
+                    sm.selectSystem("{$systemname|default:'RF-GGF'}");
                 }
             });
             //universe.initFullscreenButton(sm);

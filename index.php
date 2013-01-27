@@ -20,7 +20,8 @@ if(!isTrusted())
 	$smarty->debugging = SMARTY_DEBUG;
 
 $smarty->assign('igb',isTrusted());
-$smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
+$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === FALSE ? 'http' : 'https';
+$smarty->assign('basepath',$protocol."://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
 //If not trusted, then exit early to avoid doing work we don't need.
 if (!isTrusted() && REQUIRE_TRUST) 

@@ -4,11 +4,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>{$smarty.config.GenericPageTitle}</title>
-	<link rel="stylesheet" href="css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="css/style-light.css" type="text/css"/>
+	<link rel="stylesheet" href="{$baseurl}/css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="{$baseurl}/css/style-light.css" type="text/css"/>
 	{include file='jquery.tpl'}
 	{include file='bootstrap.tpl'}
-	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="{$baseurl}/js/util.js"></script>
 </head>
 <body>
 	{include file='navbar.tpl'}

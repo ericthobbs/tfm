@@ -15,8 +15,9 @@ $smarty->setCacheDir(    dirname(__FILE__) . "/smarty/cache" );
 $smarty->debugging = SMARTY_DEBUG;
 
 //If not trusted, then exit early to avoid doing work we don't need.
-$smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 $smarty->assign('igb',isTrusted());
+$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === FALSE ? 'http' : 'https';
+$smarty->assign('basepath',$protocol."://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
 $icons_array = json_decode(file_get_contents(IMAGES_FILE),true);
 $smarty->assign("icons", $icons_array["system-icons"]);
@@ -157,6 +158,7 @@ try
 		
 		$pilots = array();
 		$totals = array();
+		$shiptypes = getShipGroups($dbh);
 		
 		$mapping = json_decode(file_get_contents(MAPPINGS_FILE),true);
 		$module_icons = array();
@@ -171,8 +173,11 @@ try
 			$entry['ship_dna'] = $dna["dna"];
 			$entry['modules'] = array();
 			$entry['ship_type'] = getItemTypeName($dna["dna"],$dbh);
-
 			$entry['ship_typeid'] = isShipDNA($dna["dna"],$dbh);
+			$entry['ship_groupid'] = getShipGroupId($entry['ship_typeid'],$dbh);
+			
+			if(array_key_exists($entry['ship_groupid'], $shiptypes))
+				$shiptypes[$entry['ship_groupid']]["count"] += 1;
 			
 			//calc number of modules
 			foreach($dna["modules"] as $mixed)
@@ -203,16 +208,17 @@ try
 				}
 			}
 			
-			if($_REQUEST["debug"])
-			{
-				print("<pre><code>");
-				print_r($entry);
-				print("</code></pre>");			
-			}
-			
 			array_push($pilots,$entry);
 			
 		}
+		
+		foreach($shiptypes as $st => $data)
+		{
+			if($data["count"] < 1)
+				unset($shiptypes[$st]);
+		}
+		
+		$smarty->assign("shiptypes",$shiptypes);
 		$smarty->assign("module_icons",$module_icons);
 		$smarty->assign("fleet",$fleet);
 		$smarty->assign("error_msg",$error_msg);
@@ -278,4 +284,35 @@ function updateFleetInfo($fleet_id,$name,$motd,$public,PDO $dbh)
 		return true;
 	else
 		return false;
+}
+
+function getShipGroups(PDO $dbh)
+{
+	$query = "SELECT groupName,groupID FROM invGroups WHERE categoryID = :shipscategory AND published = 1 ORDER by categoryID ASC;";
+	$stmt = $dbh->prepare($query);
+	if(!$stmt->execute( array( ":shipscategory" => SHIP_CATEGORY ) ))
+		return false;
+	
+	$return = array();
+	
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($result as $row)
+	{
+		$return[$row["groupID"]] = array( "groupName" => $row["groupName"], "count" => 0 );
+	}
+	
+	return $return;
+}
+
+function getShipGroupId($typeid,PDO $dbh)
+{
+	$query = "SELECT groupID from invTypes WHERE typeID = :typeid";
+	$stmt = $dbh->prepare($query);
+	
+	if( !$stmt->execute( array( ":typeid" => $typeid ) ) )
+		return false;
+	
+	//lazy -- fixme
+	return $stmt->fetchColumn();
 }

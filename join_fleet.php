@@ -25,7 +25,8 @@ if(!isTrusted())
 	$smarty->debugging = SMARTY_DEBUG;
 
 $smarty->assign("igb",isTrusted());
-$smarty->assign('trusturl',"http://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
+$protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === FALSE ? 'http' : 'https';
+$smarty->assign('basepath',$protocol."://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
 
 $icons_array = json_decode(file_get_contents(IMAGES_FILE),true);
 $smarty->assign("icons", $icons_array["system-icons"]);

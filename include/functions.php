@@ -1,8 +1,10 @@
 <?php
 // Common functions
 
-//returns true or false if the website is trusted by the in-game browser
-//if the browser is not the IGB, then the function returns false.
+/**
+ * Check if the browser session is trusted by the client
+ * @return boolean true if the user-agent is the igb and it is trusted
+ */
 function isTrusted()
 {
     //check if we are the running in the igb
@@ -17,7 +19,11 @@ function isTrusted()
         return false;
 }
 
-//Check if the user is using the In-game browser to view the site
+/**
+ * Check if the user is using the In-game browser to view the site
+ * 
+ * @return boolean true if the user-agent is the IGB
+ */
 function isIGB()
 {
     $ingame = strpos($_SERVER["HTTP_USER_AGENT"], "EVE-IGB");
@@ -26,7 +32,11 @@ function isIGB()
 	return true;
 }
 
-//Connect to the database
+/**
+ * Connects to the database
+ * 
+ * @return \PDO
+ */
 function connectToDatabase()
 {   
     if(DB_MYSQL)
@@ -48,33 +58,28 @@ function connectToDatabase()
     return $db;
 }
 
-//check if the pilot is in a fleet
-//this function will restore the pilots last session data if possible.
+/**
+ * Check if the pilot is in a fleet
+ * 
+ * @param PDO $db the database handle
+ * @return boolean true if the pilot is in a fleet
+ */
 function pilotIsInFleet(PDO $db)
 {
     if(isset($_SESSION["fleet"]))
         return true;
 
-	/*
-	//check if the player is part of an active fleet
-	if(isset($_SERVER["HTTP_EVE_CHARID"]))
-	{
-		$fleets = getAllValidFleets($db);
-		foreach($fleets as $row)
-		{
-			$stmt = $db->prepare("SELECT fleet,owner from ships WHERE fleet = ? and owner = ?");
-			if(!$stmt->execute( array($row['id'],$_SERVER['HTTP_EVE_CHARID']) ))
-				return false;
-			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			$_SESSION["fleet"] = $results['fleet'];
-			return true;
-		}
-	}
-	 */
     return false;
 }
 
-//get all valid fleets
+/**
+ * Get all valid fleets
+ * 
+ * Valid fleets are fleets that are enabled and less then 24 hours old.
+ * 
+ * @param type $dbh handle to the database
+ * @return type 
+ */
 function getAllValidFleets($dbh)
 {
     $query="SELECT fleets.id as fleet_id, fleets.name as fleet_name,fc,creation_time,password,public,motd,options,enabled,pilots.name as fc_name
@@ -85,31 +90,47 @@ function getAllValidFleets($dbh)
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
-//returns an array of results containg the ships in the fleet
-function getShipsInFleet($fleet, PDO $db)
+//
+
+/**
+ * Gets every ship that belongs to the fleet
+ * @param type $fleet_id id of the fleet to query
+ * @param PDO $db valid database handle
+ * @return type
+ */
+function getShipsInFleet($fleet_id, PDO $db)
 {
 	$query="SELECT owner,dna,pilots.name as pilot_name 
 			FROM ships INNER JOIN pilots ON ships.owner=pilots.id 
-			WHERE fleet = :id;";
+			WHERE fleet = :id ORDER BY REVERSE(SUBSTRING(pilots.name, LOCATE(' ', pilots.name) +1)) ";
 	$stmt = $db->prepare($query);
-	$stmt->execute( array(':id' => $fleet) );
+	$stmt->execute( array(':id' => $fleet_id) );
 	return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }	
 
-//returns the selected fleet information
-function getFleetInfo($fleet, PDO $db)
+/**
+ * Retrieve information about the selected fleet
+ * @param type $fleet_id id of the fleet to query
+ * @param PDO $db handle to the database
+ * @return type
+ */
+function getFleetInfo($fleet_id, PDO $db)
 {
 	$query="SELECT fleets.id as fleet_id, fleets.name as fleet_name,fc,creation_time,password,public,motd,enabled, pilots.name as fc_name
 			FROM fleets JOIN pilots ON pilots.id=fleets.fc WHERE fleets.id = :id";
 	$stmt = $db->prepare($query);
-	$stmt->execute( array(':id' => $fleet) );
+	$stmt->execute( array(':id' => $fleet_id) );
 	return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-//Checks if the first element of the dna string is a valid item id.
-//if it is, then its most likely a ship and it returns the typeId.
-//if not, returns false
-//TODO: Check if the typeId is really a ship!
+/**
+ * Check if the string is a valid ship dna string/url
+ * 
+ * @todo Check if the typeId is really a ship
+ * @param type $dna 
+ * @param PDO $dbh
+ * @return boolean false on failure or the ship typeId if it is a type
+ */
 function isShipDNA($dna,PDO $dbh)
 {
 			$start = $dna;
@@ -139,11 +160,15 @@ function isShipDNA($dna,PDO $dbh)
 			return $typeId;
 }
 
-//parse a chat line/dna string into is component parts
-// return[0](dna)     = ship dna string
-// return[1](name)    = ship name
-// return[2](modules) = array of typeids and quantities in 'typeID;quantity' format
-//note: function assumes it is a valid ship dna string -- see isShipDNA to check if it is
+
+
+/**
+ * parses a chat line/dna string into is component parts
+ * 
+ * note: function assumes it is a valid ship dna string -- see isShipDNA to check if it is
+ * @param type $_dna
+ * @return type [0](dna) = ship dna string, [1](name) = ship name, [2](modules) = array of typeids and quantities in 'typeID;quantity' format
+ */
 function parseShipDNA($_dna)
 {
 			//TODO: replace this voodoo with actual code
@@ -165,8 +190,12 @@ function parseShipDNA($_dna)
 			return array( 'dna' => $dna, 'name' => $ship, 'modules' => $rdna );
 }
 
-//check if a given typeid belongs to a ship.
-//returns true if it does or false upon failure
+/**
+ * Check if a typeId belongs to an item that is in the ships category
+ * @param type $typeId typeid of the item in question
+ * @param PDO $dbh handle to the database
+ * @return boolean true if the item is a ship, false if not
+ */
 function isTypeAShip($typeId, PDO $dbh)
 {
 	$stmt = $dbh->prepare("SELECT invTypes.typeID, invTypes.typeName, marketGroupID,invGroups.categoryID, invCategories.categoryName
@@ -185,7 +214,12 @@ function isTypeAShip($typeId, PDO $dbh)
 	return false;
 }
 
-//convert an items typeID to its typeName
+/**
+ * Retrieve the items name from its id
+ * @param type $typeID typeid to query
+ * @param PDO $dbh
+ * @return string 
+ */
 function getItemTypeName($typeID, PDO $dbh)
 {
 	$query = "SELECT typeName from invTypes WHERE typeID = ?;";
