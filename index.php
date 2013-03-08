@@ -21,7 +21,8 @@ if(!isTrusted())
 
 $smarty->assign('igb',isTrusted());
 $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === FALSE ? 'http' : 'https';
-$smarty->assign('basepath',$protocol."://".$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']));
+$dir = implode("/", (explode('/', $_SERVER["SCRIPT_URI"], -1)));
+$smarty->assign('basepath', $dir );
 
 //If not trusted, then exit early to avoid doing work we don't need.
 if (!isTrusted() && REQUIRE_TRUST) 
