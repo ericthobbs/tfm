@@ -1,0 +1,23 @@
+{
+	"system-icons": 
+	{	
+		"stop": [ "9_64_8.png", "Stop"],
+		"info": [ "9_64_9.png", "Information" ],
+		"help": [ "9_64_10.png", "Help" ],
+		"warning": [ "9_64_11.png", "Warning" ],
+		"danger": [ "9_32_12.png", "Danger" ],
+		"denied": [ "9_32_13.png", "Denied"],
+		"gear": [ "9_32_16.png", "Gear"],
+		"vitruvian": [ "2_64_16.png", "Vitruvian Man"],
+		"ship": [ "36_64_13.png", "Ship"],
+		"checkmark": [ "77_32_7.png", "Green Check"],
+		"redx": [ "77_32_22.png", "Red X"],
+		"fleet": [ "70_64_11.png", "Fleet" ],
+		"settings": [ "22_32_42.png", "settings" ],
+		"foward": [ "23_32_2.png" , "Forwards" ],
+		"backward": [ "23_32_1.png" , "Backwards" ],
+		"reload": [ "23_32_3.png", "Reload" ],
+		"plus": [ "25_32_11.png", "Plus" ],
+		"minus": [ "25_32_12.png", "Minus" ]
+	}
+}

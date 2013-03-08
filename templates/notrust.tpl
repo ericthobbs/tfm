@@ -4,15 +4,15 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>{$smarty.config.GenericPageTitle}</title>
-	<link rel="stylesheet" href="{$baseurl}/css/core.css" type="text/css"/>
-	<link rel="stylesheet" href="{$baseurl}/css/style-light.css" type="text/css"/>
+	<link rel="stylesheet" href="{$basepath}/css/core.css" type="text/css"/>
+	<link rel="stylesheet" href="{$basepath}/css/style-light.css" type="text/css"/>
 	{include file='jquery.tpl'}
 	{include file='bootstrap.tpl'}
 </head>
 <body onload="javascript:CCPEVE.requestTrust('{$baseurl}');">
 	<div class="container">
 Trivial Fleet Manager requires that the IGB trust this page. 
-Click <a href="javascript:CCPEVE.requestTrust('{$baseurl}');">here</a> to trust. 
+Click <a href="javascript:CCPEVE.requestTrust('{$basepath}');">here</a> to trust. 
 After seting the site to trusted, you must refresh the page. 
 Click <a href="javascript:window.location.reload(true);">here</a> to refresh.
 {include file='footer.tpl'}
